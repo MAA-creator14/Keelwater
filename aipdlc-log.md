@@ -4,7 +4,7 @@
 **Proposed:** Problem framing: the slow tail, not the average, is the problem to solve.
 **Decision:** Instinct recorded (post-exposure)
 **Notes:** Written after reviewing AI suggestions on 26 Oct. Own view: the median of 11 minutes is already fast, so the problem is the long tail (15% over four hours). Confidence in the 15% figure is high because it is in the brief; confidence in its cause is low. Adopted from AI: none. Not yet tested: whether the tail is a sorting problem.
-**Confidence level:** low
+**Confidence level:** low, in the cause of the tail (high in the 15% figure itself)
 **What would surprise me:** If the tail was a sorting problem, handlers not knowing what to do with the relevant claims. 
 
 ## 2026-10-26T19:17:00Z - Item: keelwater-sorting - Stage: Stage 2, Failure map
