@@ -18,7 +18,7 @@
 **Proposed:** Riskiest assumption: the four-hour wait is caused by information or approval waits, not by the queue.
 **Decision:** Instinct recorded (post-exposure)
 **Notes:** Written after reviewing AI suggestions on 26 Oct. Own: the assumption itself and why it is the riskiest, because if it is true, sorting automation does not help the tail. Adopted from AI: the 60-claim sample, the four time categories, and the 30% and 15% thresholds. Own change to make before the test: sample from the last 12 months only if the data is clean enough to classify time spent. The threshold percentages are invented, used to measure the queue time: if the queue or unworked time accounts for more than 30% of 4 hour claims, then automated sorting will have the desired impact on resolution speed. If it is 15% or less we can conclude that sorting is not the right problem to solve.
-**What would surprise me:** If the 15% of four-hour wait instances were solely the result of internal efficiencies (e.g. resource capacity planning or constraints). 
+**What would surprise me:** If the 15% of four-hour wait instances were solely the result of internal inefficiencies (e.g. resource capacity planning or constraints). 
 
 ## 2026-10-26T19:17:00Z - Item: keelwater-sorting - Stage: Stage 4a, System test
 **Proposed:** Rules-based variant expected to have the lowest wrong-pay rate; LLM classifier expected to miss linked-claim context.
