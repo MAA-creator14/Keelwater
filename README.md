@@ -26,5 +26,6 @@ Keelwater is a fictional product. Every customer, quote, dataset and figure not 
 
 - All Stage 0 instinct notes were recorded after I'd seen AI suggestions: stages 1 to 3 were written after, and stages 4a onward were rewritten after. They're labelled "post-exposure" in the log, so no stage has a clean pre-AI instinct.
 - All eight Stage 0 entries share one timestamp (26 Oct, 19:17 UTC) because I logged them together in one sitting. The timestamp is when they were logged, not when each instinct was first written.
+- Both logs are meant to be append-only, but on 26 Oct I edited existing entries in place. In `aipdlc-log.md` I added the confidence and "what would surprise me" lines to each Stage 0 entry, and fixed typos. In `ai-use-log.md` I filled the bracketed lines and corrected the 19:12 entry. The commit history shows each change.
 - Commits follow the gate timestamps. Nothing has been backdated.
 - Numbers are invented unless they're in the brief.
