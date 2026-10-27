@@ -54,3 +54,8 @@
 **Notes:** Rewritten after reviewing AI suggestions on 26 Oct. Own: the shadow period must cover a month-end pay run. Adopted from AI: the four-week shadow gate, the kill switch and the compliance sign-off. Note: these are gates on the decision to pay automatically, separate from the light build gate for the pull request.
 **Confidence:** medium
 **What would surprise me:** If no compliance issues are detected post-release, use guardrails and traces to identify and correct.
+
+## 2026-10-27T08:09:00Z - Item: keelwater-sorting - Stage: Stage 1, Frame the signal
+**Proposed:** Problem statement: 15% of claims take 4+ hours to sort, appearing mostly due to waits for missing information or approval, affecting 315,000 claims a year.
+**Decision:** Edited
+**Notes:** Added missing word "be". Approved despite gaps: no cost or who-bears-it in the statement, and no confidence levels in the coding. Source material invented by AI; coding by human.
