@@ -59,3 +59,8 @@
 **Proposed:** Problem statement: 15% of claims take 4+ hours to sort, appearing mostly due to waits for missing information or approval, affecting 315,000 claims a year.
 **Decision:** Edited
 **Notes:** Added missing word "be". Approved despite gaps: no cost or who-bears-it in the statement, and no confidence levels in the coding. Source material invented by AI; coding by human.
+
+## 2026-10-27T11:55:00Z - Item: keelwater-sorting - Stage: Stage 2, Failure map
+**Proposed:** Six failure modes, wrong-pay first: 3 human-drafted, plus missing context, stale or partial inputs and handler over-trust added at AI review.
+**Decision:** Approved
+**Notes:** Failure 2 narrowed to errors with no money out. Drift offered and not kept. Failure 1 terms and the noisy handler labels carried to Stage 3.
