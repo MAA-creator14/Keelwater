@@ -1,0 +1,77 @@
+id,source,stated_request,underlying_need,Role,notes
+T01,ticket,Is there any way for the system to put claims into a pile automatically? My team spends the first hour of every shift just sorting.,Reduce sorting time,Team Lead,
+T02,ticket,Claims sit in unsorted because we can't decide until the police reference comes in. Can we park them somewhere so they stop showing as overdue?,Waiting for information,Handler,
+T03,ticket,"After the hailstorm on 9 May we had 1,140 new claims in two days against a normal 300. The unsorted queue hit 26 hours. We need help with surges.",Manage handler workload,Ops Manager,
+T04,ticket,The sort screen takes 6 to 8 seconds to load claim history. It slows everything down.,Reduce sorting time,Handler,
+T05,ticket,Two handlers put identical windscreen claims in different piles. We need sorting to be consistent.,Manage handler workload,QA Lead,
+T06,ticket,A customer submitted four claims for the same incident by mistake and we paid two of them. The sort screen doesn't show related claims.,Show linked claims,Handler,
+T07,ticket,"We wait on photos from the customer for most motor claims, about two days on average. Sorting isn't the slow bit, getting the information is.",Waiting for information,Team Lead,
+T08,ticket,Please add auto-sorting. Our board is asking why we still do this by hand.,Reduce sorting time,Ops Manager,
+T09,ticket,"The suspicious pile needs a supervisor to approve before it goes to investigation. The supervisor is often in meetings, so claims wait hours.",Waiting for approval,Handler,
+T10,ticket,"Our auditor asked why a claim was marked simple. Keelwater records who sorted it, but not why.",Include accurate reason,Compliance Officer,
+T11,ticket,Glass-only claims under £300 are always simple. Can we select a load of them and sort them in one go?,Reduce sorting time,Handler,
+T12,ticket,Lots of claims arrive without a policy number. Handlers can't sort without it and have to look it up in another system.,Waiting for information,Team Lead,
+T13,ticket,Our own report says we moved 6% of last month's claims to a different pile after the first week. Most went from simple to needs a closer look once the engineer's report arrived.,Waiting for information,Ops Manager,
+T14,ticket,The pile dropdown resets if you open the attachments tab. I lost my selection three times today.,Reduce sorting time,Handler,
+T15,ticket,"Can Keelwater recommend a pile? We don't want it decided for us, but a starting point would help new starters.",Reduce sorting time,Head of Claims,
+T16,ticket,Storm again: 900 claims in and half the team on leave. Is there anything that can tell us which unsorted claims to look at first?,Manage handler workload,Ops Manager,
+T17,ticket,Third-party claims wait for the other insurer to confirm liability before we can tell if they're simple. Usually one to three days.,Waiting for information,Handler,
+T18,ticket,Auto-sorting please. The competitor's product does it now.,Miscellaneous,Team Lead,
+T19,ticket,"New handlers send far too many claims to suspicious, which clogs investigation. Experienced handlers almost never do.",Manage handler workload,QA Lead,
+T20,ticket,We'd love bulk sorting for the simple ones. Selecting them one by one is painful on Monday mornings.,Reduce sorting time,Ops Manager,
+T21,ticket,"Linked claims, like the driver and a passenger from the same accident, come in separately and get sorted by different people. One went simple, one went suspicious.",Show linked claims,Handler,
+T22,ticket,"If you add any automatic sorting, we'll need to show the regulator exactly why each claim went where it did.",Include accurate reason,Compliance Officer,
+T23,ticket,Is auto-sort on the roadmap? Asking for our ops director.,Miscellaneous,Team Lead,
+T24,ticket,Waiting on the repair estimate from the garage is our biggest delay. Claims sit unsorted for a day or more.,Waiting for information,Handler,
+T25,ticket,"From our export: of 4,200 claims in July, 610 took more than four hours to sort. Nearly all of those were waiting on something from the customer.",Waiting for information,Ops Manager,
+T26,ticket,Our sorting backlog after a weekend is 400 to 600 claims. Monday mornings are spent catching up.,Manage handler workload,Head of Claims,
+T27,ticket,Search on the sort screen doesn't find claims by vehicle registration.,Reduce sorting time,Handler,
+T28,ticket,Investigation sent back 22% of what we referred last quarter as not suspicious. We need better guidance on what goes in the suspicious pile.,Miscellaneous,Team Lead,
+T29,ticket,"Can we auto-sort the claims that clearly don't need a human, like low-value glass?",Reduce sorting time,Ops Manager,
+T30,ticket,"Large-loss claims need a manager to sign off the pile. Our managers cover two sites, so it can take half a day.",Waiting for approval,Ops Manager,
+T31,ticket,"When a claim is moved to a different pile later, nobody tells the handler who sorted it, so we keep making the same call.",Manage handler workload,Handler,
+T32,ticket,"Customers phone to chase unsorted claims. We can't tell them anything, because the claim is waiting on their own documents.",Waiting for information,Team Lead,
+T33,ticket,We'd like auto-sorting so we can move three FTE onto complex claims.,Manage handler workload,Ops Manager,
+T34,ticket,"Same customer, two claims in a month, and we didn't spot the first one when sorting the second. It should have been a closer look.",Show linked claims,Handler,
+T35,ticket,"Can you add a ""waiting for information"" status? Unsorted mixes claims we haven't looked at with ones we can't sort yet.",Waiting for information,Ops Manager,
+T36,ticket,Bulk select would save me so much time on the overnight glass claims.,Reduce sorting time,Handler,
+T37,ticket,Please confirm whether the predictive model you trialled with us in 2025 kept any decision records.,Include accurate reason,Compliance Officer,
+T38,ticket,"Our investigators want suspicious claims flagged earlier, before a handler has spent time on them.",Manage handler workload,Ops Manager,
+T39,ticket,"Speed to payment is now one of our KPIs. Sorting is the first step, so anything that speeds it up.",Reduce sorting time,Head of Claims,
+T40,ticket,Can the system auto-sort overnight claims so the morning shift starts with the piles ready?,Reduce sorting time,Team Lead,
+D1,sales,"RFP requirement 14: ""AI-assisted triage, with an explainable reason recorded for every decision."" Procurement asked in the Q&A round how decision records would be shown to their regulator. 
+They saw the competitor's demo in August. Rep: ""This is a must-have. They won't shortlist us without it. Every other requirement we're fine on.”",Include accurate reason,Sales Rep,
+D2,sales,"They promise customers payment within 24 hours on simple motor claims and miss it on about a fifth of claims (their figure, from the demo call). Their claims director said: 
+“We want claims sorted the second they land.”
+Rep: ""Automatic sorting is the headline ask. I think what they actually care about is the 24-hour promise.""",Reduce sorting time,Sales Rep,
+D3,sales,"The ops director wants to cut handler headcount by 15% over two years. Automatic sorting came up as ""how we get there”.
+Rep: ""They're a cost play. If we can show handler hours saved, the sorting question goes away.""",Reduce headcount cost,Sales Rep,
+D4,sales,"They ticked ""automatic sorting"" as required on a 60-item requirements checklist. It didn't come up in either demo.
+Rep: ""Honestly not sure it matters to them. But it's a red cell on the scoresheet.”",Miscellaneous,Sales Rep,
+D5,sales,"They asked whether we can sort the easy claims in bulk. When I said bulk sorting ships in about six weeks, they were positive, but the head of claims said: ""Bulk is nice. Automatic is what the board asked about.""
+Rep: ""Bulk might be enough for the users. Not sure it's enough for the buyer.""",Reduce sorting time,Sales Rep,
+D6,sales,"They raised the competitor's pricing first, then automatic sorting. About 40 handlers.
+Rep: ""Price-led. Sorting feels like a reason to say no rather than a reason to say yes.""",Miscellaneous,Sales Rep,
+A1,cs,"Quarterly review, 29 Sep 2026. Attended by their ops director and head of claims.
+
+- Ops director: ""Our board wants to see automation this year. The backlogs after the storms were embarrassing.""
+- Head of claims: ""My handlers are drowning on Mondays and after any weather event.""
+- They asked when automatic sorting will be available, and whether they'd get it before renewal.
+They mentioned that the competitor approached them in the summer.
+
+CSM: ""At risk. The ask is automatic sorting, but every example they gave was a volume spike.”",Reduce sorting time,Customer Success Manager,
+A2,cs,"Annual review, 2 Oct 2026. Attended by their head of claims and compliance officer.
+
+- Head of claims asked for automatic sorting and referred to the competitor's launch.
+- The compliance officer then said: ""Nothing goes live that we can't explain to the regulator, line by line.""
+- Their auditor raised a finding this year that sorting decisions have no recorded reason.
+They asked what happened to the predictive model trialled with them in 2025.
+
+CSM: ""They want it and fear it in equal measure. Compliance has a veto.""",Include accurate reason,,
+A3,cs,"Quarterly review, 14 Oct 2026. Attended by their ops manager and head of investigations.
+
+- Ops manager asked for automatic sorting ""to stop new starters sending everything to suspicious"".
+- Head of investigations said their team is spending time rejecting referrals that were never suspicious.
+- Supervisor sign-off on the suspicious pile was described as ""the bottleneck nobody owns"".
+
+CSM: ""The pain is in the suspicious pile, not in sorting as a whole.""",Manage handler workload,,
