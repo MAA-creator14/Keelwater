@@ -75,3 +75,8 @@
 **Proposed:** Three variants on 80 invented claims (simulation): rules 6.2% wrong-simple, 2 linked; prototype stand-in 27.5%, 10 linked; LLM 17.5%, 4 linked. Handler baseline 7.5% (simulated). All fail A3a.
 **Decision:** Approved
 **Notes:** Outcome: revise. AI may only route claims toward a human; auto-clear dropped. Planted faults: both found. L1 failed (50%); labels rebuilt from human sorting policy and spot-checked. Reason rubric not done. Limits in work/04-prototype/test-notes.md.
+
+## 2026-10-28T18:21:00Z - Item: keelwater-sorting - Stage: Stage 4b, UI mock
+**Proposed:** One-person pilot, 24 invented claims: 61 s with suggestion vs 36 s without; accuracy 58% vs 83%; 1 of 3 wrong suggestions accepted, 4 of 9 correct ones overridden. A3b fails on time.
+**Decision:** Approved
+**Notes:** Fail carried to Stage 5; suggested sorting stays in the comparison. Templated look-alike claims confound overrides and time. Visual design (AI-designed; SKILL.md changed to help communication with customers, Sales and CS) approved with changes: required reasons and a similar-claims check, carried to Stage 6.

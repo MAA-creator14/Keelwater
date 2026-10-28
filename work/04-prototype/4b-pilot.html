@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claims Sorting Pilot</title>
+<style>
+:root {
+  --bg: #f5f6f8; --surface: #ffffff; --surface-2: #f0f2f5; --border: #dfe3e8;
+  --text: #1a1f29; --muted: #5d6675; --accent: #2457d6; --accent-ink: #ffffff;
+  --ai-bg: #f4f1fe; --ai-border: #8b74e8; --ai-ink: #4a33b8;
+  --simple-bg: #e8f1ff; --simple-ink: #1d4fb8;
+  --closer-bg: #fff3dc; --closer-ink: #8a5a00;
+  --susp-bg: #fde8e8; --susp-ink: #a51d1d;
+  --missing-bg: #fff3dc; --missing-ink: #8a5a00;
+  --present-ink: #1f7a4d;
+  --shadow: 0 1px 2px rgba(16,24,40,.06), 0 1px 3px rgba(16,24,40,.08);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11141a; --surface: #1a1e26; --surface-2: #222733; --border: #2e3442;
+    --text: #e8ebf1; --muted: #9aa3b2; --accent: #6b93ff; --accent-ink: #0b1020;
+    --ai-bg: #211c38; --ai-border: #8f7cf0; --ai-ink: #c4b8ff;
+    --simple-bg: #16264a; --simple-ink: #9dbbff;
+    --closer-bg: #3a2c10; --closer-ink: #f3c46b;
+    --susp-bg: #3e1717; --susp-ink: #ff9d9d;
+    --missing-bg: #3a2c10; --missing-ink: #f3c46b;
+    --present-ink: #6fd3a0;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11141a; --surface: #1a1e26; --surface-2: #222733; --border: #2e3442;
+  --text: #e8ebf1; --muted: #9aa3b2; --accent: #6b93ff; --accent-ink: #0b1020;
+  --ai-bg: #211c38; --ai-border: #8f7cf0; --ai-ink: #c4b8ff;
+  --simple-bg: #16264a; --simple-ink: #9dbbff;
+  --closer-bg: #3a2c10; --closer-ink: #f3c46b;
+  --susp-bg: #3e1717; --susp-ink: #ff9d9d;
+  --missing-bg: #3a2c10; --missing-ink: #f3c46b;
+  --present-ink: #6fd3a0;
+  --shadow: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif; }
+header { position: sticky; top: 0; z-index: 2; background: var(--surface);
+  border-bottom: 1px solid var(--border); padding: 12px 24px;
+  display: flex; align-items: center; gap: 16px; }
+header .brand { font-weight: 650; letter-spacing: -.01em; }
+header .brand span { color: var(--muted); font-weight: 450; }
+.progress { margin-left: auto; display: flex; align-items: center; gap: 10px; color: var(--muted);
+  font-size: 13px; }
+.bar { width: 160px; height: 6px; background: var(--surface-2); border-radius: 99px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--accent); }
+main { max-width: 1240px; margin: 0 auto; padding: 24px; }
+.grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 20px;
+  align-items: start; }
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } main { padding: 16px; } }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  box-shadow: var(--shadow); padding: 16px 18px; margin-bottom: 14px; }
+.card h3 { margin: 0 0 10px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em;
+  color: var(--muted); display: flex; align-items: center; gap: 8px; }
+.tag { font-size: 10px; letter-spacing: .05em; padding: 2px 7px; border-radius: 99px;
+  border: 1px solid var(--border); color: var(--muted); text-transform: uppercase; }
+.title { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+.title h2 { margin: 0; font-size: 22px; letter-spacing: -.01em; }
+.title .amount { font-size: 22px; font-weight: 650; margin-left: auto; }
+.desc { font-size: 16px; margin: 8px 0 0; }
+dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; margin: 0; }
+dt { color: var(--muted); }
+dd { margin: 0; overflow-wrap: anywhere; }
+.hint { color: var(--muted); font-size: 13px; }
+.docs { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+.doc { border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 14px; }
+.doc b { display: block; font-weight: 550; }
+.doc.missing { background: var(--missing-bg); border-color: transparent; color: var(--missing-ink); }
+.doc.present { color: var(--present-ink); }
+.doc.na { color: var(--muted); }
+.missing-flag { display: inline-block; background: var(--missing-bg); color: var(--missing-ink);
+  padding: 1px 8px; border-radius: 99px; font-size: 13px; font-weight: 550; }
+.rel { border-top: 1px solid var(--border); padding-top: 10px; margin-top: 10px; }
+.rel:first-of-type { border-top: 0; margin-top: 0; padding-top: 0; }
+.ai { background: var(--ai-bg); border: 1.5px dashed var(--ai-border); }
+.ai h3 { color: var(--ai-ink); }
+.ai .tag { border-color: var(--ai-border); color: var(--ai-ink); }
+.status { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 10px;
+  font-weight: 650; font-size: 18px; margin-bottom: 12px; }
+.status small { display: block; font-weight: 450; font-size: 13px; }
+.s-simple { background: var(--simple-bg); color: var(--simple-ink); }
+.s-closer_look { background: var(--closer-bg); color: var(--closer-ink); }
+.s-suspicious { background: var(--susp-bg); color: var(--susp-ink); }
+.ai section { margin-top: 12px; }
+.ai section h4 { margin: 0 0 4px; font-size: 13px; color: var(--ai-ink); }
+.ai ul { margin: 0; padding-left: 18px; }
+.reminder { margin-top: 12px; font-size: 13px; padding: 8px 10px; border-radius: 8px;
+  background: var(--surface); border: 1px solid var(--border); }
+.meta { display: flex; justify-content: space-between; align-items: center; margin-top: 14px;
+  font-size: 12px; color: var(--muted); gap: 8px; flex-wrap: wrap; }
+button { font: inherit; border-radius: 8px; border: 1px solid var(--border); background: var(--surface);
+  color: var(--text); padding: 9px 14px; cursor: pointer; }
+button:hover { border-color: var(--accent); }
+button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent);
+  font-weight: 600; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+button.small { padding: 4px 10px; font-size: 12px; }
+.decide .row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.piles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 10px; }
+.piles label { border: 1px solid var(--border); border-radius: 8px; padding: 10px; cursor: pointer;
+  text-align: center; font-weight: 550; }
+.piles input { display: none; }
+.piles input:checked + span { color: var(--accent); }
+.piles label:has(input:checked) { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+input[type=text] { width: 100%; font: inherit; padding: 9px 10px; border-radius: 8px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text); }
+.checks { display: flex; flex-direction: column; gap: 6px; margin: 10px 0 14px; font-size: 14px; }
+.hidden { display: none; }
+.center { max-width: 640px; margin: 48px auto; }
+.center h1 { font-size: 26px; letter-spacing: -.01em; margin: 0 0 8px; }
+.center ol { padding-left: 20px; }
+.chip { display: inline-block; padding: 2px 9px; border-radius: 99px; font-size: 12px; font-weight: 600; }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">Keelwater <span>· Claims sorting pilot · invented claims</span></div>
+  <div class="progress"><span id="pos"></span><div class="bar"><i id="barfill" style="width:0"></i></div></div>
+</header>
+<main id="app"></main>
+
+<script>
+const DATA = {"order": [{"id": "K063", "condition": "with", "claim": {"id": "K063", "received_at": "2026-10-11", "line": "home", "claimant_id": "P0063", "incident_ref": "I0061", "incident_date": "2026-10-09", "policy_number": "KW-977072", "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 2474, "description": "Laptop and camera stolen in a break-in. No sign of forced entry. Claiming \u00a32474.", "documents": {"photos": true, "repair_estimate": false, "police_ref": true, "engineer_report": null}, "claimant_history": [{"claim_id": "H-7367", "date": "2026-05-26", "line": "home", "amount_gbp": 2438, "outcome": "paid"}, {"claim_id": "H-2558", "date": "2026-08-14", "line": "motor", "amount_gbp": 3343, "outcome": "paid"}, {"claim_id": "H-6994", "date": "2026-01-03", "line": "home", "amount_gbp": 2503, "outcome": "paid"}, {"claim_id": "H-8278", "date": "2026-08-19", "line": "motor", "amount_gbp": 3408, "outcome": "paid"}], "policy_days_before_incident": 1092, "policy_checked_days_before_claim": 1, "related": []}, "ai": {"pile": "suspicious", "reason": "This claim is being referred for investigation, not refused. The description reports a break-in but says there was no sign of forced entry. The claimant has also had four paid claims in 2026, including two earlier home claims for similar amounts. These points together need a closer review before payment. They are not proof of wrongdoing.", "supporting_facts": [{"field": "description", "value": "Laptop and camera stolen in a break-in. No sign of forced entry. Claiming \u00a32474."}, {"field": "amount_gbp", "value": "2474"}, {"field": "claimant_history", "value": "H-6994, 2026-01-03, home, \u00a32503, paid"}, {"field": "claimant_history", "value": "H-7367, 2026-05-26, home, \u00a32438, paid"}, {"field": "claimant_history", "value": "H-2558, 2026-08-14, motor, \u00a33343, paid"}, {"field": "claimant_history", "value": "H-8278, 2026-08-19, motor, \u00a33408, paid"}, {"field": "documents.police_ref", "value": "true"}, {"field": "documents.photos", "value": "true"}, {"field": "policy_status", "value": "active (checked 2026-10-10)"}, {"field": "policy_start_date", "value": "2023-10-13"}, {"field": "incident_date", "value": "2026-10-09"}], "missing_information": ["Proof of ownership and purchase value for the laptop and camera (receipts, serial numbers)", "Itemised breakdown of the \u00a32474 claimed", "How entry to the property was gained, given no sign of forced entry", "Whether the policy covers theft without forced entry", "Content of the police report behind the police reference", "Items and circumstances of the earlier home claims H-6994 and H-7367, to check for overlap with this claim"], "investigation_needed": true, "next_action": "Refer to the investigations team. Verify the police reference with the force. Request proof of ownership and serial numbers for the stolen items. Confirm theft-without-forced-entry cover under policy KW-977072. Compare the items with those in previous home claims H-6994 and H-7367. Make no payment until the review is complete. This suggestion is not a payment authorisation.", "model": "claude-opus-5-5", "generated_at": "2026-10-28T17:21:36Z", "usage": {"input_tokens": 1199, "output_tokens": 1234}}}, {"id": "K028", "condition": "without", "claim": {"id": "K028", "received_at": "2026-10-11", "line": "home", "claimant_id": "P0021", "incident_ref": "I0021", "incident_date": "2026-10-09", "policy_number": "KW-269156", "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 641, "description": "Washing machine hose split and leaked onto the kitchen floor. Vinyl flooring needs replacing, quoted at \u00a3641.", "documents": {"photos": true, "repair_estimate": true, "police_ref": null, "engineer_report": null}, "claimant_history": [], "policy_days_before_incident": 1092, "policy_checked_days_before_claim": 1, "related": []}, "ai": null}, {"id": "K067", "condition": "with", "claim": {"id": "K067", "received_at": "2026-10-11", "line": "motor", "claimant_id": "P0042", "incident_ref": "I0042", "incident_date": "2026-10-09", "policy_number": "KW-404437", "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 1244, "description": "Rear-ended at traffic lights on Chapel Lane. Boot lid and bumper damaged. Estimate \u00a31244.", "documents": {"photos": true, "repair_estimate": true, "police_ref": true, "engineer_report": null}, "claimant_history": [{"claim_id": "H-1733", "date": "2026-04-19", "line": "motor", "amount_gbp": 1094, "outcome": "paid"}], "policy_days_before_incident": 1092, "policy_checked_days_before_claim": 1, "related": []}, "ai": {"pile": "simple", "reason": "This is a low-value motor claim for a rear-end collision, reported two days after the incident. The policy is active and has been in force for about three years. Photos, a repair estimate and a police reference are on file, and no related claims are listed. The claimant had one earlier motor claim six months ago, which was paid. One prior claim on its own is not a warning sign, but the handler should confirm it did not involve the same boot lid or bumper.", "supporting_facts": [{"field": "line", "value": "motor"}, {"field": "amount_gbp", "value": "1244"}, {"field": "description", "value": "Rear-ended at traffic lights on Chapel Lane. Boot lid and bumper damaged. Estimate \u00a31244."}, {"field": "incident_date", "value": "2026-10-09"}, {"field": "received_at", "value": "2026-10-11"}, {"field": "policy_status", "value": "active"}, {"field": "policy_status_checked_at", "value": "2026-10-10"}, {"field": "policy_start_date", "value": "2023-10-13"}, {"field": "documents.photos", "value": "true"}, {"field": "documents.repair_estimate", "value": "true"}, {"field": "documents.police_ref", "value": "true"}, {"field": "documents.engineer_report", "value": "null"}, {"field": "claimant_history", "value": "H-1733, 2026-04-19, motor, \u00a31094, paid"}, {"field": "related_claims", "value": "none listed"}], "missing_information": ["Engineer report status is null, so it is unclear whether one was requested, is not required or is outstanding.", "Third-party driver and insurer details for the vehicle that rear-ended the claimant are not in the record. These are relevant to liability and recovery.", "The record does not say what damage prior claim H-1733 covered, so overlap with the boot lid and bumper cannot be ruled out.", "The police reference number itself is not shown, only that one exists."], "investigation_needed": false, "next_action": "Check that the prior claim H-1733 did not cover the same panels and that the police reference is valid. Record third-party details for recovery. If these checks raise no issues, process the claim for settlement within the handler's authority. This suggestion is not a payment authorisation.", "model": "claude-opus-5-5", "generated_at": "2026-10-28T17:20:12Z", "usage": {"input_tokens": 1010, "output_tokens": 1127}}}, {"id": "K023", "condition": "without", "claim": {"id": "K023", "received_at": "2026-10-11", "line": "motor", "claimant_id": "P0025", "incident_ref": "I0025", "incident_date": "2026-10-09", "policy_number": "KW-834924", "policy_start_date": "2020-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 5389, "description": "Hit a deep pothole on Kings Parade at night, damaging both nearside wheels and the suspension. Council has acknowledged the pothole. Estimate \u00a35389.", "documents": {"photos": true, "repair_estimate": true, "police_ref": null, "engineer_report": true}, "claimant_history": [], "policy_days_before_incident": 2187, "policy_checked_days_before_claim": 1, "related": []}, "ai": null}, {"id": "K049", "condition": "without", "claim": {"id": "K049", "received_at": "2026-10-12", "line": "motor", "claimant_id": "P0032", "incident_ref": "I0032", "incident_date": "2026-10-09", "policy_number": null, "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 652, "description": "Car damaged while parked overnight on Kings Parade. Estimate \u00a3652.", "documents": {"photos": true, "repair_estimate": true, "police_ref": null, "engineer_report": null}, "claimant_history": [], "policy_days_before_incident": 1092, "policy_checked_days_before_claim": 2, "related": []}, "ai": null}, {"id": "K025", "condition": "with", "claim": {"id": "K025", "received_at": "2026-10-10", "line": "motor", "claimant_id": "P0013", "incident_ref": "I0013", "incident_date": "2026-10-09", "policy_number": "KW-506776", "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 991, "description": "Reversed into a bollard in a supermarket car park. Rear bumper dented, no other vehicle involved. Garage estimate \u00a3991.", "documents": {"photos": true, "repair_estimate": true, "police_ref": null, "engineer_report": null}, "claimant_history": [], "policy_days_before_incident": 1092, "policy_checked_days_before_claim": 0, "related": []}, "ai": {"pile": "simple", "reason": "A low-value, single-vehicle bumper claim on a policy that has been active for about three years. The claim was reported the day after the incident, photos and a garage estimate are supplied, and the estimate matches the amount claimed. The record shows no previous claims and no linked claims. Nothing in the record points to a need for investigation.", "supporting_facts": [{"field": "amount_gbp", "value": "991"}, {"field": "description", "value": "Reversed into a bollard in a supermarket car park. Rear bumper dented, no other vehicle involved. Garage estimate \u00a3991."}, {"field": "incident_date", "value": "2026-10-09"}, {"field": "received_at", "value": "2026-10-10"}, {"field": "policy_start_date", "value": "2023-10-13"}, {"field": "policy_status", "value": "active (checked 2026-10-10)"}, {"field": "documents.photos", "value": "true"}, {"field": "documents.repair_estimate", "value": "true"}, {"field": "claimant_history", "value": "empty"}, {"field": "related_claims", "value": "empty"}], "missing_information": ["The record does not show the policy excess or cover type, for example whether own-damage cover applies.", "There is no police reference or engineer report. This is likely not required for a single-vehicle car park incident under \u00a31,000, but the record does not confirm that."], "investigation_needed": false, "next_action": "Confirm that the policy covers own damage and apply the excess. Check that the photos are consistent with rear bumper damage and the \u00a3991 estimate. Then pass the claim to an authorised handler for a payment decision. This suggestion is not a payment authorisation.", "model": "claude-opus-5-5", "generated_at": "2026-10-28T17:21:03Z", "usage": {"input_tokens": 943, "output_tokens": 548}}}, {"id": "K027", "condition": "without", "claim": {"id": "K027", "received_at": "2026-10-12", "line": "motor", "claimant_id": "P0017", "incident_ref": "I0017", "incident_date": "2026-10-09", "policy_number": "KW-406123", "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 914, "description": "Reversed into a bollard in a supermarket car park. Rear bumper dented, no other vehicle involved. Garage estimate \u00a3914.", "documents": {"photos": true, "repair_estimate": true, "police_ref": null, "engineer_report": null}, "claimant_history": [], "policy_days_before_incident": 1092, "policy_checked_days_before_claim": 2, "related": []}, "ai": null}, {"id": "K020", "condition": "with", "claim": {"id": "K020", "received_at": "2026-10-10", "line": "motor", "claimant_id": "P0050", "incident_ref": "I0048", "incident_date": "2026-10-06", "policy_number": "KW-273492", "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 2363, "description": "I was a passenger in HP43 ELB on Chapel Lane when it was hit from behind. Claiming for my damaged phone, laptop and physiotherapy.", "documents": {"photos": true, "repair_estimate": false, "police_ref": null, "engineer_report": null}, "claimant_history": [], "policy_days_before_incident": 1089, "policy_checked_days_before_claim": 0, "related": []}, "ai": {"pile": "closer_look", "reason": "The policy is active and long-standing, and nothing in the record points to fraud. However, the claimant describes themselves as a passenger and is claiming for personal belongings and physiotherapy rather than vehicle damage. The record does not show how the claimant is connected to this policy or whether it covers these items. There is also no breakdown of the amount, no evidence of ownership or value for the phone and laptop, and no medical evidence for the physiotherapy. These details need checking before any payment decision.", "supporting_facts": [{"field": "description", "value": "I was a passenger in HP43 ELB on Chapel Lane when it was hit from behind. Claiming for my damaged phone, laptop and physiotherapy."}, {"field": "line", "value": "motor"}, {"field": "amount_gbp", "value": "2363"}, {"field": "policy_status", "value": "active (checked 2026-10-10)"}, {"field": "policy_start_date", "value": "2023-10-13"}, {"field": "incident_date", "value": "2026-10-06"}, {"field": "received_at", "value": "2026-10-10"}, {"field": "documents.photos", "value": "true"}, {"field": "documents.repair_estimate", "value": "false"}, {"field": "documents.police_ref", "value": "null"}, {"field": "claimant_history", "value": "empty"}, {"field": "related_claims", "value": "empty"}], "missing_information": ["Claimant's relationship to policy KW-273492 (policyholder, named driver, or third-party passenger) and whether vehicle HP43 ELB is the insured vehicle", "Whether the policy covers passenger personal belongings and injury/treatment costs", "Breakdown of the \u00a32,363 between phone, laptop and physiotherapy", "Proof of ownership and value (receipts or invoices) for the phone and laptop", "Medical evidence or physiotherapy invoices or treatment plan linking treatment to the incident", "Details of the vehicle that hit from behind (third-party driver and insurer), which may determine where liability and recovery sit", "Police reference, if one was obtained (field is null)", "What the photos show"], "investigation_needed": false, "next_action": "Contact the claimant to confirm how they are connected to policy KW-273492 and to request an itemised breakdown, receipts or proof of value for the phone and laptop, and medical or physiotherapy evidence. Check the policy wording for passenger belongings and injury cover. Obtain third-party details to assess liability and possible recovery. Refer the claim back for a decision once these are received. This is a triage suggestion only and does not authorise payment.", "model": "claude-opus-5-5", "generated_at": "2026-10-28T17:21:23Z", "usage": {"input_tokens": 949, "output_tokens": 1016}}}, {"id": "K002", "condition": "with", "claim": {"id": "K002", "received_at": "2026-10-11", "line": "home", "claimant_id": "P0022", "incident_ref": "I0022", "incident_date": "2026-10-09", "policy_number": "KW-372268", "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 438, "description": "Washing machine hose split and leaked onto the kitchen floor. Vinyl flooring needs replacing, quoted at \u00a3438.", "documents": {"photos": true, "repair_estimate": true, "police_ref": null, "engineer_report": null}, "claimant_history": [], "policy_days_before_incident": 1092, "policy_checked_days_before_claim": 1, "related": []}, "ai": {"pile": "simple", "reason": "A small home escape-of-water claim (\u00a3438) on a policy that has run for about three years and was active when last checked. The claim was reported two days after the incident, and photos and a repair estimate are attached. The claimant has no prior claims and no related claims are listed. Nothing in the record suggests a need for investigation. Police and engineer reports are not normally needed for a split washing machine hose.", "supporting_facts": [{"field": "amount_gbp", "value": "438"}, {"field": "line", "value": "home"}, {"field": "description", "value": "Washing machine hose split and leaked onto the kitchen floor. Vinyl flooring needs replacing, quoted at \u00a3438."}, {"field": "policy_status", "value": "active"}, {"field": "policy_status_checked_at", "value": "2026-10-10"}, {"field": "policy_start_date", "value": "2023-10-13"}, {"field": "incident_date", "value": "2026-10-09"}, {"field": "received_at", "value": "2026-10-11"}, {"field": "documents.photos", "value": "true"}, {"field": "documents.repair_estimate", "value": "true"}, {"field": "claimant_history", "value": "[] (no prior claims listed)"}, {"field": "related_claims", "value": "[] (none listed)"}], "missing_information": ["Policy cover details: whether escape of water and flooring are covered, and the excess amount", "Confirmation that the policy was active on the incident date (status was checked 2026-10-10, the day after the incident)"], "investigation_needed": false, "next_action": "Confirm that the policy covers escape of water and flooring, and apply any excess. Check that the photos and estimate match the description. If they do, proceed with fast-track settlement under normal authorisation. This suggestion is not a payment authorisation.", "model": "claude-opus-5-5", "generated_at": "2026-10-28T17:20:41Z", "usage": {"input_tokens": 940, "output_tokens": 592}}}, {"id": "K021", "condition": "without", "claim": {"id": "K021", "received_at": "2026-10-10", "line": "home", "claimant_id": "P0070", "incident_ref": "I0066", "incident_date": "2026-09-02", "policy_number": "KW-420497", "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 3412, "description": "Storm on the night of the 14th blew tiles off the roof and rain damaged the loft. Claiming \u00a33412. Roofer's invoice is dated three weeks before the storm.", "documents": {"photos": true, "repair_estimate": true, "police_ref": null, "engineer_report": null}, "claimant_history": [], "policy_days_before_incident": 1055, "policy_checked_days_before_claim": 0, "related": []}, "ai": null}, {"id": "K035", "condition": "with", "claim": {"id": "K035", "received_at": "2026-10-10", "line": "motor", "claimant_id": "P0041", "incident_ref": "I0041", "incident_date": "2026-10-09", "policy_number": "KW-109852", "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 1012, "description": "Rear-ended at traffic lights on Chapel Lane. Boot lid and bumper damaged. Estimate \u00a31012.", "documents": {"photos": true, "repair_estimate": true, "police_ref": true, "engineer_report": null}, "claimant_history": [{"claim_id": "H-7252", "date": "2026-03-13", "line": "motor", "amount_gbp": 1050, "outcome": "paid"}], "policy_days_before_incident": 1092, "policy_checked_days_before_claim": 0, "related": []}, "ai": {"pile": "simple", "reason": "The policy is active and has run for about three years. The claim was reported the day after the incident. Photos, a repair estimate and a police reference are supplied, and the amount is modest and matches the description. One previous paid motor claim seven months earlier is not unusual on its own, and nothing in the record points to fraud.", "supporting_facts": [{"field": "policy_status", "value": "active (checked 2026-10-10)"}, {"field": "policy_start_date", "value": "2023-10-13"}, {"field": "incident_date", "value": "2026-10-09"}, {"field": "received_at", "value": "2026-10-10"}, {"field": "amount_gbp", "value": "1012"}, {"field": "description", "value": "Rear-ended at traffic lights on Chapel Lane. Boot lid and bumper damaged. Estimate \u00a31012."}, {"field": "documents", "value": "photos: true, repair_estimate: true, police_ref: true, engineer_report: null"}, {"field": "claimant_history", "value": "H-7252, 2026-03-13, motor, \u00a31050, paid"}, {"field": "related_claims", "value": "none"}], "missing_information": [], "investigation_needed": false, "next_action": "Confirm the estimate matches the photos and that no engineer report is needed at this amount. Check that the damage does not overlap with prior claim H-7252. Record the third-party details for recovery, since the claimant was rear-ended. Then process for payment through normal authorisation. This suggestion is not a payment authorisation.\"}", "model": "claude-opus-5-5", "generated_at": "2026-10-28T17:19:48Z", "usage": {"input_tokens": 1010, "output_tokens": 720}}}, {"id": "K026", "condition": "without", "claim": {"id": "K026", "received_at": "2026-10-11", "line": "motor", "claimant_id": "P0036", "incident_ref": "I0036", "incident_date": "2026-10-09", "policy_number": null, "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 505, "description": "Car damaged while parked overnight on Mill Road. Estimate \u00a3505.", "documents": {"photos": true, "repair_estimate": true, "police_ref": null, "engineer_report": null}, "claimant_history": [], "policy_days_before_incident": 1092, "policy_checked_days_before_claim": 1, "related": []}, "ai": null}, {"id": "K010", "condition": "with", "claim": {"id": "K010", "received_at": "2026-10-11", "line": "motor", "claimant_id": "P0028", "incident_ref": "I0028", "incident_date": "2026-10-09", "policy_number": "KW-292627", "policy_start_date": "2020-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 5791, "description": "Hit a deep pothole on Victoria Avenue at night, damaging both nearside wheels and the suspension. Council has acknowledged the pothole. Estimate \u00a35791.", "documents": {"photos": true, "repair_estimate": true, "police_ref": null, "engineer_report": true}, "claimant_history": [], "policy_days_before_incident": 2187, "policy_checked_days_before_claim": 1, "related": []}, "ai": {"pile": "simple", "reason": "A long-standing active policy, a recent incident reported promptly, and a consistent pothole damage description backed by photos, a repair estimate and an engineer report. There is no prior claims history and no related claims. Nothing in the record suggests fraud. A police reference is not normally expected for pothole damage.", "supporting_facts": [{"field": "policy_start_date", "value": "2020-10-13"}, {"field": "policy_status", "value": "active (checked 2026-10-10)"}, {"field": "incident_date", "value": "2026-10-09"}, {"field": "received_at", "value": "2026-10-11"}, {"field": "description", "value": "Hit a deep pothole on Victoria Avenue at night, damaging both nearside wheels and the suspension. Council has acknowledged the pothole."}, {"field": "amount_gbp", "value": "5791"}, {"field": "documents", "value": "photos: true, repair_estimate: true, engineer_report: true, police_ref: null"}, {"field": "claimant_history", "value": "none"}, {"field": "related_claims", "value": "none"}], "missing_information": ["Written evidence of the council's acknowledgement of the pothole", "Policy cover type and applicable excess", "Confirmation that the engineer report's findings match the repair estimate total"], "investigation_needed": false, "next_action": "Confirm cover and excess. Check that the engineer report supports the \u00a35,791 estimate. Then proceed through the standard payment process with the usual authorisation, as this triage is not a payment approval. Obtain the council's acknowledgement and consider pursuing recovery from the council.", "model": "claude-opus-5-5", "generated_at": "2026-10-28T17:21:13Z", "usage": {"input_tokens": 956, "output_tokens": 759}}}, {"id": "K032", "condition": "without", "claim": {"id": "K032", "received_at": "2026-10-11", "line": "home", "claimant_id": "P0035", "incident_ref": "I0035", "incident_date": "2026-10-09", "policy_number": "KW-581316", "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 1127, "description": "Ceiling stain spreading from the bathroom above. Plumber found a leaking joint. Photos to follow.", "documents": {"photos": false, "repair_estimate": false, "police_ref": null, "engineer_report": null}, "claimant_history": [], "policy_days_before_incident": 1092, "policy_checked_days_before_claim": 1, "related": []}, "ai": null}, {"id": "K050", "condition": "without", "claim": {"id": "K050", "received_at": "2026-10-12", "line": "motor", "claimant_id": "P0038", "incident_ref": "I0038", "incident_date": "2026-10-09", "policy_number": "KW-438491", "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 1739, "description": "Car scraped along a wall in a narrow lane. Estimate to follow.", "documents": {"photos": true, "repair_estimate": false, "police_ref": null, "engineer_report": null}, "claimant_history": [], "policy_days_before_incident": 1092, "policy_checked_days_before_claim": 2, "related": []}, "ai": null}, {"id": "K017", "condition": "with", "claim": {"id": "K017", "received_at": "2026-10-10", "line": "glass", "claimant_id": "P0009", "incident_ref": "I0009", "incident_date": "2026-10-09", "policy_number": "KW-945836", "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 96, "description": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a396.", "documents": {"photos": true, "repair_estimate": true, "police_ref": null, "engineer_report": null}, "claimant_history": [], "policy_days_before_incident": 1092, "policy_checked_days_before_claim": 0, "related": []}, "ai": {"pile": "simple", "reason": "A low-value windscreen claim (\u00a396) on a policy that was active when checked on the day the claim arrived. It was reported the day after the incident and is backed by photos and a repair estimate. The description is consistent with a glass claim, and the record shows no previous or related claims. Nothing in the record suggests the need for further checks.", "supporting_facts": [{"field": "line", "value": "glass"}, {"field": "amount_gbp", "value": "96"}, {"field": "policy_status", "value": "active"}, {"field": "policy_status_checked_at", "value": "2026-10-10"}, {"field": "policy_start_date", "value": "2023-10-13"}, {"field": "incident_date", "value": "2026-10-09"}, {"field": "received_at", "value": "2026-10-10"}, {"field": "description", "value": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a396."}, {"field": "documents.photos", "value": "true"}, {"field": "documents.repair_estimate", "value": "true"}, {"field": "claimant_history", "value": "[] (none recorded)"}, {"field": "related_claims", "value": "[] (none recorded)"}], "missing_information": ["The record does not show the policy's glass cover terms, any excess, or whether the policy limits cover to approved repairers.", "No police reference or engineer report is on file. Neither would normally be expected for a stone-chip windscreen claim."], "investigation_needed": false, "next_action": "Confirm that glass cover and any excess apply under policy KW-945836, check the photos and estimate against the description, then pass the claim to an authorised handler for a payment decision. This suggestion is not a payment authorisation.", "model": "claude-opus-5-5", "generated_at": "2026-10-28T17:20:54Z", "usage": {"input_tokens": 937, "output_tokens": 571}}}, {"id": "K007", "condition": "with", "claim": {"id": "K007", "received_at": "2026-10-11", "line": "glass", "claimant_id": "P0004", "incident_ref": "I0004", "incident_date": "2026-10-09", "policy_number": "KW-676089", "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 95, "description": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a395.", "documents": {"photos": true, "repair_estimate": true, "police_ref": null, "engineer_report": null}, "claimant_history": [], "policy_days_before_incident": 1092, "policy_checked_days_before_claim": 1, "related": []}, "ai": {"pile": "simple", "reason": "A low-value windscreen claim on a policy that has run for about three years and was confirmed active the day after the incident. The description is consistent with the quoted amount. Photos and a repair estimate are supplied, and there are no previous or related claims.", "supporting_facts": [{"field": "line", "value": "glass"}, {"field": "amount_gbp", "value": "95"}, {"field": "description", "value": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a395."}, {"field": "policy_status", "value": "active"}, {"field": "policy_status_checked_at", "value": "2026-10-10"}, {"field": "policy_start_date", "value": "2023-10-13"}, {"field": "incident_date", "value": "2026-10-09"}, {"field": "received_at", "value": "2026-10-11"}, {"field": "documents.photos", "value": "true"}, {"field": "documents.repair_estimate", "value": "true"}, {"field": "claimant_history", "value": "[] (no prior claims)"}, {"field": "related_claims", "value": "[] (none)"}], "missing_information": ["No police reference or engineer report; neither would normally be expected for a windscreen claim of this size", "Policy excess and glass cover terms are not stated in the record"], "investigation_needed": false, "next_action": "Confirm the photos and estimate match the description, then check the glass cover terms and excess. If they are in order, proceed to standard settlement under the handler's normal authority. This suggestion is not a payment authorisation.", "model": "claude-opus-5-5", "generated_at": "2026-10-28T17:20:48Z", "usage": {"input_tokens": 937, "output_tokens": 608}}}, {"id": "K037", "condition": "without", "claim": {"id": "K037", "received_at": "2026-10-10", "line": "motor", "claimant_id": "P0016", "incident_ref": "I0016", "incident_date": "2026-10-09", "policy_number": "KW-981288", "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 482, "description": "Reversed into a bollard in a supermarket car park. Rear bumper dented, no other vehicle involved. Garage estimate \u00a3482.", "documents": {"photos": true, "repair_estimate": true, "police_ref": null, "engineer_report": null}, "claimant_history": [], "policy_days_before_incident": 1092, "policy_checked_days_before_claim": 0, "related": []}, "ai": null}, {"id": "K065", "condition": "with", "claim": {"id": "K065", "received_at": "2026-10-10", "line": "motor", "claimant_id": "P0039", "incident_ref": "I0039", "incident_date": "2026-10-09", "policy_number": "KW-957659", "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 1091, "description": "Rear-ended at traffic lights on Brook Way. Boot lid and bumper damaged. Estimate \u00a31091.", "documents": {"photos": true, "repair_estimate": true, "police_ref": true, "engineer_report": null}, "claimant_history": [{"claim_id": "H-6270", "date": "2026-07-05", "line": "motor", "amount_gbp": 2081, "outcome": "paid"}], "policy_days_before_incident": 1092, "policy_checked_days_before_claim": 0, "related": []}, "ai": {"pile": "simple", "reason": "Low-value motor claim on a policy confirmed active, running for about three years, and reported the day after the incident. Photos, a repair estimate and a police reference were supplied, and the estimate matches the claimed amount. The claimant had one earlier motor claim, paid three months ago. On its own that is not a concern, but the record does not say what it covered.", "supporting_facts": [{"field": "amount_gbp", "value": "1091"}, {"field": "policy_status", "value": "active (checked 2026-10-10)"}, {"field": "policy_start_date", "value": "2023-10-13"}, {"field": "incident_date", "value": "2026-10-09"}, {"field": "received_at", "value": "2026-10-10"}, {"field": "description", "value": "Rear-ended at traffic lights on Brook Way. Boot lid and bumper damaged. Estimate \u00a31091."}, {"field": "documents.photos", "value": "true"}, {"field": "documents.repair_estimate", "value": "true"}, {"field": "documents.police_ref", "value": "true"}, {"field": "documents.engineer_report", "value": "null (not provided / status unknown)"}, {"field": "claimant_history", "value": "H-6270, 2026-07-05, motor, \u00a32081, paid"}, {"field": "related_claims", "value": "none"}], "missing_information": ["Whether an engineer report is required or was requested (field is null)", "Details of the damage covered by prior claim H-6270, to rule out overlap with the boot lid and bumper", "Third-party driver and insurer details for a possible recovery (claimant was rear-ended)"], "investigation_needed": false, "next_action": "Handler to check that prior claim H-6270 did not cover the same boot lid or bumper damage. If there is no overlap, process the claim against the repair estimate under normal authority and open third-party recovery using the police reference. This sorting is a suggestion only and does not authorise payment.", "model": "claude-opus-5-5", "generated_at": "2026-10-28T17:20:00Z", "usage": {"input_tokens": 1008, "output_tokens": 1019}}}, {"id": "K029", "condition": "without", "claim": {"id": "K029", "received_at": "2026-10-10", "line": "home", "claimant_id": "P0018", "incident_ref": "I0018", "incident_date": "2026-10-09", "policy_number": "KW-426906", "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 786, "description": "Washing machine hose split and leaked onto the kitchen floor. Vinyl flooring needs replacing, quoted at \u00a3786.", "documents": {"photos": true, "repair_estimate": true, "police_ref": null, "engineer_report": null}, "claimant_history": [], "policy_days_before_incident": 1092, "policy_checked_days_before_claim": 0, "related": []}, "ai": null}, {"id": "K042", "condition": "without", "claim": {"id": "K042", "received_at": "2026-10-11", "line": "home", "claimant_id": "P0031", "incident_ref": "I0031", "incident_date": "2026-10-09", "policy_number": "KW-205884", "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 1213, "description": "Ceiling stain spreading from the bathroom above. Plumber found a leaking joint. Photos to follow.", "documents": {"photos": false, "repair_estimate": false, "police_ref": null, "engineer_report": null}, "claimant_history": [], "policy_days_before_incident": 1092, "policy_checked_days_before_claim": 1, "related": []}, "ai": null}, {"id": "K022", "condition": "with", "claim": {"id": "K022", "received_at": "2026-10-10", "line": "motor", "claimant_id": "P0030", "incident_ref": "I0030", "incident_date": "2026-10-09", "policy_number": "KW-685660", "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 1713, "description": "Car scraped along a wall in a narrow lane. Estimate to follow.", "documents": {"photos": true, "repair_estimate": false, "police_ref": null, "engineer_report": null}, "claimant_history": [], "policy_days_before_incident": 1092, "policy_checked_days_before_claim": 0, "related": []}, "ai": {"pile": "closer_look", "reason": "Nothing in the record suggests fraud: the policy is active and long-standing, the incident was reported the day after it happened, photos were supplied, and there is no prior claim history. However, the claimed amount of \u00a31,713 is not yet supported by a repair estimate, and the description says the estimate is still to follow. The amount needs checking against the estimate before the claim can be paid.", "supporting_facts": [{"field": "policy_status", "value": "active (checked 2026-10-10)"}, {"field": "policy_start_date", "value": "2023-10-13, about three years before the incident"}, {"field": "incident_date", "value": "2026-10-09"}, {"field": "received_at", "value": "2026-10-10, one day after the incident"}, {"field": "amount_gbp", "value": "1713"}, {"field": "description", "value": "Car scraped along a wall in a narrow lane. Estimate to follow."}, {"field": "documents.photos", "value": "true"}, {"field": "documents.repair_estimate", "value": "false"}, {"field": "claimant_history", "value": "empty, no prior claims recorded"}, {"field": "related_claims", "value": "empty, no linked claims recorded"}], "missing_information": ["Repair estimate supporting the \u00a31,713 claimed (documents.repair_estimate is false)", "Basis for the \u00a31,713 figure, given that no estimate has been received", "Confirmation of whether any third-party property, such as the wall, was damaged; the record does not say"], "investigation_needed": false, "next_action": "Ask the claimant for the repair estimate. Once it arrives, check it against the photos and the claimed amount, and confirm whether any third-party property was damaged. Then refer the claim to the handler for a payment decision. This suggestion does not authorise payment.", "model": "claude-opus-5-5", "generated_at": "2026-10-28T17:20:33Z", "usage": {"input_tokens": 920, "output_tokens": 702}}}, {"id": "K069", "condition": "without", "claim": {"id": "K069", "received_at": "2026-10-12", "line": "motor", "claimant_id": "P0043", "incident_ref": "I0043", "incident_date": "2026-10-09", "policy_number": "KW-219137", "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 1670, "description": "Rear-ended at traffic lights on Victoria Avenue. Boot lid and bumper damaged. Estimate \u00a31670.", "documents": {"photos": true, "repair_estimate": true, "police_ref": true, "engineer_report": null}, "claimant_history": [{"claim_id": "H-2590", "date": "2026-04-23", "line": "motor", "amount_gbp": 1248, "outcome": "paid"}], "policy_days_before_incident": 1092, "policy_checked_days_before_claim": 2, "related": []}, "ai": null}, {"id": "K005", "condition": "with", "claim": {"id": "K005", "received_at": "2026-10-11", "line": "motor", "claimant_id": "P0029", "incident_ref": "I0029", "incident_date": "2026-10-09", "policy_number": "KW-883226", "policy_start_date": "2023-10-13", "policy_status": "active", "policy_status_checked_at": "2026-10-10", "amount_gbp": 1857, "description": "Another car pulled out of a side road and hit my front wing. The other driver gave their details. Estimate \u00a31857. Third party involved; liability not yet confirmed by their insurer.", "documents": {"photos": true, "repair_estimate": true, "police_ref": false, "engineer_report": null}, "claimant_history": [], "policy_days_before_incident": 1092, "policy_checked_days_before_claim": 1, "related": []}, "ai": {"pile": "closer_look", "reason": "Nothing in the record suggests fraud. The policy is active and long-standing, the amount is moderate, and photos and a repair estimate are supplied. However, a third party is involved and their insurer has not yet confirmed liability. The engineer report status is also unrecorded. A handler should confirm the third-party details and the liability position before deciding how to settle.", "supporting_facts": [{"field": "policy_status", "value": "active (checked 2026-10-10)"}, {"field": "policy_start_date", "value": "2023-10-13, about three years before the incident"}, {"field": "incident_date", "value": "2026-10-09, reported 2026-10-11"}, {"field": "amount_gbp", "value": "1857"}, {"field": "description", "value": "Another car pulled out of a side road and hit the front wing; the other driver gave their details; liability not yet confirmed by their insurer"}, {"field": "documents.photos", "value": "true"}, {"field": "documents.repair_estimate", "value": "true"}, {"field": "documents.police_ref", "value": "false"}, {"field": "documents.engineer_report", "value": "null (not recorded)"}, {"field": "claimant_history", "value": "empty"}, {"field": "related_claims", "value": "empty"}], "missing_information": ["Third-party driver, vehicle and insurer details (described as given but not in the record)", "Third-party insurer's liability decision", "Whether an engineer report is required or has been requested (field is null)", "Policy cover level and excess, to judge whether own-damage payment is due regardless of liability"], "investigation_needed": false, "next_action": "Obtain the third-party details from the claimant and contact the third party's insurer about liability. Confirm the cover type and excess, and decide whether an engineer inspection is needed for the \u00a31857 estimate. Then pass the claim to the handler for a settlement decision. This suggestion is not a payment authorisation.", "model": "claude-opus-5-5", "generated_at": "2026-10-28T17:20:22Z", "usage": {"input_tokens": 955, "output_tokens": 837}}}]};
+const KEY = "keelwater-4b-pilot";
+const PILE = { simple: "Simple", closer_look: "Closer look", suspicious: "Suspicious" };
+const DOCS = { photos: "Photos", repair_estimate: "Repair estimate", police_ref: "Police reference",
+               engineer_report: "Engineer's report" };
+let state = load();
+let started = 0;
+
+function load() {
+  try { return JSON.parse(localStorage.getItem(KEY)) || { i: -1, records: [] }; }
+  catch { return { i: -1, records: [] }; }
+}
+function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch {} }
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const gbp = n => "£" + Number(n).toLocaleString("en-GB");
+const fmtDate = d => new Date(d + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+
+function progress() {
+  const n = DATA.order.length, done = Math.max(0, state.i);
+  document.getElementById("pos").textContent = state.i >= 0 && state.i < n ? `Claim ${state.i + 1} of ${n}` : "";
+  document.getElementById("barfill").style.width = (100 * Math.min(done, n) / n) + "%";
+}
+
+function render() {
+  progress();
+  const app = document.getElementById("app");
+  if (state.i < 0) return renderStart(app);
+  if (state.i >= DATA.order.length) return renderEnd(app);
+  const item = DATA.order[state.i];
+  app.innerHTML = `<div class="grid"><div>${facts(item.claim)}</div><div>${item.ai ? aiPanel(item.ai) : ""}${decide(item)}</div></div>`;
+  wire(item);
+  window.scrollTo(0, 0);
+  started = performance.now();
+}
+
+function renderStart(app) {
+  app.innerHTML = `<div class="center card">
+    <h1>Claims sorting pilot</h1>
+    <p>You'll sort ${DATA.order.length} invented claims as a handler. About half show an AI suggestion; the rest don't.</p>
+    <ol>
+      <li>Read the claim as you would at work.</li>
+      <li>Where there's an AI suggestion, accept it or override it with a one-line reason.</li>
+      <li>Where there isn't, choose the pile yourself.</li>
+      <li>Tick "request missing information" or "escalate" if you would do either.</li>
+    </ol>
+    <p class="hint">Each decision is timed from when the claim appears. Work at your normal pace. Progress is saved in this browser, and you'll download your results at the end.</p>
+    <button class="primary" id="start">Start</button></div>`;
+  document.getElementById("start").onclick = () => { state.i = 0; save(); render(); };
+}
+
+function renderEnd(app) {
+  app.innerHTML = `<div class="center card">
+    <h1>All ${DATA.order.length} claims sorted</h1>
+    <p>Download your results and save the file as <code>4b-pilot-results.csv</code> in <code>work/04-prototype/</code>.</p>
+    <div class="row" style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="primary" id="dl">Download results (CSV)</button>
+      <button id="reset">Start again (clears results)</button></div></div>`;
+  document.getElementById("dl").onclick = download;
+  document.getElementById("reset").onclick = () => {
+    if (window.confirm("Clear all recorded decisions?")) { state = { i: -1, records: [] }; save(); render(); }
+  };
+}
+
+function facts(c) {
+  const docs = Object.entries(c.documents).map(([k, v]) => {
+    const cls = v === false ? "missing" : v === true ? "present" : "na";
+    const txt = v === false ? "Missing" : v === true ? "Received" : "Not required";
+    return `<div class="doc ${cls}"><b>${DOCS[k] || k}</b>${txt}</div>`;
+  }).join("");
+  const years = (c.policy_days_before_incident / 365).toFixed(1);
+  const hist = c.claimant_history.length
+    ? c.claimant_history.map(h => `<li>${fmtDate(h.date)} · ${esc(h.line)} · ${gbp(h.amount_gbp)} · ${esc(h.outcome)} <span class="hint">(${esc(h.claim_id)})</span></li>`).join("")
+    : "";
+  const rel = c.related.length
+    ? c.related.map(r => `<div class="rel"><b>${esc(r.id)}</b> · ${esc(r.relation)} · ${gbp(r.amount)}<div>${esc(r.description)}</div><div class="hint">Status: not in record</div></div>`).join("")
+    : `<div class="hint">No related claims recorded.</div>`;
+  return `
+  <div class="card">
+    <h3>Claim overview <span class="tag">Record</span></h3>
+    <div class="title"><h2>${esc(c.id)}</h2><span class="chip" style="background:var(--surface-2)">${esc(c.line)}</span><span class="amount">${gbp(c.amount_gbp)}</span></div>
+    <p class="desc">${esc(c.description)}</p>
+    <dl style="margin-top:12px">
+      <dt>Claimant</dt><dd>${esc(c.claimant_id)}</dd>
+      <dt>Incident</dt><dd>${fmtDate(c.incident_date)} <span class="hint">· ref ${esc(c.incident_ref)}</span></dd>
+      <dt>Received</dt><dd>${fmtDate(c.received_at)}</dd></dl>
+  </div>
+  <div class="card">
+    <h3>Policy <span class="tag">Record</span></h3>
+    <dl>
+      <dt>Policy number</dt><dd>${c.policy_number ? esc(c.policy_number) : `<span class="missing-flag">Missing</span>`}</dd>
+      <dt>Effective from</dt><dd>${fmtDate(c.policy_start_date)} <span class="hint">· ${c.policy_days_before_incident} days (${years} years) before the incident</span></dd>
+      <dt>Status</dt><dd>${esc(c.policy_status)}</dd>
+      <dt>Last checked</dt><dd>${fmtDate(c.policy_status_checked_at)} <span class="hint">· ${c.policy_checked_days_before_claim} days before the claim arrived</span></dd></dl>
+  </div>
+  <div class="card">
+    <h3>Supporting evidence <span class="tag">Record</span></h3>
+    <div class="docs">${docs}</div>
+  </div>
+  <div class="card">
+    <h3>Claimant history <span class="tag">Record</span></h3>
+    ${hist ? `<ul style="margin:0;padding-left:18px">${hist}</ul>` : `<div class="hint">No earlier claims recorded.</div>`}
+  </div>
+  <div class="card">
+    <h3>Related claims <span class="tag">Record</span></h3>${rel}
+  </div>
+  <div class="card">
+    <h3>Workflow <span class="tag">Record</span></h3>
+    <dl><dt>Approval required</dt><dd class="hint">Not in record</dd>
+      <dt>Current owner</dt><dd>You (pilot handler)</dd></dl>
+  </div>`;
+}
+
+function aiText(ai) {
+  return [`AI sorting suggestion: ${PILE[ai.pile]}${ai.pile === "simple" ? " (handler required)" : ""}`,
+    `Reason: ${ai.reason}`,
+    `Supporting facts:`, ...ai.supporting_facts.map(f => `- ${f.field}: ${f.value}`),
+    `Missing information: ${ai.missing_information.length ? ai.missing_information.join("; ") : "none identified"}`,
+    `Investigation needed: ${ai.investigation_needed ? "yes" : "no"}`,
+    `Next action: ${ai.next_action}`,
+    `Generated: ${ai.generated_at} by ${ai.model}`,
+    `This is a sorting suggestion, not a payment authorisation.`].join("\n");
+}
+
+function aiPanel(ai) {
+  const sub = { simple: "Handler required · not a payment authorisation",
+                closer_look: "Check the points below before deciding",
+                suspicious: "Investigation recommended" }[ai.pile];
+  const label = ai.pile === "simple" ? "Simple – handler required" : PILE[ai.pile];
+  return `<div class="card ai">
+    <h3>AI assessment <span class="tag">AI-generated</span></h3>
+    <div class="status s-${ai.pile}"><div>${label}<small>${sub}</small></div></div>
+    <section><h4>Why</h4><div>${esc(ai.reason)}</div></section>
+    <section><h4>Facts the AI relied on</h4><ul>${ai.supporting_facts.map(f => `<li><b>${esc(f.field)}</b>: ${esc(f.value)}</li>`).join("")}</ul></section>
+    <section><h4>Missing information</h4>${ai.missing_information.length ? `<ul>${ai.missing_information.map(m => `<li>${esc(m)}</li>`).join("")}</ul>` : `<div class="hint">None identified by the AI.</div>`}</section>
+    <section><h4>Investigation needed</h4><div>${ai.investigation_needed ? "Yes" : "No"}</div></section>
+    <section><h4>Suggested next action</h4><div>${esc(ai.next_action)}</div></section>
+    <div class="reminder">This is a sorting suggestion, not a payment authorisation. Check it against the record.</div>
+    <div class="meta"><span>Generated ${esc(ai.generated_at)} · ${esc(ai.model)}</span><button class="small" id="copy">Copy for compliance</button></div>
+  </div>`;
+}
+
+function pileChoices(name) {
+  return `<div class="piles">${Object.entries(PILE).map(([k, v]) =>
+    `<label><input type="radio" name="${name}" value="${k}"><span>${v}</span></label>`).join("")}</div>`;
+}
+
+function decide(item) {
+  const extras = `<div class="checks">
+      <label><input type="checkbox" id="reqinfo"> Request missing information</label>
+      <label><input type="checkbox" id="escalate"> Escalate for review or approval</label></div>`;
+  if (item.ai) return `<div class="card decide">
+    <h3>Your decision</h3>
+    <div class="row"><button class="primary" id="accept">Accept: ${PILE[item.ai.pile]}</button><button id="override">Override</button></div>
+    <div id="ovr" class="hidden">${pileChoices("pile")}
+      <input type="text" id="reason" placeholder="One-line reason for the override (required)"></div>
+    ${extras}
+    <button class="primary" id="confirm" disabled>Confirm decision</button></div>`;
+  return `<div class="card decide">
+    <h3>Your decision</h3>
+    <p class="hint" style="margin-top:0">No AI suggestion for this claim. Choose the pile.</p>
+    ${pileChoices("pile")}
+    <input type="text" id="reason" placeholder="Reason (optional)">
+    ${extras}
+    <button class="primary" id="confirm" disabled>Confirm decision</button></div>`;
+}
+
+function wire(item) {
+  const $ = id => document.getElementById(id);
+  let action = null;
+  const chosen = () => (document.querySelector('input[name="pile"]:checked') || {}).value;
+  const ready = () => {
+    if (!item.ai) return !!chosen();
+    if (action === "accept") return true;
+    return action === "override" && chosen() && chosen() !== item.ai.pile && $("reason").value.trim().length > 0;
+  };
+  const refresh = () => { $("confirm").disabled = !ready(); };
+  document.querySelectorAll('input[name="pile"]').forEach(r => r.onchange = refresh);
+  $("reason").oninput = refresh;
+  if (item.ai) {
+    $("accept").onclick = () => { action = "accept"; $("accept").classList.add("primary"); $("override").classList.remove("primary"); $("ovr").classList.add("hidden"); refresh(); };
+    $("accept").classList.remove("primary");
+    $("override").onclick = () => { action = "override"; $("override").classList.add("primary"); $("accept").classList.remove("primary"); $("ovr").classList.remove("hidden"); refresh(); };
+    $("copy").onclick = async () => {
+      try { await navigator.clipboard.writeText(aiText(item.ai)); $("copy").textContent = "Copied"; }
+      catch { $("copy").textContent = "Copy failed"; }
+    };
+  }
+  $("confirm").onclick = () => {
+    const ms = Math.round(performance.now() - started);
+    const pile = item.ai && action === "accept" ? item.ai.pile : chosen();
+    state.records.push({
+      order: state.i + 1, claim_id: item.id, condition: item.condition,
+      ai_pile: item.ai ? item.ai.pile : "", action: item.ai ? action : "choose",
+      final_pile: pile, reason: $("reason").value.trim(),
+      request_info: $("reqinfo").checked ? 1 : 0, escalate: $("escalate").checked ? 1 : 0,
+      time_ms: ms, decided_at: new Date().toISOString(),
+    });
+    state.i += 1; save(); render();
+  };
+}
+
+function download() {
+  const cols = ["order", "claim_id", "condition", "ai_pile", "action", "final_pile", "reason",
+                "request_info", "escalate", "time_ms", "decided_at"];
+  const q = v => `"${String(v).replace(/"/g, '""')}"`;
+  const csv = [cols.join(","), ...state.records.map(r => cols.map(c => q(r[c])).join(","))].join("\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv" }));
+  a.download = "4b-pilot-results.csv";
+  a.click();
+}
+
+render();
+</script>
+</body>
+</html>

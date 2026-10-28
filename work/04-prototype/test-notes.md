@@ -44,3 +44,21 @@ The LLM variant (Claude Opus 5.5, medium effort, automatic fallback on) ran once
 The first scoring reported 88 of 884 cited facts as ungrounded. Part of that was a harness bug: the check compared the AI's text against claim data in which "£" was escaped, so any fact containing "£" failed. Fixing it and rescoring the saved answers (no new API calls) gives 42 of 884. The raw first scoring is kept in `results-llm-run-raw.json`.
 
 The remaining 42 are restatements the substring check can't match, for example "active (checked 2026-10-10)" for the policy status. A sample of 12 read by the AI were all accurate; the other 30 have not been read. The grounding figure is a rough proxy, not a measure of invented facts.
+
+## Stage 4b pilot set-up (28 Oct 2026)
+
+- **Pilot, not the real test.** The human plays the only handler. The real test (5 to 10 handlers with a range of experience, halves swapped between handlers) is described, not run.
+- **Claims.** 24 claims from the 37 not yet discussed with the human, in two halves matched on correct pile (5 simple, 6 closer look, 1 suspicious each). The "with suggestion" half includes K035, K065 and K067, which the AI wrongly calls simple, to test over-trust. The halves differ in claim type (3 recent-claim cases with a suggestion, 1 without).
+- **The handler isn't fully blind.** The human wrote the sorting policy and has had access to `labels.csv`. The 24 claims weren't discussed, but the human knows how each case type is labelled.
+- **Order.** Claims alternate between "with" and "without" in a fixed shuffled order, so tiredness and learning affect both halves alike.
+- **AI suggestions re-run with a fuller structure.** The 12 "with" claims were sent to the same model and prompt as in 4a, with extra fields: missing information, investigation needed and next action. All 12 piles matched 4a. Cost about $0.24 (21,497 tokens).
+- **Screen fields with no data.** Approval required and linked-claim status aren't in the claim record and are shown as "Not in record". Policy age and days since the last policy check are worked out from the dates and shown alongside them, to avoid the date misread seen in the label audit.
+- **Visual style designed by the AI**, per the `SKILL.md` change at the start of 4b. Both conditions use the same layout; only the AI panel differs.
+- **A3b limits.** Reclassifications can't be measured in a pilot. Overrides can only happen with a suggestion, so they're reported, not compared. Escalation is counted as "sorted suspicious or escalate ticked".
+
+## Stage 4b pilot result and confounds (28 Oct 2026)
+
+- **Result.** Median time to decide was 61 s with a suggestion and 36 s without, so A3b fails on time. Accuracy was 58% with a suggestion and 83% without. One wrong suggestion was accepted (K035); four correct ones were overridden (K063, K002, K007, K010). Full figures are in `4b-results.md`.
+- **Look-alike claims.** The handler suspected duplicates on 7 claims (K002, K007, K010, K026, K037, K042, K069). None is a duplicate in the data. The generator built claims from a few templates, so different claimants have near-identical descriptions (K042 and K032 are word for word the same). Three of the four overrides of correct suggestions cite possible duplicates. Part of the "under-trust" and probably part of the extra time come from the test data, not the suggestion design.
+- **Reasons.** The screen made reasons optional without a suggestion and not needed when accepting one. The handler typed reasons on 10 of 12 claims without a suggestion and 6 of 12 with, so reason-typing doesn't explain the slower times.
+- **Handler not fully blind, and recording the session.** See the set-up notes above.

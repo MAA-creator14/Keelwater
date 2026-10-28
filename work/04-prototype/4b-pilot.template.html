@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claims Sorting Pilot</title>
+<style>
+:root {
+  --bg: #f5f6f8; --surface: #ffffff; --surface-2: #f0f2f5; --border: #dfe3e8;
+  --text: #1a1f29; --muted: #5d6675; --accent: #2457d6; --accent-ink: #ffffff;
+  --ai-bg: #f4f1fe; --ai-border: #8b74e8; --ai-ink: #4a33b8;
+  --simple-bg: #e8f1ff; --simple-ink: #1d4fb8;
+  --closer-bg: #fff3dc; --closer-ink: #8a5a00;
+  --susp-bg: #fde8e8; --susp-ink: #a51d1d;
+  --missing-bg: #fff3dc; --missing-ink: #8a5a00;
+  --present-ink: #1f7a4d;
+  --shadow: 0 1px 2px rgba(16,24,40,.06), 0 1px 3px rgba(16,24,40,.08);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11141a; --surface: #1a1e26; --surface-2: #222733; --border: #2e3442;
+    --text: #e8ebf1; --muted: #9aa3b2; --accent: #6b93ff; --accent-ink: #0b1020;
+    --ai-bg: #211c38; --ai-border: #8f7cf0; --ai-ink: #c4b8ff;
+    --simple-bg: #16264a; --simple-ink: #9dbbff;
+    --closer-bg: #3a2c10; --closer-ink: #f3c46b;
+    --susp-bg: #3e1717; --susp-ink: #ff9d9d;
+    --missing-bg: #3a2c10; --missing-ink: #f3c46b;
+    --present-ink: #6fd3a0;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11141a; --surface: #1a1e26; --surface-2: #222733; --border: #2e3442;
+  --text: #e8ebf1; --muted: #9aa3b2; --accent: #6b93ff; --accent-ink: #0b1020;
+  --ai-bg: #211c38; --ai-border: #8f7cf0; --ai-ink: #c4b8ff;
+  --simple-bg: #16264a; --simple-ink: #9dbbff;
+  --closer-bg: #3a2c10; --closer-ink: #f3c46b;
+  --susp-bg: #3e1717; --susp-ink: #ff9d9d;
+  --missing-bg: #3a2c10; --missing-ink: #f3c46b;
+  --present-ink: #6fd3a0;
+  --shadow: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif; }
+header { position: sticky; top: 0; z-index: 2; background: var(--surface);
+  border-bottom: 1px solid var(--border); padding: 12px 24px;
+  display: flex; align-items: center; gap: 16px; }
+header .brand { font-weight: 650; letter-spacing: -.01em; }
+header .brand span { color: var(--muted); font-weight: 450; }
+.progress { margin-left: auto; display: flex; align-items: center; gap: 10px; color: var(--muted);
+  font-size: 13px; }
+.bar { width: 160px; height: 6px; background: var(--surface-2); border-radius: 99px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--accent); }
+main { max-width: 1240px; margin: 0 auto; padding: 24px; }
+.grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 20px;
+  align-items: start; }
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } main { padding: 16px; } }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  box-shadow: var(--shadow); padding: 16px 18px; margin-bottom: 14px; }
+.card h3 { margin: 0 0 10px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em;
+  color: var(--muted); display: flex; align-items: center; gap: 8px; }
+.tag { font-size: 10px; letter-spacing: .05em; padding: 2px 7px; border-radius: 99px;
+  border: 1px solid var(--border); color: var(--muted); text-transform: uppercase; }
+.title { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+.title h2 { margin: 0; font-size: 22px; letter-spacing: -.01em; }
+.title .amount { font-size: 22px; font-weight: 650; margin-left: auto; }
+.desc { font-size: 16px; margin: 8px 0 0; }
+dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; margin: 0; }
+dt { color: var(--muted); }
+dd { margin: 0; overflow-wrap: anywhere; }
+.hint { color: var(--muted); font-size: 13px; }
+.docs { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+.doc { border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 14px; }
+.doc b { display: block; font-weight: 550; }
+.doc.missing { background: var(--missing-bg); border-color: transparent; color: var(--missing-ink); }
+.doc.present { color: var(--present-ink); }
+.doc.na { color: var(--muted); }
+.missing-flag { display: inline-block; background: var(--missing-bg); color: var(--missing-ink);
+  padding: 1px 8px; border-radius: 99px; font-size: 13px; font-weight: 550; }
+.rel { border-top: 1px solid var(--border); padding-top: 10px; margin-top: 10px; }
+.rel:first-of-type { border-top: 0; margin-top: 0; padding-top: 0; }
+.ai { background: var(--ai-bg); border: 1.5px dashed var(--ai-border); }
+.ai h3 { color: var(--ai-ink); }
+.ai .tag { border-color: var(--ai-border); color: var(--ai-ink); }
+.status { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 10px;
+  font-weight: 650; font-size: 18px; margin-bottom: 12px; }
+.status small { display: block; font-weight: 450; font-size: 13px; }
+.s-simple { background: var(--simple-bg); color: var(--simple-ink); }
+.s-closer_look { background: var(--closer-bg); color: var(--closer-ink); }
+.s-suspicious { background: var(--susp-bg); color: var(--susp-ink); }
+.ai section { margin-top: 12px; }
+.ai section h4 { margin: 0 0 4px; font-size: 13px; color: var(--ai-ink); }
+.ai ul { margin: 0; padding-left: 18px; }
+.reminder { margin-top: 12px; font-size: 13px; padding: 8px 10px; border-radius: 8px;
+  background: var(--surface); border: 1px solid var(--border); }
+.meta { display: flex; justify-content: space-between; align-items: center; margin-top: 14px;
+  font-size: 12px; color: var(--muted); gap: 8px; flex-wrap: wrap; }
+button { font: inherit; border-radius: 8px; border: 1px solid var(--border); background: var(--surface);
+  color: var(--text); padding: 9px 14px; cursor: pointer; }
+button:hover { border-color: var(--accent); }
+button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent);
+  font-weight: 600; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+button.small { padding: 4px 10px; font-size: 12px; }
+.decide .row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.piles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 10px; }
+.piles label { border: 1px solid var(--border); border-radius: 8px; padding: 10px; cursor: pointer;
+  text-align: center; font-weight: 550; }
+.piles input { display: none; }
+.piles input:checked + span { color: var(--accent); }
+.piles label:has(input:checked) { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+input[type=text] { width: 100%; font: inherit; padding: 9px 10px; border-radius: 8px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text); }
+.checks { display: flex; flex-direction: column; gap: 6px; margin: 10px 0 14px; font-size: 14px; }
+.hidden { display: none; }
+.center { max-width: 640px; margin: 48px auto; }
+.center h1 { font-size: 26px; letter-spacing: -.01em; margin: 0 0 8px; }
+.center ol { padding-left: 20px; }
+.chip { display: inline-block; padding: 2px 9px; border-radius: 99px; font-size: 12px; font-weight: 600; }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">Keelwater <span>· Claims sorting pilot · invented claims</span></div>
+  <div class="progress"><span id="pos"></span><div class="bar"><i id="barfill" style="width:0"></i></div></div>
+</header>
+<main id="app"></main>
+
+<script>
+const DATA = /*__DATA__*/null;
+const KEY = "keelwater-4b-pilot";
+const PILE = { simple: "Simple", closer_look: "Closer look", suspicious: "Suspicious" };
+const DOCS = { photos: "Photos", repair_estimate: "Repair estimate", police_ref: "Police reference",
+               engineer_report: "Engineer's report" };
+let state = load();
+let started = 0;
+
+function load() {
+  try { return JSON.parse(localStorage.getItem(KEY)) || { i: -1, records: [] }; }
+  catch { return { i: -1, records: [] }; }
+}
+function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch {} }
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const gbp = n => "£" + Number(n).toLocaleString("en-GB");
+const fmtDate = d => new Date(d + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+
+function progress() {
+  const n = DATA.order.length, done = Math.max(0, state.i);
+  document.getElementById("pos").textContent = state.i >= 0 && state.i < n ? `Claim ${state.i + 1} of ${n}` : "";
+  document.getElementById("barfill").style.width = (100 * Math.min(done, n) / n) + "%";
+}
+
+function render() {
+  progress();
+  const app = document.getElementById("app");
+  if (state.i < 0) return renderStart(app);
+  if (state.i >= DATA.order.length) return renderEnd(app);
+  const item = DATA.order[state.i];
+  app.innerHTML = `<div class="grid"><div>${facts(item.claim)}</div><div>${item.ai ? aiPanel(item.ai) : ""}${decide(item)}</div></div>`;
+  wire(item);
+  window.scrollTo(0, 0);
+  started = performance.now();
+}
+
+function renderStart(app) {
+  app.innerHTML = `<div class="center card">
+    <h1>Claims sorting pilot</h1>
+    <p>You'll sort ${DATA.order.length} invented claims as a handler. About half show an AI suggestion; the rest don't.</p>
+    <ol>
+      <li>Read the claim as you would at work.</li>
+      <li>Where there's an AI suggestion, accept it or override it with a one-line reason.</li>
+      <li>Where there isn't, choose the pile yourself.</li>
+      <li>Tick "request missing information" or "escalate" if you would do either.</li>
+    </ol>
+    <p class="hint">Each decision is timed from when the claim appears. Work at your normal pace. Progress is saved in this browser, and you'll download your results at the end.</p>
+    <button class="primary" id="start">Start</button></div>`;
+  document.getElementById("start").onclick = () => { state.i = 0; save(); render(); };
+}
+
+function renderEnd(app) {
+  app.innerHTML = `<div class="center card">
+    <h1>All ${DATA.order.length} claims sorted</h1>
+    <p>Download your results and save the file as <code>4b-pilot-results.csv</code> in <code>work/04-prototype/</code>.</p>
+    <div class="row" style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="primary" id="dl">Download results (CSV)</button>
+      <button id="reset">Start again (clears results)</button></div></div>`;
+  document.getElementById("dl").onclick = download;
+  document.getElementById("reset").onclick = () => {
+    if (window.confirm("Clear all recorded decisions?")) { state = { i: -1, records: [] }; save(); render(); }
+  };
+}
+
+function facts(c) {
+  const docs = Object.entries(c.documents).map(([k, v]) => {
+    const cls = v === false ? "missing" : v === true ? "present" : "na";
+    const txt = v === false ? "Missing" : v === true ? "Received" : "Not required";
+    return `<div class="doc ${cls}"><b>${DOCS[k] || k}</b>${txt}</div>`;
+  }).join("");
+  const years = (c.policy_days_before_incident / 365).toFixed(1);
+  const hist = c.claimant_history.length
+    ? c.claimant_history.map(h => `<li>${fmtDate(h.date)} · ${esc(h.line)} · ${gbp(h.amount_gbp)} · ${esc(h.outcome)} <span class="hint">(${esc(h.claim_id)})</span></li>`).join("")
+    : "";
+  const rel = c.related.length
+    ? c.related.map(r => `<div class="rel"><b>${esc(r.id)}</b> · ${esc(r.relation)} · ${gbp(r.amount)}<div>${esc(r.description)}</div><div class="hint">Status: not in record</div></div>`).join("")
+    : `<div class="hint">No related claims recorded.</div>`;
+  return `
+  <div class="card">
+    <h3>Claim overview <span class="tag">Record</span></h3>
+    <div class="title"><h2>${esc(c.id)}</h2><span class="chip" style="background:var(--surface-2)">${esc(c.line)}</span><span class="amount">${gbp(c.amount_gbp)}</span></div>
+    <p class="desc">${esc(c.description)}</p>
+    <dl style="margin-top:12px">
+      <dt>Claimant</dt><dd>${esc(c.claimant_id)}</dd>
+      <dt>Incident</dt><dd>${fmtDate(c.incident_date)} <span class="hint">· ref ${esc(c.incident_ref)}</span></dd>
+      <dt>Received</dt><dd>${fmtDate(c.received_at)}</dd></dl>
+  </div>
+  <div class="card">
+    <h3>Policy <span class="tag">Record</span></h3>
+    <dl>
+      <dt>Policy number</dt><dd>${c.policy_number ? esc(c.policy_number) : `<span class="missing-flag">Missing</span>`}</dd>
+      <dt>Effective from</dt><dd>${fmtDate(c.policy_start_date)} <span class="hint">· ${c.policy_days_before_incident} days (${years} years) before the incident</span></dd>
+      <dt>Status</dt><dd>${esc(c.policy_status)}</dd>
+      <dt>Last checked</dt><dd>${fmtDate(c.policy_status_checked_at)} <span class="hint">· ${c.policy_checked_days_before_claim} days before the claim arrived</span></dd></dl>
+  </div>
+  <div class="card">
+    <h3>Supporting evidence <span class="tag">Record</span></h3>
+    <div class="docs">${docs}</div>
+  </div>
+  <div class="card">
+    <h3>Claimant history <span class="tag">Record</span></h3>
+    ${hist ? `<ul style="margin:0;padding-left:18px">${hist}</ul>` : `<div class="hint">No earlier claims recorded.</div>`}
+  </div>
+  <div class="card">
+    <h3>Related claims <span class="tag">Record</span></h3>${rel}
+  </div>
+  <div class="card">
+    <h3>Workflow <span class="tag">Record</span></h3>
+    <dl><dt>Approval required</dt><dd class="hint">Not in record</dd>
+      <dt>Current owner</dt><dd>You (pilot handler)</dd></dl>
+  </div>`;
+}
+
+function aiText(ai) {
+  return [`AI sorting suggestion: ${PILE[ai.pile]}${ai.pile === "simple" ? " (handler required)" : ""}`,
+    `Reason: ${ai.reason}`,
+    `Supporting facts:`, ...ai.supporting_facts.map(f => `- ${f.field}: ${f.value}`),
+    `Missing information: ${ai.missing_information.length ? ai.missing_information.join("; ") : "none identified"}`,
+    `Investigation needed: ${ai.investigation_needed ? "yes" : "no"}`,
+    `Next action: ${ai.next_action}`,
+    `Generated: ${ai.generated_at} by ${ai.model}`,
+    `This is a sorting suggestion, not a payment authorisation.`].join("\n");
+}
+
+function aiPanel(ai) {
+  const sub = { simple: "Handler required · not a payment authorisation",
+                closer_look: "Check the points below before deciding",
+                suspicious: "Investigation recommended" }[ai.pile];
+  const label = ai.pile === "simple" ? "Simple – handler required" : PILE[ai.pile];
+  return `<div class="card ai">
+    <h3>AI assessment <span class="tag">AI-generated</span></h3>
+    <div class="status s-${ai.pile}"><div>${label}<small>${sub}</small></div></div>
+    <section><h4>Why</h4><div>${esc(ai.reason)}</div></section>
+    <section><h4>Facts the AI relied on</h4><ul>${ai.supporting_facts.map(f => `<li><b>${esc(f.field)}</b>: ${esc(f.value)}</li>`).join("")}</ul></section>
+    <section><h4>Missing information</h4>${ai.missing_information.length ? `<ul>${ai.missing_information.map(m => `<li>${esc(m)}</li>`).join("")}</ul>` : `<div class="hint">None identified by the AI.</div>`}</section>
+    <section><h4>Investigation needed</h4><div>${ai.investigation_needed ? "Yes" : "No"}</div></section>
+    <section><h4>Suggested next action</h4><div>${esc(ai.next_action)}</div></section>
+    <div class="reminder">This is a sorting suggestion, not a payment authorisation. Check it against the record.</div>
+    <div class="meta"><span>Generated ${esc(ai.generated_at)} · ${esc(ai.model)}</span><button class="small" id="copy">Copy for compliance</button></div>
+  </div>`;
+}
+
+function pileChoices(name) {
+  return `<div class="piles">${Object.entries(PILE).map(([k, v]) =>
+    `<label><input type="radio" name="${name}" value="${k}"><span>${v}</span></label>`).join("")}</div>`;
+}
+
+function decide(item) {
+  const extras = `<div class="checks">
+      <label><input type="checkbox" id="reqinfo"> Request missing information</label>
+      <label><input type="checkbox" id="escalate"> Escalate for review or approval</label></div>`;
+  if (item.ai) return `<div class="card decide">
+    <h3>Your decision</h3>
+    <div class="row"><button class="primary" id="accept">Accept: ${PILE[item.ai.pile]}</button><button id="override">Override</button></div>
+    <div id="ovr" class="hidden">${pileChoices("pile")}
+      <input type="text" id="reason" placeholder="One-line reason for the override (required)"></div>
+    ${extras}
+    <button class="primary" id="confirm" disabled>Confirm decision</button></div>`;
+  return `<div class="card decide">
+    <h3>Your decision</h3>
+    <p class="hint" style="margin-top:0">No AI suggestion for this claim. Choose the pile.</p>
+    ${pileChoices("pile")}
+    <input type="text" id="reason" placeholder="Reason (optional)">
+    ${extras}
+    <button class="primary" id="confirm" disabled>Confirm decision</button></div>`;
+}
+
+function wire(item) {
+  const $ = id => document.getElementById(id);
+  let action = null;
+  const chosen = () => (document.querySelector('input[name="pile"]:checked') || {}).value;
+  const ready = () => {
+    if (!item.ai) return !!chosen();
+    if (action === "accept") return true;
+    return action === "override" && chosen() && chosen() !== item.ai.pile && $("reason").value.trim().length > 0;
+  };
+  const refresh = () => { $("confirm").disabled = !ready(); };
+  document.querySelectorAll('input[name="pile"]').forEach(r => r.onchange = refresh);
+  $("reason").oninput = refresh;
+  if (item.ai) {
+    $("accept").onclick = () => { action = "accept"; $("accept").classList.add("primary"); $("override").classList.remove("primary"); $("ovr").classList.add("hidden"); refresh(); };
+    $("accept").classList.remove("primary");
+    $("override").onclick = () => { action = "override"; $("override").classList.add("primary"); $("accept").classList.remove("primary"); $("ovr").classList.remove("hidden"); refresh(); };
+    $("copy").onclick = async () => {
+      try { await navigator.clipboard.writeText(aiText(item.ai)); $("copy").textContent = "Copied"; }
+      catch { $("copy").textContent = "Copy failed"; }
+    };
+  }
+  $("confirm").onclick = () => {
+    const ms = Math.round(performance.now() - started);
+    const pile = item.ai && action === "accept" ? item.ai.pile : chosen();
+    state.records.push({
+      order: state.i + 1, claim_id: item.id, condition: item.condition,
+      ai_pile: item.ai ? item.ai.pile : "", action: item.ai ? action : "choose",
+      final_pile: pile, reason: $("reason").value.trim(),
+      request_info: $("reqinfo").checked ? 1 : 0, escalate: $("escalate").checked ? 1 : 0,
+      time_ms: ms, decided_at: new Date().toISOString(),
+    });
+    state.i += 1; save(); render();
+  };
+}
+
+function download() {
+  const cols = ["order", "claim_id", "condition", "ai_pile", "action", "final_pile", "reason",
+                "request_info", "escalate", "time_ms", "decided_at"];
+  const q = v => `"${String(v).replace(/"/g, '""')}"`;
+  const csv = [cols.join(","), ...state.records.map(r => cols.map(c => q(r[c])).join(","))].join("\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv" }));
+  a.download = "4b-pilot-results.csv";
+  a.click();
+}
+
+render();
+</script>
+</body>
+</html>
