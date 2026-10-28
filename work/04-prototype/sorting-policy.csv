@@ -1,0 +1,18 @@
+id,case,example claims,AI's current label,your_pile,why
+P01,Same claimant submits the same incident twice,"K001/K030, K054/K059",closer_look,closer_look,
+P02,"Claimant had 1 or 2 paid claims in the last 12 months, each with a threshold of £1,000 or more","K012, K040",closer_look,closer_look,
+P03,"Claimant had 3 or more claims in the last 12 months, each with a threshold of £1,000 or more",K003,suspicious,suspicious,Setting a treshold for potentially suspicious activity
+P04,Earlier claim more than 12 months ago only,"(glass claim, 2.5 years ago)",simple,simple,
+P05,Policy status last checked more than 60 days before the claim,K016,closer_look,simple,
+P06,Policy number or a needed document is missing,K006,closer_look,closer_look,
+P07,Third party involved and their insurer hasn't confirmed liability,K031,closer_look,closer_look,
+P08,Linked claims from one incident (e.g. driver and passenger),K071,closer_look,closer_look,
+P09,"Linked claims between the claimant's own cars, both insured with Keelwater",K070,simple,closer_look,"Given that it involves claimant’s own cars, a closer look is needed to understand what happened and whether the claim is valid"
+P10,"High value (£3,000+) but complete, with an independent record (e.g. council acknowledged pothole)",K024,simple,simple,
+P11,Policy started less than 30 days before the incident,(3 stolen-car claims),suspicious,suspicious,
+P12,"Policy started 30 to 60 days before the incident, cause unclear",K068,closer_look,closer_look,
+P13,Claimant asks for payment in cash,K043,suspicious,suspicious,
+P14,A supporting document is dated before the incident,"K057, K066",suspicious,suspicious,
+P15,"Minor damage to a third party's property, claimant left details, no contact yet",K075,simple,closer_look,Needs to have evidence of the damage and payment to the other party involved
+P16,"Hit-and-run while parked, reported to police",(one claim),closer_look,closer_look,
+P17,"Large water damage (£4,000+) without an engineer's report",(one claim),closer_look,closer_look,

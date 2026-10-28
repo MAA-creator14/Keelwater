@@ -3,6 +3,7 @@
 Usage:
   python3 run_test.py              rules and prototype only (no API calls)
   python3 run_test.py --llm        also run the LLM variant (needs ANTHROPIC_API_KEY in .env)
+  python3 run_test.py --reuse-llm  rescore the LLM's saved predictions from results.json, no API calls
 
 Writes results.json and results.md.
 """
@@ -56,7 +57,9 @@ def grounded(claim, fact):
         return False
     if value == "None":
         return claim[field] is None
-    return value.lower() in json.dumps(claim[field]).lower()
+    if claim[field] in ([], {}, None):
+        return value.lower().startswith(("[]", "none", "empty"))
+    return value.lower() in json.dumps(claim[field], ensure_ascii=False).lower()
 
 
 def score(name, preds, labels, claims, flags, latencies):
@@ -96,6 +99,7 @@ def score(name, preds, labels, claims, flags, latencies):
         "latency_p90_ms": (statistics.quantiles(latencies, n=10)[-1] * 1000
                            if len(latencies) >= 10 else None),
         "confusion": confusion,
+        "latencies": latencies,
     }
 
 
@@ -108,8 +112,11 @@ def a3a_verdict(variant, baseline):
     return "investigate"
 
 
-def l1_result(labels):
-    """Label audit: the human's blind re-label of 20 claims against the AI labels."""
+def l1_result():
+    """Label audit: the human's blind re-label of 20 claims against the AI labels it audited
+    (labels-v1-ai.csv). The current labels.csv was rebuilt from the human's sorting policy
+    after the audit, so the audit is not re-scored against it."""
+    labels = {r["id"]: r for r in csv.DictReader(open("labels-v1-ai.csv"))}
     try:
         rows = list(csv.DictReader(open("l1-audit-sheet.csv")))
     except FileNotFoundError:
@@ -147,15 +154,27 @@ def main():
     if "--llm" in sys.argv:
         load_env()
         variants.append(("llm", LLM()))
+    saved = None
+    if "--reuse-llm" in sys.argv:
+        old = json.load(open("results.json"))
+        saved = (old["predictions"]["llm"],
+                 next(r for r in old["results"] if r["variant"] == "llm"))
     for name, fn in variants:
         preds, lat = run_variant(fn, claims)
         preds_all[name] = preds
         results.append(score(name, preds, labels, claims, flags, lat))
+    if saved:
+        preds_all["llm"] = saved[0]
+        r = score("llm", saved[0], labels, claims, flags, saved[1].get("latencies", []))
+        if not r["latencies"]:  # results saved before per-claim latencies were kept
+            r["latency_median_ms"] = saved[1]["latency_median_ms"]
+            r["latency_p90_ms"] = saved[1]["latency_p90_ms"]
+        results.append(r)
 
     baseline = results[0]["wrong_simple_rate"]
     for r in results[1:]:
         r["a3a"] = a3a_verdict(r, baseline)
-    l1 = l1_result(labels)
+    l1 = l1_result()
 
     json.dump({"results": results, "l1": l1, "predictions": preds_all,
                "data_flags": flags}, open("results.json", "w"), indent=1)
@@ -169,8 +188,9 @@ def main():
 def write_md(results, l1, baseline):
     out = ["# Stage 4a results\n",
            "**Simulation on 80 invented claims. Small sample. Not evidence about real claims.** "
-           "The correct piles were set by the AI, which also wrote the claims and the rules "
-           "variant. The handler baseline is invented.\n",
+           "The AI wrote the claims and the rules variant. The correct piles follow the human's "
+           "sorting policy (`sorting-policy.csv`), applied to all 80 claims and spot-checked by "
+           "the human. The handler baseline is invented. See `test-notes.md`.\n",
            f"A3a thresholds (locked at Stage 3): pass if wrong-simple rate ≤ half the handler "
            f"baseline ({baseline / 2:.1%}) and zero on linked claims; fail if any wrong-simple on "
            f"linked claims or a rate above the baseline ({baseline:.1%}).\n",
@@ -184,7 +204,7 @@ def write_md(results, l1, baseline):
                    f"{r['linked_n']} | {r['over_escalation_rate']:.1%} | {r['with_reason']}/"
                    f"{r['n']} | {r['ungrounded_facts']}/{r['cited_facts']} | {lat} | "
                    f"{r.get('a3a', '-')} |")
-    out.append("\n## Label audit (L1)\n")
+    out.append("\n## Label audit (L1), against the original AI labels\n")
     if not l1 or l1["status"] != "complete":
         out.append("Not complete, so every A3a verdict above is provisional.\n")
     else:

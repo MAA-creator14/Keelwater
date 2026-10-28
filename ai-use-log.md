@@ -54,3 +54,11 @@ Append-only. One entry per AI session that affects the Keelwater work. Keep the 
 - Changed: narrowed Failure 2 to errors with no money moved.
 - Rejected: drift failure mode because I don't believe the claim mix to be a real factor.
 **Evidence:** Chat, 27 Oct; aipdlc-log.md, Stage 2 entry.
+
+## 2026-10-28T07:03:01Z - Item: keelwater-sorting - Stage 3: AI use
+**Asked:** Review 3 riskiest assumptions in Assumptions Register.
+**Got:** A critical review of my assumptions, tresholds, pass and fail outcomes.
+**Kept / changed / rejected:**
+- Kept A1 assumption.
+- Changed: treshold conditons for A1 and A3
+**Evidence:** Chat, 28 Oct; aipdlc-log.md, Stage 3 entry.

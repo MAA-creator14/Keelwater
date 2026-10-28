@@ -1,0 +1,5 @@
+handler baseline (simulated)   acc 85%  wrong-simple 7.5%  linked wrong-simple 5  A3a -
+rules                          acc 89%  wrong-simple 6.2%  linked wrong-simple 2  A3a fail
+prototype stand-in             acc 51%  wrong-simple 27.5%  linked wrong-simple 10  A3a fail
+llm                            acc 69%  wrong-simple 17.5%  linked wrong-simple 4  A3a fail
+L1: {'status': 'complete', 'agreement': 0.5, 'verdict': 'fail', 'disagreements': [{'id': 'K001', 'human': 'simple', 'ai': 'closer_look'}, {'id': 'K012', 'human': 'simple', 'ai': 'closer_look'}, {'id': 'K016', 'human': 'simple', 'ai': 'closer_look'}, {'id': 'K019', 'human': 'closer_look', 'ai': 'simple'}, {'id': 'K024', 'human': 'closer_look', 'ai': 'simple'}, {'id': 'K040', 'human': 'simple', 'ai': 'closer_look'}, {'id': 'K054', 'human': 'simple', 'ai': 'closer_look'}, {'id': 'K059', 'human': 'simple', 'ai': 'closer_look'}, {'id': 'K070', 'human': 'suspicious', 'ai': 'simple'}, {'id': 'K075', 'human': 'closer_look', 'ai': 'simple'}]}

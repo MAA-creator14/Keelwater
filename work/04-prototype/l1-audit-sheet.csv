@@ -1,21 +1,21 @@
 id,your_pile (simple / closer_look / suspicious),why (optional)
-K001,,
-K003,,
-K006,,
-K012,,
-K016,,
-K018,,
-K019,,
-K024,,
-K031,,
-K034,,
-K040,,
-K043,,
-K054,,
-K057,,
-K059,,
-K066,,
-K070,,
-K071,,
-K075,,
-K079,,
+K001,simple,
+K003,suspicious,"Claim requested 1 day before the policy kicked in, several similar claims in the past 1.5 year"
+K006,closer_look,Missing repair estimate and price report
+K012,simple,
+K016,simple,
+K018,simple,
+K019,closer_look,Claim requested 1 day before the policy kicked in
+K024,closer_look,Establish first whether there have been more accidents due to the pothole
+K031,closer_look,"Missing police report, liability confirmation of the other party"
+K040,simple,
+K043,suspicious,"Several missing documents, preference for cash payment"
+K054,simple,
+K057,suspicious,Roofer’s invoice is dated three weeks before the storm
+K058,simple,
+K059,simple,
+K066,suspicious,"Roofer’s invoice is dated three weeks before the storm, related to claim K057?"
+K070,suspicious,"Two of our cars collided on the driveway, how did that happen?"
+K071,closer_look,"Need more detail on why the phone and laptop are damaged, and extent of physiotherapy required"
+K075,closer_look,Need to check whether the own of the other car contacted the claimant
+K079,simple,

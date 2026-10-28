@@ -1,0 +1,11 @@
+id,label,policy_row,description,ok? (yes / no + correct pile)
+K004,suspicious,P11,"Car stolen from outside my house overnight and found burnt out two days later. Claiming the full value, £8362.","no, closer_look"
+K038,closer_look,P16,Car damaged in a hit-and-run while parked. Reported to the police.,yes
+K051,simple,P04,Windscreen cracked by a stone. Replacement £279.,yes
+K052,simple,default,"Reversed into a bollard in a supermarket car park. Rear bumper dented, no other vehicle involved. Garage estimate £637.","no, closer_look"
+K054,closer_look,P01,Side mirror knocked off by a passing van on Station Street. Replacement £884.,"no, closer_look"
+K056,suspicious,P03,Laptop and camera stolen in a break-in. No sign of forced entry. Claiming £3160.,Yes
+K057,suspicious,P14,Storm on the night of the 14th blew tiles off the roof and rain damaged the loft. Claiming £3996. Roofer's invoice is dated three weeks before the storm.,yes
+K059,closer_look,P01,Side mirror knocked off by a passing van on Station Street. Replacement £884. Submitting again as I had no confirmation.,yes
+K076,simple,P10,"Hit a deep pothole on Station Street at night, damaging both nearside wheels and the suspension. Council has acknowledged the pothole. Estimate £4604.",yes
+K077,closer_look,P08,"I was a passenger in BH63 RHY on Victoria Avenue when it was hit from behind. Claiming for my damaged phone, laptop and physiotherapy.",Yes

@@ -94,16 +94,6 @@ Another car pulled out of a side road and hit my front wing. The other driver ga
 - Claimant's earlier claims: none
 - Related claims: none recorded
 
-## K034 (motor, £4,716)
-
-Car stolen from outside my house overnight and found burnt out two days later. Claiming the full value, £4716.
-
-- Incident 2026-10-09, received 2026-10-12
-- Policy: KW-135843, started 2026-10-01, active (checked 2026-10-10)
-- Documents missing: photos, repair_estimate
-- Claimant's earlier claims: none
-- Related claims: none recorded
-
 ## K040 (motor, £659)
 
 Rear-ended at traffic lights on Victoria Avenue. Boot lid and bumper damaged. Estimate £659.
@@ -143,6 +133,17 @@ Storm on the night of the 14th blew tiles off the roof and rain damaged the loft
 - Documents missing: none
 - Claimant's earlier claims: none
 - Related claims: none recorded
+
+## K058 (glass, £223)
+
+Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at £223.
+
+- Incident 2026-10-09, received 2026-10-10
+- Policy: KW-477744, started 2023-10-13, active (checked 2026-10-10)
+- Documents missing: none
+- Claimant's earlier claims: none
+- Related claims: none recorded
+
 
 ## K059 (motor, £884)
 

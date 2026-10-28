@@ -70,3 +70,8 @@
 **Proposed:** Register of 5 rows (A1 waits not queue, A2 overlooked information, A3a AI accuracy, A3b AI value, L1 label audit), ranked, with thresholds set before any test.
 **Decision:** Approved
 **Notes:** Thresholds locked. A1 keeps the Stage 0 queue-time 30%/15%, reversed so queue ≤15% passes. A3 split by AI; A2 and A3 redrafted by AI and edited by human. Label audit (L1) runs before A3a.
+
+## 2026-10-28T16:32:00Z - Item: keelwater-sorting - Stage: Stage 4a, System test
+**Proposed:** Three variants on 80 invented claims (simulation): rules 6.2% wrong-simple, 2 linked; prototype stand-in 27.5%, 10 linked; LLM 17.5%, 4 linked. Handler baseline 7.5% (simulated). All fail A3a.
+**Decision:** Approved
+**Notes:** Outcome: revise. AI may only route claims toward a human; auto-clear dropped. Planted faults: both found. L1 failed (50%); labels rebuilt from human sorting policy and spot-checked. Reason rubric not done. Limits in work/04-prototype/test-notes.md.

@@ -1,0 +1,5865 @@
+{
+ "results": [
+  {
+   "variant": "handler baseline (simulated)",
+   "n": 80,
+   "accuracy": 0.85,
+   "wrong_simple_rate": 0.075,
+   "wrong_simple_ids": [
+    "K020",
+    "K044",
+    "K060",
+    "K070",
+    "K071",
+    "K075"
+   ],
+   "linked_n": 17,
+   "linked_wrong_simple": 5,
+   "linked_wrong_simple_ids": [
+    "K020",
+    "K044",
+    "K060",
+    "K070",
+    "K071"
+   ],
+   "over_escalation_rate": 0.075,
+   "data_flagged_n": 32,
+   "data_flagged_sorted_simple": [
+    "K008",
+    "K020",
+    "K071"
+   ],
+   "cited_facts": 0,
+   "ungrounded_facts": 0,
+   "ungrounded_examples": [],
+   "with_reason": 0,
+   "latency_median_ms": null,
+   "latency_p90_ms": null,
+   "confusion": {
+    "simple": {
+     "simple": 28,
+     "closer_look": 6,
+     "suspicious": 0,
+     "refused": 0,
+     "no_answer": 0
+    },
+    "closer_look": {
+     "simple": 6,
+     "closer_look": 28,
+     "suspicious": 0,
+     "refused": 0,
+     "no_answer": 0
+    },
+    "suspicious": {
+     "simple": 0,
+     "closer_look": 0,
+     "suspicious": 12,
+     "refused": 0,
+     "no_answer": 0
+    }
+   }
+  },
+  {
+   "variant": "rules",
+   "n": 80,
+   "accuracy": 0.8875,
+   "wrong_simple_rate": 0.0625,
+   "wrong_simple_ids": [
+    "K038",
+    "K044",
+    "K060",
+    "K068",
+    "K075"
+   ],
+   "linked_n": 17,
+   "linked_wrong_simple": 2,
+   "linked_wrong_simple_ids": [
+    "K044",
+    "K060"
+   ],
+   "over_escalation_rate": 0.05,
+   "data_flagged_n": 32,
+   "data_flagged_sorted_simple": [],
+   "cited_facts": 96,
+   "ungrounded_facts": 0,
+   "ungrounded_examples": [],
+   "with_reason": 80,
+   "latency_median_ms": 0.0042339961510151625,
+   "latency_p90_ms": 0.0068215071223676205,
+   "confusion": {
+    "simple": {
+     "simple": 30,
+     "closer_look": 4,
+     "suspicious": 0,
+     "refused": 0,
+     "no_answer": 0
+    },
+    "closer_look": {
+     "simple": 5,
+     "closer_look": 29,
+     "suspicious": 0,
+     "refused": 0,
+     "no_answer": 0
+    },
+    "suspicious": {
+     "simple": 0,
+     "closer_look": 0,
+     "suspicious": 12,
+     "refused": 0,
+     "no_answer": 0
+    }
+   },
+   "a3a": "fail"
+  },
+  {
+   "variant": "prototype stand-in",
+   "n": 80,
+   "accuracy": 0.5125,
+   "wrong_simple_rate": 0.275,
+   "wrong_simple_ids": [
+    "K001",
+    "K009",
+    "K012",
+    "K026",
+    "K030",
+    "K035",
+    "K038",
+    "K040",
+    "K044",
+    "K047",
+    "K049",
+    "K054",
+    "K059",
+    "K060",
+    "K065",
+    "K066",
+    "K067",
+    "K068",
+    "K069",
+    "K070",
+    "K074",
+    "K075"
+   ],
+   "linked_n": 17,
+   "linked_wrong_simple": 10,
+   "linked_wrong_simple_ids": [
+    "K001",
+    "K009",
+    "K030",
+    "K044",
+    "K047",
+    "K054",
+    "K059",
+    "K060",
+    "K070",
+    "K074"
+   ],
+   "over_escalation_rate": 0.075,
+   "data_flagged_n": 32,
+   "data_flagged_sorted_simple": [
+    "K001",
+    "K008",
+    "K016",
+    "K026",
+    "K030",
+    "K036",
+    "K049",
+    "K054",
+    "K055",
+    "K059"
+   ],
+   "cited_facts": 0,
+   "ungrounded_facts": 0,
+   "ungrounded_examples": [],
+   "with_reason": 0,
+   "latency_median_ms": 0.003948996891267598,
+   "latency_p90_ms": 0.008491394692100585,
+   "confusion": {
+    "simple": {
+     "simple": 28,
+     "closer_look": 6,
+     "suspicious": 0,
+     "refused": 0,
+     "no_answer": 0
+    },
+    "closer_look": {
+     "simple": 21,
+     "closer_look": 13,
+     "suspicious": 0,
+     "refused": 0,
+     "no_answer": 0
+    },
+    "suspicious": {
+     "simple": 1,
+     "closer_look": 11,
+     "suspicious": 0,
+     "refused": 0,
+     "no_answer": 0
+    }
+   },
+   "a3a": "fail"
+  },
+  {
+   "variant": "llm",
+   "n": 80,
+   "accuracy": 0.6875,
+   "wrong_simple_rate": 0.175,
+   "wrong_simple_ids": [
+    "K009",
+    "K012",
+    "K013",
+    "K035",
+    "K038",
+    "K040",
+    "K044",
+    "K060",
+    "K065",
+    "K067",
+    "K068",
+    "K069",
+    "K074",
+    "K075"
+   ],
+   "linked_n": 17,
+   "linked_wrong_simple": 4,
+   "linked_wrong_simple_ids": [
+    "K009",
+    "K044",
+    "K060",
+    "K074"
+   ],
+   "over_escalation_rate": 0.0625,
+   "data_flagged_n": 32,
+   "data_flagged_sorted_simple": [
+    "K013"
+   ],
+   "cited_facts": 884,
+   "ungrounded_facts": 88,
+   "ungrounded_examples": [
+    {
+     "id": "K001",
+     "field": "related_claims",
+     "value": "K030, relation: same incident, claimant_id: P0054"
+    },
+    {
+     "id": "K001",
+     "field": "policy_status",
+     "value": "active (checked 2026-10-10)"
+    },
+    {
+     "id": "K001",
+     "field": "documents",
+     "value": "photos: true, repair_estimate: true"
+    },
+    {
+     "id": "K002",
+     "field": "description",
+     "value": "Washing machine hose split and leaked onto the kitchen floor. Vinyl flooring needs replacing, quoted at \u00a3438."
+    },
+    {
+     "id": "K003",
+     "field": "description",
+     "value": "Laptop and camera stolen in a break-in. No sign of forced entry. Claiming \u00a31662."
+    }
+   ],
+   "with_reason": 80,
+   "latency_median_ms": 6107.373596998514,
+   "latency_p90_ms": 8663.477481203154,
+   "confusion": {
+    "simple": {
+     "simple": 29,
+     "closer_look": 5,
+     "suspicious": 0,
+     "refused": 0,
+     "no_answer": 0
+    },
+    "closer_look": {
+     "simple": 14,
+     "closer_look": 20,
+     "suspicious": 0,
+     "refused": 0,
+     "no_answer": 0
+    },
+    "suspicious": {
+     "simple": 0,
+     "closer_look": 6,
+     "suspicious": 6,
+     "refused": 0,
+     "no_answer": 0
+    }
+   },
+   "a3a": "fail"
+  }
+ ],
+ "l1": {
+  "status": "complete",
+  "agreement": 0.5,
+  "verdict": "fail",
+  "disagreements": [
+   {
+    "id": "K001",
+    "human": "simple",
+    "ai": "closer_look"
+   },
+   {
+    "id": "K012",
+    "human": "simple",
+    "ai": "closer_look"
+   },
+   {
+    "id": "K016",
+    "human": "simple",
+    "ai": "closer_look"
+   },
+   {
+    "id": "K019",
+    "human": "closer_look",
+    "ai": "simple"
+   },
+   {
+    "id": "K024",
+    "human": "closer_look",
+    "ai": "simple"
+   },
+   {
+    "id": "K040",
+    "human": "simple",
+    "ai": "closer_look"
+   },
+   {
+    "id": "K054",
+    "human": "simple",
+    "ai": "closer_look"
+   },
+   {
+    "id": "K059",
+    "human": "simple",
+    "ai": "closer_look"
+   },
+   {
+    "id": "K070",
+    "human": "suspicious",
+    "ai": "simple"
+   },
+   {
+    "id": "K075",
+    "human": "closer_look",
+    "ai": "simple"
+   }
+  ]
+ },
+ "predictions": {
+  "rules": {
+   "K001": {
+    "pile": "closer_look",
+    "reason": "Closer look: related to K030.",
+    "cited_facts": [
+     {
+      "field": "related_claims",
+      "value": "K030"
+     }
+    ]
+   },
+   "K002": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3438.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "438"
+     }
+    ]
+   },
+   "K003": {
+    "pile": "suspicious",
+    "reason": "Claimant has 4 claims in the last 12 months.",
+    "cited_facts": [
+     {
+      "field": "claimant_history",
+      "value": "H-9009"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-3273"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-9568"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-2224"
+     }
+    ]
+   },
+   "K004": {
+    "pile": "suspicious",
+    "reason": "Policy started 8 days before the incident.",
+    "cited_facts": [
+     {
+      "field": "policy_start_date",
+      "value": "2026-10-01"
+     }
+    ]
+   },
+   "K005": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing police_ref; third-party liability not confirmed.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "police_ref"
+     },
+     {
+      "field": "description",
+      "value": "liability not yet confirmed"
+     }
+    ]
+   },
+   "K006": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing repair_estimate; related to K074.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "repair_estimate"
+     },
+     {
+      "field": "related_claims",
+      "value": "K074"
+     }
+    ]
+   },
+   "K007": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a395.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "95"
+     }
+    ]
+   },
+   "K008": {
+    "pile": "closer_look",
+    "reason": "Closer look: policy status last checked 119 days ago.",
+    "cited_facts": [
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-06-14"
+     }
+    ]
+   },
+   "K009": {
+    "pile": "closer_look",
+    "reason": "Closer look: related to K077.",
+    "cited_facts": [
+     {
+      "field": "related_claims",
+      "value": "K077"
+     }
+    ]
+   },
+   "K010": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a35,791.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "5791"
+     }
+    ]
+   },
+   "K011": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3700.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "700"
+     }
+    ]
+   },
+   "K012": {
+    "pile": "closer_look",
+    "reason": "Closer look: claimant has claimed in the last 12 months.",
+    "cited_facts": [
+     {
+      "field": "claimant_history",
+      "value": "H-2019"
+     }
+    ]
+   },
+   "K013": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing engineer_report.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "engineer_report"
+     }
+    ]
+   },
+   "K014": {
+    "pile": "suspicious",
+    "reason": "Claimant asks for payment in cash.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "cash"
+     }
+    ]
+   },
+   "K015": {
+    "pile": "suspicious",
+    "reason": "Policy started 8 days before the incident.",
+    "cited_facts": [
+     {
+      "field": "policy_start_date",
+      "value": "2026-10-01"
+     }
+    ]
+   },
+   "K016": {
+    "pile": "closer_look",
+    "reason": "Closer look: policy status last checked 69 days ago.",
+    "cited_facts": [
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-08-02"
+     }
+    ]
+   },
+   "K017": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a396.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "96"
+     }
+    ]
+   },
+   "K018": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3150.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "150"
+     }
+    ]
+   },
+   "K019": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a31,336.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "1336"
+     }
+    ]
+   },
+   "K020": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing repair_estimate.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "repair_estimate"
+     }
+    ]
+   },
+   "K021": {
+    "pile": "suspicious",
+    "reason": "Supporting document is dated before the incident.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "dated"
+     }
+    ]
+   },
+   "K022": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing repair_estimate.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "repair_estimate"
+     }
+    ]
+   },
+   "K023": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a35,389.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "5389"
+     }
+    ]
+   },
+   "K024": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a33,472.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "3472"
+     }
+    ]
+   },
+   "K025": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3991.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "991"
+     }
+    ]
+   },
+   "K026": {
+    "pile": "closer_look",
+    "reason": "Closer look: no policy number.",
+    "cited_facts": [
+     {
+      "field": "policy_number",
+      "value": "None"
+     }
+    ]
+   },
+   "K027": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3914.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "914"
+     }
+    ]
+   },
+   "K028": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3641.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "641"
+     }
+    ]
+   },
+   "K029": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3786.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "786"
+     }
+    ]
+   },
+   "K030": {
+    "pile": "closer_look",
+    "reason": "Closer look: related to K001.",
+    "cited_facts": [
+     {
+      "field": "related_claims",
+      "value": "K001"
+     }
+    ]
+   },
+   "K031": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing police_ref; third-party liability not confirmed.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "police_ref"
+     },
+     {
+      "field": "description",
+      "value": "liability not yet confirmed"
+     }
+    ]
+   },
+   "K032": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing photos, repair_estimate.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "photos"
+     },
+     {
+      "field": "documents",
+      "value": "repair_estimate"
+     }
+    ]
+   },
+   "K033": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a35,095.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "5095"
+     }
+    ]
+   },
+   "K034": {
+    "pile": "suspicious",
+    "reason": "Policy started 8 days before the incident.",
+    "cited_facts": [
+     {
+      "field": "policy_start_date",
+      "value": "2026-10-01"
+     }
+    ]
+   },
+   "K035": {
+    "pile": "closer_look",
+    "reason": "Closer look: claimant has claimed in the last 12 months.",
+    "cited_facts": [
+     {
+      "field": "claimant_history",
+      "value": "H-7252"
+     }
+    ]
+   },
+   "K036": {
+    "pile": "closer_look",
+    "reason": "Closer look: policy status last checked 76 days ago.",
+    "cited_facts": [
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-07-28"
+     }
+    ]
+   },
+   "K037": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3482.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "482"
+     }
+    ]
+   },
+   "K038": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a31,800.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "1800"
+     }
+    ]
+   },
+   "K039": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3633.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "633"
+     }
+    ]
+   },
+   "K040": {
+    "pile": "closer_look",
+    "reason": "Closer look: claimant has claimed in the last 12 months.",
+    "cited_facts": [
+     {
+      "field": "claimant_history",
+      "value": "H-5807"
+     }
+    ]
+   },
+   "K041": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3806.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "806"
+     }
+    ]
+   },
+   "K042": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing photos, repair_estimate.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "photos"
+     },
+     {
+      "field": "documents",
+      "value": "repair_estimate"
+     }
+    ]
+   },
+   "K043": {
+    "pile": "suspicious",
+    "reason": "Claimant asks for payment in cash.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "cash"
+     }
+    ]
+   },
+   "K044": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a31,052.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "1052"
+     }
+    ]
+   },
+   "K045": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3117.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "117"
+     }
+    ]
+   },
+   "K046": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3164.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "164"
+     }
+    ]
+   },
+   "K047": {
+    "pile": "closer_look",
+    "reason": "Closer look: related to K070.",
+    "cited_facts": [
+     {
+      "field": "related_claims",
+      "value": "K070"
+     }
+    ]
+   },
+   "K048": {
+    "pile": "suspicious",
+    "reason": "Claimant asks for payment in cash.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "cash"
+     }
+    ]
+   },
+   "K049": {
+    "pile": "closer_look",
+    "reason": "Closer look: no policy number.",
+    "cited_facts": [
+     {
+      "field": "policy_number",
+      "value": "None"
+     }
+    ]
+   },
+   "K050": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing repair_estimate.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "repair_estimate"
+     }
+    ]
+   },
+   "K051": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3279.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "279"
+     }
+    ]
+   },
+   "K052": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3637.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "637"
+     }
+    ]
+   },
+   "K053": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3160.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "160"
+     }
+    ]
+   },
+   "K054": {
+    "pile": "closer_look",
+    "reason": "Closer look: related to K059.",
+    "cited_facts": [
+     {
+      "field": "related_claims",
+      "value": "K059"
+     }
+    ]
+   },
+   "K055": {
+    "pile": "closer_look",
+    "reason": "Closer look: policy status last checked 97 days ago.",
+    "cited_facts": [
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-07-07"
+     }
+    ]
+   },
+   "K056": {
+    "pile": "suspicious",
+    "reason": "Claimant has 4 claims in the last 12 months.",
+    "cited_facts": [
+     {
+      "field": "claimant_history",
+      "value": "H-7921"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-3667"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-9097"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-1079"
+     }
+    ]
+   },
+   "K057": {
+    "pile": "suspicious",
+    "reason": "Supporting document is dated before the incident.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "dated"
+     }
+    ]
+   },
+   "K058": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3223.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "223"
+     }
+    ]
+   },
+   "K059": {
+    "pile": "closer_look",
+    "reason": "Closer look: related to K054.",
+    "cited_facts": [
+     {
+      "field": "related_claims",
+      "value": "K054"
+     }
+    ]
+   },
+   "K060": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a31,693.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "1693"
+     }
+    ]
+   },
+   "K061": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing repair_estimate.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "repair_estimate"
+     }
+    ]
+   },
+   "K062": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3274.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "274"
+     }
+    ]
+   },
+   "K063": {
+    "pile": "suspicious",
+    "reason": "Claimant has 4 claims in the last 12 months.",
+    "cited_facts": [
+     {
+      "field": "claimant_history",
+      "value": "H-7367"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-2558"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-6994"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-8278"
+     }
+    ]
+   },
+   "K064": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3129.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "129"
+     }
+    ]
+   },
+   "K065": {
+    "pile": "closer_look",
+    "reason": "Closer look: claimant has claimed in the last 12 months.",
+    "cited_facts": [
+     {
+      "field": "claimant_history",
+      "value": "H-6270"
+     }
+    ]
+   },
+   "K066": {
+    "pile": "suspicious",
+    "reason": "Supporting document is dated before the incident.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "dated"
+     }
+    ]
+   },
+   "K067": {
+    "pile": "closer_look",
+    "reason": "Closer look: claimant has claimed in the last 12 months.",
+    "cited_facts": [
+     {
+      "field": "claimant_history",
+      "value": "H-1733"
+     }
+    ]
+   },
+   "K068": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3260.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "260"
+     }
+    ]
+   },
+   "K069": {
+    "pile": "closer_look",
+    "reason": "Closer look: claimant has claimed in the last 12 months.",
+    "cited_facts": [
+     {
+      "field": "claimant_history",
+      "value": "H-2590"
+     }
+    ]
+   },
+   "K070": {
+    "pile": "closer_look",
+    "reason": "Closer look: related to K047.",
+    "cited_facts": [
+     {
+      "field": "related_claims",
+      "value": "K047"
+     }
+    ]
+   },
+   "K071": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing repair_estimate.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "repair_estimate"
+     }
+    ]
+   },
+   "K072": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3156.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "156"
+     }
+    ]
+   },
+   "K073": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a31,062.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "1062"
+     }
+    ]
+   },
+   "K074": {
+    "pile": "closer_look",
+    "reason": "Closer look: related to K006.",
+    "cited_facts": [
+     {
+      "field": "related_claims",
+      "value": "K006"
+     }
+    ]
+   },
+   "K075": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3600.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "600"
+     }
+    ]
+   },
+   "K076": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a34,604.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "4604"
+     }
+    ]
+   },
+   "K077": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing repair_estimate; related to K009.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "repair_estimate"
+     },
+     {
+      "field": "related_claims",
+      "value": "K009"
+     }
+    ]
+   },
+   "K078": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing police_ref; third-party liability not confirmed.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "police_ref"
+     },
+     {
+      "field": "description",
+      "value": "liability not yet confirmed"
+     }
+    ]
+   },
+   "K079": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a36,528.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "6528"
+     }
+    ]
+   },
+   "K080": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3720.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "720"
+     }
+    ]
+   }
+  },
+  "prototype stand-in": {
+   "K001": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K002": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K003": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K004": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K005": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K006": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K007": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K008": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K009": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K010": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K011": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K012": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K013": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K014": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K015": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K016": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K017": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K018": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K019": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K020": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K021": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K022": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K023": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K024": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K025": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K026": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K027": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K028": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K029": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K030": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K031": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K032": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K033": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K034": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K035": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K036": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K037": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K038": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K039": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K040": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K041": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K042": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K043": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K044": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K045": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K046": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K047": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K048": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K049": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K050": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K051": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K052": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K053": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K054": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K055": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K056": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K057": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K058": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K059": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K060": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K061": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K062": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K063": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K064": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K065": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K066": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K067": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K068": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K069": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K070": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K071": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K072": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K073": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K074": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K075": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K076": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K077": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K078": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K079": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K080": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   }
+  },
+  "llm": {
+   "K001": {
+    "pile": "closer_look",
+    "reason": "This looks like an ordinary minor motor claim. The policy is active and has run since 2023, and photos and a repair estimate are attached. However, another claim (K030) is recorded for the same incident by the same claimant, and the description says this is a resubmission because no confirmation was received. That explanation is plausible and does not suggest fraud, but the record does not show the status of K030. The handler should confirm whether K030 is still open or already paid, then merge or close one of the two claims so the claim is not paid twice.",
+    "cited_facts": [
+     {
+      "field": "related_claims",
+      "value": "K030, relation: same incident, claimant_id: P0054"
+     },
+     {
+      "field": "description",
+      "value": "Submitting again as I had no confirmation."
+     },
+     {
+      "field": "policy_status",
+      "value": "active (checked 2026-10-10)"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "documents",
+      "value": "photos: true, repair_estimate: true"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "900"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (no prior claims listed)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K002": {
+    "pile": "simple",
+    "reason": "A small, well-documented escape-of-water claim on a long-standing, active policy. The incident date (2026-10-09) falls within cover, and the claim was reported two days later. Photos and a repair estimate support the stated amount. There is no previous claims history and no related claims. No police reference or engineer report was supplied, but neither would normally be expected for a split washing machine hose of this size. Nothing in the record suggests further checks are needed.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "438"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-11"
+     },
+     {
+      "field": "description",
+      "value": "Washing machine hose split and leaked onto the kitchen floor. Vinyl flooring needs replacing, quoted at \u00a3438."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (none)"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (none)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K003": {
+    "pile": "closer_look",
+    "reason": "This claim should not be paid automatically. Some details need checking first, though nothing here on its own shows wrongdoing. (1) The description calls it a break-in but says there was no sign of forced entry. That needs clarifying: how did the thief get in, and does the policy cover theft without forced entry? (2) The claimant has four earlier home claims, all paid. Three of them fall in the roughly two months before this incident (10 Aug, 1 Sep and 17 Sep 2026). The handler should confirm none of them overlap with this one, for example the same laptop or camera claimed twice. (3) The record has no proof of ownership or value for the laptop and camera. Other points are in order. A police reference and photos were supplied, the policy started in 2023, and it was active when checked on 2026-10-10. If these checks come back clean, the claim can be paid.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "Laptop and camera stolen in a break-in. No sign of forced entry. Claiming \u00a31662."
+     },
+     {
+      "field": "amount_gbp",
+      "value": "1662"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-2224, 2026-08-10, home, \u00a32361, paid"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-3273, 2026-09-01, home, \u00a31126, paid"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-9568, 2026-09-17, home, \u00a32220, paid"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-9009, 2025-12-09, home, \u00a33290, paid"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "true"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K004": {
+    "pile": "suspicious",
+    "reason": "Referred for investigation because of an unexplained timeline conflict and an early, full-value claim. This is not a finding of wrongdoing. The description says the car was stolen overnight and found burnt out two days later. With an incident date of 9 Oct, that would be 11 Oct, but the claim was received on 10 Oct. The dates cannot all be right as recorded, which may be a data entry error that needs checking. The theft happened 8 days after the policy started, and the claim is for the vehicle's full value of \u00a38,362. A police reference is provided, but there are no photos, the engineer report status is unknown, and nothing in the record shows how the vehicle's value was established. There is no prior claim history or related claims.",
+    "cited_facts": [
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "description",
+      "value": "Car stolen from outside my house overnight and found burnt out two days later. Claiming the full value, \u00a38362."
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2026-10-01"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "8362"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "true"
+     },
+     {
+      "field": "documents.photos",
+      "value": "false"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K005": {
+    "pile": "closer_look",
+    "reason": "There are no signs of fraud. The policy is active and has run for about three years, the claim was reported two days after the incident, photos and a repair estimate were supplied, and the claimant has no prior or related claims. The handler should still check a few details before paying. A third party is involved and their insurer has not yet confirmed liability, which affects who pays and whether costs can be recovered. The record does not say whether an engineer report has been requested or is needed. There is no police reference, though one may not be needed for a non-injury collision where the other driver gave their details.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "Third party involved; liability not yet confirmed by their insurer."
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-11"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "1857"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "false"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K006": {
+    "pile": "closer_look",
+    "reason": "Nothing points to fraud. The policy is active and long-standing, the claimant has no prior claims, and a second claim from another person for the same incident fits a passenger in a rear-end collision. The claim does need checking before payment. It combines an injury (physiotherapy) with personal belongings (phone and laptop), and the record shows only photos as evidence. There is no police reference and no engineer report. The record also does not show any receipts, valuations or medical evidence for the physiotherapy, or the claimant's relationship to the policy. The handler should confirm the claimant's link to the policy, check the related claim K074, and ask for proof of ownership, values and medical evidence for the physiotherapy.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "I was a passenger in XB72 WHL on Mill Road when it was hit from behind. Claiming for my damaged phone, laptop and physiotherapy."
+     },
+     {
+      "field": "amount_gbp",
+      "value": "3297"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (no prior claims)"
+     },
+     {
+      "field": "related_claims",
+      "value": "K074, same incident, claimant P0045"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "null"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K007": {
+    "pile": "simple",
+    "reason": "Low-value windscreen claim (\u00a395) reported two days after the incident on a policy active since 2023. Photos and a repair estimate are provided, and the description is consistent with the amount quoted. There are no prior claims and no related claims. A police reference and engineer report are absent, but neither is normally needed for stone-chip glass damage. Policy status was confirmed active on 2026-10-10, after the incident date.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "glass"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "95"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-11"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "description",
+      "value": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a395."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (none)"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (none)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K008": {
+    "pile": "closer_look",
+    "reason": "This is a low-value, well-documented claim with nothing suspicious about it. The policy began about three years before the incident, photos and a repair estimate are supplied, and there are no prior or related claims. However, the policy status was last checked on 2026-06-14, about four months before the incident. We cannot confirm the policy was still active on the incident date. Once current cover is reconfirmed, this should be paid as a simple claim. A police reference and engineer report are absent but would not normally be needed for minor parking damage of this size.",
+    "cited_facts": [
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-06-14"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "418"
+     },
+     {
+      "field": "description",
+      "value": "Kerbed the car while parking, front alloy cracked. Estimate \u00a3418."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K009": {
+    "pile": "simple",
+    "reason": "This is a modest rear-end collision claim on a policy that has been active for about three years. Photos, a repair estimate and a police reference are all supplied, and the claimant has no previous claims. The linked claim is for the same incident from another person, which is normal in a two-car collision. No engineer report is on file, but at this amount it does not look necessary to decide the claim.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "1420"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "description",
+      "value": "another car went into the back of me on Victoria Avenue. Bumper and tailgate damaged."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "true"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (no prior claims)"
+     },
+     {
+      "field": "related_claims",
+      "value": "K077, same incident, claimant P0048"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K010": {
+    "pile": "simple",
+    "reason": "The policy is long-standing and was confirmed active the day before the claim arrived. The claim was reported two days after the incident. The damage described (wheels and suspension from a pothole) is supported by photos, a repair estimate and an engineer report, and there is no prior claim history or related claims. There is no police reference, but none would normally be expected for a single-vehicle pothole incident. The council's acknowledgement of the pothole is stated in the description but not documented; it matters for later recovery from the council, not for paying the claim.",
+    "cited_facts": [
+     {
+      "field": "policy_start_date",
+      "value": "2020-10-13"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-11"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "5791"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     },
+     {
+      "field": "description",
+      "value": "Council has acknowledged the pothole."
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K011": {
+    "pile": "closer_look",
+    "reason": "Nothing here points to fraud. It is a modest claim with photos and a repair estimate, on a policy running since 2023, with no previous or related claims. Two things need checking before payment. First, the policy was last confirmed active on 2026-08-28, about six weeks before the incident on 2026-10-09, so cover on the incident date should be re-confirmed. Second, the record does not show whether this policy's accidental damage cover includes damage caused by pets, which is often excluded. The policy wording needs checking.",
+    "cited_facts": [
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-08-28"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "description",
+      "value": "Dog chewed through the sofa. Claiming accidental damage cover."
+     },
+     {
+      "field": "amount_gbp",
+      "value": "700"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K012": {
+    "pile": "simple",
+    "reason": "This is a low-value motor claim on a policy that was active and has run for about three years. It was reported the day after the incident, and the photos, repair estimate and police reference are all supplied. The description matches the estimate amount. There is one previous motor claim from July 2026, which was paid. A single earlier claim is not by itself a sign of a problem, and no related claims are listed. There is no engineer report, but at this amount the repair estimate and photos appear enough to settle the claim. Nothing in the record suggests it needs further checks.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "621"
+     },
+     {
+      "field": "policy_status",
+      "value": "active (checked 2026-10-10)"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "description",
+      "value": "Rear-ended at traffic lights on Brook Way. Boot lid and bumper damaged. Estimate \u00a3621."
+     },
+     {
+      "field": "documents",
+      "value": "photos: true, repair_estimate: true, police_ref: true, engineer_report: null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-2019, 2026-07-30, motor, \u00a31090, paid"
+     },
+     {
+      "field": "related_claims",
+      "value": "none"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K013": {
+    "pile": "simple",
+    "reason": "This is a routine escape-of-water claim on a long-standing, active home policy. It was reported two days after the incident, and the amount is moderate. Photos and a repair estimate are supplied. There is no prior claim history and there are no related claims. A police reference is not relevant to a burst pipe, and nothing in the record suggests an engineer report is needed for this kind of damage.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "home"
+     },
+     {
+      "field": "description",
+      "value": "Burst pipe in the loft during the cold snap flooded the upstairs bedroom. Plumber and builder quotes attached."
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-11"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "4100"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K014": {
+    "pile": "suspicious",
+    "reason": "Several common risk indicators appear together, so we recommend investigation before payment. This is not a finding of fraud. The claimant asks for payment in cash. The claim is for whiplash and lost earnings. No photos or police reference have been supplied. Two other people have claimed for the same incident. The policy began about ten weeks before the incident. The record also lacks evidence needed to assess the claim itself, including a medical report for the injury and proof of lost earnings. The engineer report status is not recorded.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "Passenger in VD72 XST when it was hit on Mill Road. Whiplash and lost earnings. Prefer payment in cash."
+     },
+     {
+      "field": "amount_gbp",
+      "value": "4535"
+     },
+     {
+      "field": "documents.photos",
+      "value": "false"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "false"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "related_claims",
+      "value": "K043 (claimant P0065) and K048 (claimant P0067), both 'same incident'"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2026-07-31"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "policy_status",
+      "value": "active (checked 2026-10-10)"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (no prior claims)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K015": {
+    "pile": "suspicious",
+    "reason": "Refer for investigation; this is not a finding of fraud. The timeline does not add up. The incident date is 9 Oct 2026 and the claim was received on 10 Oct 2026, but the description says the car was found burnt out two days after it was stolen. That would be 11 Oct, after the claim was received. The theft also happened eight days after the policy started, and the claim is for the car's full value. A police reference has been provided, but there are no photos, and the engineer's report is missing (not recorded), so the vehicle's condition and value cannot yet be confirmed. The claimant has no previous claims and there are no related claims, which counts in their favour. The date discrepancy should be clarified with the claimant and the police record checked before any payment.",
+    "cited_facts": [
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "description",
+      "value": "Car stolen from outside my house overnight and found burnt out two days later. Claiming the full value, \u00a37208."
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2026-10-01"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "7208"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "true"
+     },
+     {
+      "field": "documents.photos",
+      "value": "false"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K016": {
+    "pile": "closer_look",
+    "reason": "This looks like a routine, low-value claim. It is \u00a3460 for a cracked alloy from kerbing, with photos and a repair estimate supplied, a policy held since 2023, and no prior or related claims. The one gap is that the policy was last confirmed active on 2026-08-02, about two months before the incident. We have no record that cover was still in force on the incident date. Once current cover is reconfirmed, this should be paid as a simple claim. A police reference or engineer report would not normally be expected for minor parking damage of this size.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "460"
+     },
+     {
+      "field": "description",
+      "value": "Kerbed the car while parking, front alloy cracked. Estimate \u00a3460."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-08-02"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (none)"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (none)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K017": {
+    "pile": "simple",
+    "reason": "This is a low-value windscreen claim on a policy that was confirmed active on the day the claim arrived. The policy began about three years before the incident. The claim was reported the day after the incident. Photos and a repair estimate were supplied, and the quoted amount matches the description. The claimant has no previous claims and there are no related claims. No police reference or engineer report was provided. These are not normally needed for a stone-chip windscreen claim of this size, so their absence is not a concern.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "glass"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "96"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "description",
+      "value": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a396."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "null"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (no prior claims)"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (none)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K018": {
+    "pile": "simple",
+    "reason": "This is a low-value windscreen claim on a policy that has been active for about three years. It was reported two days after the incident, and the description matches the quoted amount. Photos and a repair estimate are provided. The claimant has no previous claims and there are no related claims. A police reference and an engineer report are not provided, but neither is normally needed for stone-chip glass damage. Nothing in the record suggests a need for further checks.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "glass"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "150"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-11"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "description",
+      "value": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3150."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (no prior claims)"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (none)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K019": {
+    "pile": "simple",
+    "reason": "This is a low-value, single-vehicle bumper claim with photos and a garage estimate that matches the amount claimed. The policy has been running since 2023 and was confirmed active the day after the incident. There is no previous claim history and no related claims. No police reference or engineer report was supplied, but neither seems necessary for minor damage from hitting a bollard with no other party involved.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "Reversed into a bollard in a supermarket car park. Rear bumper dented, no other vehicle involved. Garage estimate \u00a31336."
+     },
+     {
+      "field": "amount_gbp",
+      "value": "1336"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (none)"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (none)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K020": {
+    "pile": "closer_look",
+    "reason": "Nothing in the record points to fraud. The policy is active, it started about three years before the incident, the claim arrived four days after the incident, and there is no prior claim history. However, the claim includes physiotherapy, which is an injury cost, alongside damaged belongings. The only documents provided are photos. There is no police reference or other evidence of the collision. The record does not show whether the claimant is the policyholder or how a passenger is covered under this motor policy. It also does not show how the \u00a32,363 is split between the phone, laptop and physiotherapy. These details should be confirmed before payment.",
+    "cited_facts": [
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-06"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "2363"
+     },
+     {
+      "field": "description",
+      "value": "I was a passenger in HP43 ELB on Chapel Lane when it was hit from behind. Claiming for my damaged phone, laptop and physiotherapy."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K021": {
+    "pile": "suspicious",
+    "reason": "The dates in this claim do not agree, and the repair paperwork appears to predate the damage. The description places the storm on the night of the 14th, but the recorded incident date is 2 September. The description also says the roofer's invoice is dated three weeks before the storm, so the invoiced work may not relate to this storm. There may be an innocent explanation, such as a typing error or earlier unrelated work, but together these points warrant investigation before payment. The policy is active, began about three years before the incident, and shows no prior or related claims. Photos and a repair estimate are on file. No weather or engineer evidence confirming the storm date is in the record.",
+    "cited_facts": [
+     {
+      "field": "incident_date",
+      "value": "2026-09-02"
+     },
+     {
+      "field": "description",
+      "value": "Storm on the night of the 14th blew tiles off the roof and rain damaged the loft."
+     },
+     {
+      "field": "description",
+      "value": "Roofer's invoice is dated three weeks before the storm."
+     },
+     {
+      "field": "amount_gbp",
+      "value": "3412"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K022": {
+    "pile": "closer_look",
+    "reason": "Nothing points to fraud. The policy is active and has run since 2023. The incident was reported the day after it happened, photos are supplied, and there are no prior or related claims. However, the claimed amount of \u00a31,713 has no repair estimate behind it yet; the description says the estimate will follow. The amount should be checked against that estimate before payment. No police reference or engineer report is on file, which is not necessarily expected for minor single-vehicle damage of this kind.",
+    "cited_facts": [
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "1713"
+     },
+     {
+      "field": "description",
+      "value": "Car scraped along a wall in a narrow lane. Estimate to follow."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "false"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K023": {
+    "pile": "simple",
+    "reason": "This looks like a straightforward pothole damage claim. The policy has been in place since 2020 and was confirmed active the day before the claim arrived. The claim came in two days after the incident. Photos, a repair estimate and an engineer report are all supplied, and they support the estimate. There is no previous claim history and no related claims. No police reference is given, but one would not normally be expected for pothole damage. The council has reportedly acknowledged the pothole, so the handler may want to note a possible recovery from the council, but that does not need to delay payment.",
+    "cited_facts": [
+     {
+      "field": "policy_start_date",
+      "value": "2020-10-13"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-11"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "5389"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (none)"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (none)"
+     },
+     {
+      "field": "description",
+      "value": "Hit a deep pothole on Kings Parade at night... Council has acknowledged the pothole."
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K024": {
+    "pile": "simple",
+    "reason": "This is a long-standing active policy with a pothole damage claim that is supported by photos, a repair estimate and an engineer report. The claimant has no prior claims and no related claims are linked. The amount matches the estimate. No police reference was supplied, which is not usually expected for pothole damage. The council's acknowledgment is mentioned in the description but no supporting document is on file. This could be requested if the insurer plans to recover costs from the council, but it does not need to delay payment.",
+    "cited_facts": [
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2020-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "3472"
+     },
+     {
+      "field": "description",
+      "value": "Hit a deep pothole on Victoria Avenue at night, damaging both nearside wheels and the suspension. Council has acknowledged the pothole. Estimate \u00a33472."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K025": {
+    "pile": "simple",
+    "reason": "This is a small, single-vehicle motor claim with consistent details. The policy is active, was checked on the day the claim arrived, and began about three years before the incident. The claim was reported the day after the incident. The \u00a3991 amount matches the garage estimate in the description, and photos and a repair estimate are provided. No other vehicle was involved, so a police reference is not expected. The record lists no previous claims for this claimant and no related claims. Nothing here calls for further checks before payment.",
+    "cited_facts": [
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "991"
+     },
+     {
+      "field": "description",
+      "value": "Reversed into a bollard in a supermarket car park. Rear bumper dented, no other vehicle involved. Garage estimate \u00a3991."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (none recorded)"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (none recorded)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K026": {
+    "pile": "closer_look",
+    "reason": "This looks like a routine low-value claim. It is \u00a3505 for damage to a parked car, with photos and a repair estimate supplied. The policy is shown as active and started about three years before the incident, and there is no prior claim history or related claims. However, the policy number is missing from the record. We cannot confirm the claim is tied to the active policy until that is checked, so it should not be paid straight away. Nothing in the record suggests fraud. The police reference and engineer report are also absent, though for minor parked-car damage of this size they may not be required.",
+    "cited_facts": [
+     {
+      "field": "policy_number",
+      "value": "null"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "505"
+     },
+     {
+      "field": "description",
+      "value": "Car damaged while parked overnight on Mill Road. Estimate \u00a3505."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "null"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K027": {
+    "pile": "simple",
+    "reason": "A low-value, single-vehicle claim on a policy that has been active for about three years. The damage described matches the supporting documents. Photos and a garage estimate for the stated amount were supplied. There are no previous claims and no linked claims. No police reference or engineer report was provided, but neither is normally needed for minor bumper damage with no other party involved. Policy status was confirmed as active on 2026-10-10, after the incident date.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "914"
+     },
+     {
+      "field": "description",
+      "value": "Reversed into a bollard in a supermarket car park. Rear bumper dented, no other vehicle involved. Garage estimate \u00a3914."
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K028": {
+    "pile": "simple",
+    "reason": "This is a low-value escape-of-water claim. Policy KW-269156 was active when last checked on 2026-10-10, the day after the incident. The policy began in 2023, well before the loss. The claim was reported two days after the incident. Photos and a repair estimate were supplied, and the quote matches the amount claimed. The claimant has no previous claims and there are no related claims. A police reference and engineer report are not provided, but neither would normally be needed for a split washing machine hose. Nothing in the record suggests a reason for further checks.",
+    "cited_facts": [
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-11"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "641"
+     },
+     {
+      "field": "description",
+      "value": "Washing machine hose split and leaked onto the kitchen floor. Vinyl flooring needs replacing, quoted at \u00a3641."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K029": {
+    "pile": "simple",
+    "reason": "This is a low-value escape-of-water claim that is consistent and well documented. The policy is active, was confirmed active on the day the claim arrived, and has been in force for about three years before the incident. The claim was reported the day after the incident. Photos and a repair estimate are supplied, and the claimed amount matches the quote in the description. There is no previous claims history and there are no related claims. A police reference and an engineer's report are absent, but neither would normally be expected for a split washing machine hose. Nothing in the record suggests further checks are needed.",
+    "cited_facts": [
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "786"
+     },
+     {
+      "field": "description",
+      "value": "Washing machine hose split and leaked onto the kitchen floor. Vinyl flooring needs replacing, quoted at \u00a3786."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (no prior claims)"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (none)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K030": {
+    "pile": "closer_look",
+    "reason": "Most of the claim looks routine: the policy is active and long-standing, the incident was reported the next day, and photos and a repair estimate are attached. However, the record lists another claim (K001) from the same claimant for the same incident. The record does not show K001's status or amount, so it is unclear whether this is a duplicate submission or a separate part of the same loss. That should be checked before payment to avoid paying twice. It is also worth confirming that the \u00a3900 estimate is reasonable for a side mirror replacement. Nothing in the record on its own points to fraud.",
+    "cited_facts": [
+     {
+      "field": "related_claims",
+      "value": "K001, relation: same incident, claimant_id: P0054"
+     },
+     {
+      "field": "claimant_id",
+      "value": "P0054"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "900"
+     },
+     {
+      "field": "description",
+      "value": "Side mirror knocked off by a passing van on Victoria Avenue. Replacement \u00a3900."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (no prior claims listed)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K031": {
+    "pile": "closer_look",
+    "reason": "There are no signs of fraud. The policy is active and long-standing, the claim was reported the day after the incident, photos and a repair estimate are supplied, and the claimant has no prior or related claims. However, a third party is involved and their insurer has not yet confirmed liability, so the handler should confirm how fault is settled before paying. No engineer report status is recorded, and there is no police reference, which is not unusual for a minor collision.",
+    "cited_facts": [
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "1536"
+     },
+     {
+      "field": "description",
+      "value": "Third party involved; liability not yet confirmed by their insurer."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "false"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K032": {
+    "pile": "closer_look",
+    "reason": "Nothing in the record suggests fraud. The policy is active, it began about three years before the incident, the claim was made two days after the incident, and there is no prior claim history or related claims. However, no photos or repair estimate have been provided, and the description says photos are still to follow. Without these, the damage and the \u00a31,127 amount cannot yet be verified. The claim should be checked once those documents arrive.",
+    "cited_facts": [
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-11"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "1127"
+     },
+     {
+      "field": "documents.photos",
+      "value": "false"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "false"
+     },
+     {
+      "field": "description",
+      "value": "Ceiling stain spreading from the bathroom above. Plumber found a leaking joint. Photos to follow."
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K033": {
+    "pile": "simple",
+    "reason": "Long-standing policy confirmed active the day before the claim arrived. Reported two days after the incident. The pothole damage is backed by photos, a repair estimate and an engineer report, and there is no claim history or linked claims. No police reference was supplied, but one is not normally expected for pothole damage. The council's acknowledgement is mentioned only in the description and is not among the documents; it matters for any recovery from the council but should not hold up payment.",
+    "cited_facts": [
+     {
+      "field": "policy_start_date",
+      "value": "2020-10-13"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-11"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "5095"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     },
+     {
+      "field": "description",
+      "value": "Council has acknowledged the pothole."
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K034": {
+    "pile": "closer_look",
+    "reason": "This total-loss theft claim needs its details checked before payment. It is not being treated as suspicious. The incident happened 8 days after the policy started, and the full value is claimed for a car reported stolen and later found burnt out. A police reference has been supplied. No photos are provided, and the engineer report status is unknown. Nothing in the record supports the claimed value of \u00a34,716. The handler should verify the police report, get an engineer's or salvage assessment of the burnt-out vehicle, and confirm the vehicle's value and the cover in place at inception. If those checks raise concerns, the claim can be escalated. Nothing in the record alone shows wrongdoing.",
+    "cited_facts": [
+     {
+      "field": "policy_start_date",
+      "value": "2026-10-01"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "description",
+      "value": "Car stolen from outside my house overnight and found burnt out two days later. Claiming the full value, \u00a34716."
+     },
+     {
+      "field": "amount_gbp",
+      "value": "4716"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "true"
+     },
+     {
+      "field": "documents.photos",
+      "value": "false"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (no prior claims recorded)"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (no related claims recorded)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K035": {
+    "pile": "simple",
+    "reason": "This is a low-value rear-end motor claim, reported the day after the incident. The policy is active and has been in force for about three years. Photos, a repair estimate and a police reference were provided, and the estimate matches the amount claimed. The claimant has one earlier motor claim (paid) about seven months ago, which on its own is not a concern. No engineer report is on file, but at this amount the other documents appear enough to pay quickly. There are no related claims.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "motor"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "1012"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "description",
+      "value": "Rear-ended at traffic lights on Chapel Lane. Boot lid and bumper damaged. Estimate \u00a31012."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "true"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-7252, 2026-03-13, motor, \u00a31050, paid"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K036": {
+    "pile": "closer_look",
+    "reason": "This is a low-value, single-vehicle kerbing claim with photos and a repair estimate. There is no prior claim history and no related claims, and nothing in it looks suspicious. It goes to closer_look rather than simple for one reason: the policy was last confirmed active on 2026-07-28, more than two months before the incident on 2026-10-09. The record does not show whether the policy was still in force on the incident date. Once current cover is re-confirmed, the claim should be suitable for quick payment. A police reference or engineer report would not normally be expected for minor parking damage of this size.",
+    "cited_facts": [
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-07-28"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "863"
+     },
+     {
+      "field": "description",
+      "value": "Kerbed the car while parking, front alloy cracked. Estimate \u00a3863."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (none)"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (none)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K037": {
+    "pile": "simple",
+    "reason": "Low-value, single-vehicle motor claim with consistent details. The policy is active, as checked on the day the claim was received. It started about three years before the incident, so this is not a new-policy claim. The claim was reported the day after the incident. Photos and a repair estimate were supplied, and the estimate matches the amount claimed. No police reference or engineer report is on file, but neither seems necessary for minor damage with no other party involved. There is no previous claim history and there are no related claims.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "motor"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "482"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "description",
+      "value": "Reversed into a bollard in a supermarket car park. Rear bumper dented, no other vehicle involved. Garage estimate \u00a3482."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "null"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K038": {
+    "pile": "simple",
+    "reason": "The policy has been active since 2023, well before the incident, and its status was confirmed the day before the claim arrived. The claim was made two days after the incident and is for a modest amount. Photos, a repair estimate and a police reference are all provided, and the claimant has no previous or related claims. There is no engineer report, but that seems unnecessary for a parked-car repair of this size. Nothing in the record suggests further checks are needed.",
+    "cited_facts": [
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-11"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "1800"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "true"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K039": {
+    "pile": "simple",
+    "reason": "This is a low-value home claim for water damage from a split washing machine hose. The policy has been active since 2023 and was confirmed active on the day the claim was received. The incident happened the day before the claim was made. Photos and a repair estimate are supplied, and the estimate matches the amount claimed. The claimant has no prior claims and there are no related claims. A police reference and an engineer report are missing, but neither would normally be expected for this kind of incident. Nothing in the record suggests anything unusual.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "home"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "633"
+     },
+     {
+      "field": "description",
+      "value": "Washing machine hose split and leaked onto the kitchen floor. Vinyl flooring needs replacing, quoted at \u00a3633."
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K040": {
+    "pile": "simple",
+    "reason": "Low-value rear-end collision on a policy that has been active since 2023, with photos, a repair estimate and a police reference supplied. The description matches the claimed amount. The claimant has one earlier motor claim, which was paid, and no related claims are linked. No engineer report is on file, but that seems unnecessary for a \u00a3659 repair. Nothing in the record suggests further checks are needed.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "659"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "description",
+      "value": "Rear-ended at traffic lights on Victoria Avenue. Boot lid and bumper damaged. Estimate \u00a3659."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "true"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-5807, 2026-03-08, motor, \u00a31184, paid"
+     },
+     {
+      "field": "related_claims",
+      "value": "none"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K041": {
+    "pile": "simple",
+    "reason": "This is a low-value, single-vehicle motor claim with a clear and consistent account. The policy is long-standing and was confirmed active the day after the incident. The claim was reported two days after the incident. Photos and a repair estimate matching the claimed amount are supplied. The claimant has no prior claims and there are no related claims. A police reference and an engineer report are absent, but neither would normally be expected for minor car-park damage with no other party involved. Nothing in the record suggests a need for further checks.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "motor"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "806"
+     },
+     {
+      "field": "description",
+      "value": "Reversed into a bollard in a supermarket car park. Rear bumper dented, no other vehicle involved. Garage estimate \u00a3806."
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-11"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "null"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K042": {
+    "pile": "closer_look",
+    "reason": "Nothing here points to fraud. The policy has been active since 2023, the claimant has no previous claims, there are no linked claims, and the amount is modest for an escape-of-water leak. However, no photos or repair estimate have been provided yet, and the description says photos will follow. The handler cannot confirm the damage or the claimed amount until these arrive, so the claim should be checked once the documents are received rather than paid now.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "home"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "1213"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "description",
+      "value": "Ceiling stain spreading from the bathroom above. Plumber found a leaking joint. Photos to follow."
+     },
+     {
+      "field": "documents.photos",
+      "value": "false"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "false"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (no prior claims)"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (none)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K043": {
+    "pile": "closer_look",
+    "reason": "This passenger injury claim cannot be paid quickly. No supporting documents have been supplied. The record contains no medical evidence for the whiplash and no proof of the lost earnings. The claimant has asked to be paid in cash, which is unusual and needs checking. Two other claimants have also claimed for the same incident. That can be normal for passengers, but their accounts should be compared. None of these points alone shows wrongdoing, so this is a verification case rather than an investigation referral. The policy was active when checked the day after the incident. The handler should obtain medical and earnings evidence and any police reference, and should cross-check the related claims K014 and K048. It should be escalated if they do not support the account.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "Passenger in VD72 XST when it was hit on Mill Road. Whiplash and lost earnings. Prefer payment in cash."
+     },
+     {
+      "field": "documents.photos",
+      "value": "false"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "false"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "false"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "related_claims",
+      "value": "K014 (claimant P0066) and K048 (claimant P0067), both same incident"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "3866"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (no prior claims)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K044": {
+    "pile": "simple",
+    "reason": "A routine rear-end motor claim for a modest amount, reported two days after the incident. The policy is active and was taken out about three years before the incident. Photos, a repair estimate and a police reference are all provided. The claimant has no prior claims and there are no related claims. No engineer report is on file, but one would not normally be needed for bumper and tailgate damage of this size.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "motor"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "1052"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-11"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "description",
+      "value": "another car went into the back of me on Brook Way. Bumper and tailgate damaged."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "true"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K045": {
+    "pile": "simple",
+    "reason": "This is a low-value windscreen claim with supporting evidence. The policy was active when last checked, and it started about three years before the incident. The claim was reported two days after the incident. Photos and a repair estimate were provided, and the quoted amount matches the claim. The claimant has no previous claims, and no related claims are linked. A police reference and an engineer report are not supplied, but these are not normally needed for stone-chip glass damage. Note that the policy status was checked on 2026-10-10, one day after the incident, not on the incident date itself.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "glass"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "117"
+     },
+     {
+      "field": "description",
+      "value": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3117."
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-11"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (no prior claims)"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (none)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K046": {
+    "pile": "simple",
+    "reason": "Low-value windscreen claim on a policy that has been active since 2023. The policy was confirmed active the day after the incident. Photos and a repair estimate are supplied, and the estimate matches the amount claimed. There are no prior or related claims. A police reference and engineer report are missing, but neither is normally expected for stone-chip glass damage. Nothing suggests a need for extra checks.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "glass"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "164"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "description",
+      "value": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3164."
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K047": {
+    "pile": "closer_look",
+    "reason": "The policy is active and long-standing, and photos and a repair estimate are provided. However, a second claim from a different claimant relates to the same incident. Both cars are described as the claimant's household cars, insured with us. The two claims should be checked together to confirm who was driving, how liability is split, and that the same damage is not paid twice. The record does not show the link between the two claimants. This alone is not a fraud indicator.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "Two of our cars collided on the driveway. Both insured with Keelwater. Estimate \u00a31,100."
+     },
+     {
+      "field": "related_claims",
+      "value": "K070, same incident, claimant P0077"
+     },
+     {
+      "field": "policy_status",
+      "value": "active (checked 2026-10-10)"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "documents",
+      "value": "photos: true, repair_estimate: true, police_ref: null, engineer_report: null"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "1100"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (no prior claims)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K048": {
+    "pile": "closer_look",
+    "reason": "This claim cannot be paid quickly. It is a whiplash and lost-earnings claim for \u00a33,269 with no supporting documents: no photos, no police reference, and the engineer report is blank. No medical evidence or proof of lost earnings is in the record. The claimant asks to be paid in cash, which is unusual and should be checked. Two other people have claimed for the same incident, which can happen when there are several passengers, so those claims should be checked against this one. The policy is active and began about ten weeks before the incident. None of these points shows wrongdoing on its own, so we are verifying rather than investigating for now. Before deciding we need: medical evidence of the injury, proof of lost earnings, confirmation the claimant was a passenger in VD72 XST, a police or incident reference if one exists, and a check that the related claims are consistent. If these cannot be verified, the claim should go for investigation.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "3269"
+     },
+     {
+      "field": "description",
+      "value": "Passenger in VD72 XST when it was hit on Mill Road. Whiplash and lost earnings. Prefer payment in cash."
+     },
+     {
+      "field": "documents.photos",
+      "value": "false"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "false"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "false"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "related_claims",
+      "value": "K014 (claimant P0066) and K043 (claimant P0065), both 'same incident'"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2026-07-31"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "policy_status",
+      "value": "active (checked 2026-10-10)"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (no prior claims)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K049": {
+    "pile": "closer_look",
+    "reason": "The claim looks routine: a modest repair estimate, photos and an estimate supplied, a policy that started about three years before the incident and was shown as active after it, and no previous or related claims. However, the policy number is missing, so the claim cannot yet be confirmed as matching the active policy. The handler should obtain and verify the policy number before paying. Nothing in the record suggests fraud.",
+    "cited_facts": [
+     {
+      "field": "policy_number",
+      "value": "null"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "652"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K050": {
+    "pile": "closer_look",
+    "reason": "Nothing suggests fraud: the policy has been active since 2023, the claim was reported three days after the incident, and there is no prior history or related claims. However, the \u00a31,739 amount is not yet backed by a repair estimate. The description says an estimate is to follow, so the amount should be checked against it before payment.",
+    "cited_facts": [
+     {
+      "field": "documents.repair_estimate",
+      "value": "false"
+     },
+     {
+      "field": "description",
+      "value": "Car scraped along a wall in a narrow lane. Estimate to follow."
+     },
+     {
+      "field": "amount_gbp",
+      "value": "1739"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-12"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K051": {
+    "pile": "simple",
+    "reason": "This is a low-value windscreen claim of \u00a3279, and photos and a repair estimate are provided. The policy has been active since 2023, and its status was checked as active the day after the incident. The claim was reported two days after the incident. The claimant has one earlier glass claim from 2024, which was paid, and no related claims are linked. A police reference and engineer report are missing, but neither would normally be expected for a stone chip to a windscreen. Nothing in the record suggests a need for further checks.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "glass"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "279"
+     },
+     {
+      "field": "description",
+      "value": "Windscreen cracked by a stone. Replacement \u00a3279."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "null"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-11"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-3101, 2024-04-25, glass, \u00a3210, paid"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (none)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K052": {
+    "pile": "simple",
+    "reason": "Low-value, single-vehicle bumper damage reported two days after the incident on an active policy held for about three years. Photos and a garage estimate matching the claimed amount are provided. There are no prior or related claims. No police reference or engineer report is present, but neither is normally needed for minor car park damage with no other party involved.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "637"
+     },
+     {
+      "field": "description",
+      "value": "Reversed into a bollard in a supermarket car park. Rear bumper dented, no other vehicle involved. Garage estimate \u00a3637."
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-11"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "null"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K053": {
+    "pile": "simple",
+    "reason": "This is a low-value windscreen claim with supporting photos and a repair estimate. The policy has been in force since 2023 and was confirmed active the day after the incident. The claimant has no prior claims and there are no related claims. A police reference and engineer report are absent, but neither would normally be needed for stone-chip glass damage. Nothing in the record calls for further checks.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "glass"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "160"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "description",
+      "value": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3160."
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (no prior claims)"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (none)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K054": {
+    "pile": "closer_look",
+    "reason": "Most of this claim looks routine. The policy is active and has run since 2023. The amount is modest, and photos and a repair estimate were supplied. However, the record links another claim (K059) from the same claimant for the same incident. That could be a duplicate submission, so it should be checked before paying to avoid paying twice. The record doesn't say what K059 covers or whether it was paid, and that alone isn't grounds for suspicion. No police reference was given for the third-party van, which may matter if recovery from the other driver is pursued.",
+    "cited_facts": [
+     {
+      "field": "related_claims[0].claim_id",
+      "value": "K059"
+     },
+     {
+      "field": "related_claims[0].relation",
+      "value": "same incident"
+     },
+     {
+      "field": "related_claims[0].claimant_id",
+      "value": "P0053"
+     },
+     {
+      "field": "claimant_id",
+      "value": "P0053"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "884"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "null"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K055": {
+    "pile": "closer_look",
+    "reason": "This looks like a routine, low-value claim. The policy is long-standing, photos and a repair estimate are supplied, and there is no prior claim history. However, the policy was last confirmed active on 2026-07-07, about three months before the incident. The record does not show the policy was still in force on the incident date. Re-confirm the current policy status before paying. If it is still active, the claim can be paid without further checks.",
+    "cited_facts": [
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-07-07"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "699"
+     },
+     {
+      "field": "description",
+      "value": "Kerbed the car while parking, front alloy cracked. Estimate \u00a3699."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (none)"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (none)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K056": {
+    "pile": "closer_look",
+    "reason": "The policy is active and has been held since 2023. Photos and a police reference were supplied, so nothing here points clearly to fraud. Two points need checking before payment. First, the claim describes a break-in but says there was no sign of forced entry. That should be clarified, because theft without forced entry may be treated differently under the policy terms, which are not included in the record. Second, the claimant has four paid claims from April to July 2026, including two motor claims four days apart in June. That frequency is worth reviewing, though it is not proof of wrongdoing. The record also shows no proof of ownership or purchase for the laptop and camera. If these checks are satisfactory, the claim can be paid.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "Laptop and camera stolen in a break-in. No sign of forced entry. Claiming \u00a33160."
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "true"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "3160"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-9097 home \u00a33019 paid 2026-04-02; H-3667 motor \u00a32137 paid 2026-06-24; H-1079 motor \u00a33454 paid 2026-06-28; H-7921 motor \u00a32322 paid 2026-07-24"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K057": {
+    "pile": "closer_look",
+    "reason": "The claim has two date problems that need checking before payment. The description says the roofer's invoice is dated three weeks before the storm, which could mean the roof damage existed before the incident. The recorded incident date is 2 September, but the description says the storm was on the night of the 14th. These may be innocent errors, such as a quote mistaken for an invoice or a typo, and nothing else in the record points to fraud. The policy started in 2023 and is active, there is no claim history, there are no related claims, and photos and a repair estimate are supplied. The handler should confirm the actual storm date, check whether it matches local weather records, and get the invoice to confirm what work it covers and when. The claim should go for investigation only if these checks cannot resolve the conflicts. The record does not include the invoice itself or any weather confirmation.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "Roofer's invoice is dated three weeks before the storm."
+     },
+     {
+      "field": "description",
+      "value": "Storm on the night of the 14th blew tiles off the roof and rain damaged the loft."
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-09-02"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "3996"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (none)"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (none)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K058": {
+    "pile": "simple",
+    "reason": "This is a low-value windscreen claim on a policy that is active and has been in force for about three years. It was reported the day after the incident, and the description matches the quoted amount. Photos and a repair estimate were supplied. There is no previous claim history and no related claims. A police reference and engineer report are not provided, but neither would normally be needed for stone-chip glass damage. Nothing in the record suggests the claim needs further checks.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "glass"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "223"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "description",
+      "value": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3223."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K059": {
+    "pile": "closer_look",
+    "reason": "The claim itself looks straightforward: the policy is active and long-standing, and photos and a repair estimate are provided. However, the claimant says this is a resubmission, and a related claim (K054) from the same claimant is recorded for the same incident. Before paying, the handler should check the status of K054 so the same incident is not paid twice. The claimant has explained the resubmission, so this points to a possible duplicate rather than signs of fraud.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "Submitting again as I had no confirmation."
+     },
+     {
+      "field": "related_claims",
+      "value": "K054, relation: same incident, claimant_id: P0053"
+     },
+     {
+      "field": "claimant_id",
+      "value": "P0053"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "884"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K060": {
+    "pile": "simple",
+    "reason": "This is a routine rear-end motor claim for a modest amount. The policy has been in force for about three years and was active when last checked, after the incident date. The claim was reported six days after the incident and comes with photos, a repair estimate and a police reference. There is no prior claim history and no related claims. The engineer report field is empty (null), so we cannot tell whether one was expected. Given the amount and the other supporting documents, it does not appear necessary to proceed.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "motor"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "1693"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-06"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-12"
+     },
+     {
+      "field": "description",
+      "value": "I was driving HP43 ELB when another car went into the back of me on Chapel Lane. Bumper and tailgate damaged."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "true"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K061": {
+    "pile": "closer_look",
+    "reason": "Nothing points to fraud. The policy is active and long-standing, the claimant has no prior claims, and photos were supplied. However, the repair estimate has not been provided yet (the description says it will follow), so nothing currently supports the \u00a31,372 amount. The handler should get and check the estimate before paying. Once it arrives and matches the amount, this could be paid as a simple claim.",
+    "cited_facts": [
+     {
+      "field": "documents.repair_estimate",
+      "value": "false"
+     },
+     {
+      "field": "description",
+      "value": "Car scraped along a wall in a narrow lane. Estimate to follow."
+     },
+     {
+      "field": "amount_gbp",
+      "value": "1372"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K062": {
+    "pile": "simple",
+    "reason": "This is a low-value glass claim with a clear, ordinary cause: a stone chip that spread into a crack, with replacement quoted at \u00a3274. The policy has been active since 2023, and its status was checked as active the day before the claim arrived. The claim was reported two days after the incident. Photos and a repair estimate were supplied. The claimant has no previous claims and there are no related claims. A police reference or engineer report is not normally needed for windscreen damage of this kind. Nothing in the record suggests a need for further checks, so it can be paid quickly.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "glass"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "274"
+     },
+     {
+      "field": "description",
+      "value": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3274."
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-11"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K063": {
+    "pile": "suspicious",
+    "reason": "Several factors together justify referral for investigation. This is not a finding of wrongdoing. The claim describes a break-in but also says there was no sign of forced entry, which needs explaining. It is the claimant's fifth claim in 2026. The earlier ones are two home claims of similar size (\u00a32,438 and \u00a32,503) and two motor claims five days apart, all paid. The policy is active and long-standing, and a police reference and photos are supplied, which count in the claimant's favour. The record does not show proof of ownership or valuation for the laptop and camera, so the amount cannot be checked from the file.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "Laptop and camera stolen in a break-in. No sign of forced entry. Claiming \u00a32474."
+     },
+     {
+      "field": "amount_gbp",
+      "value": "2474"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-6994, 2026-01-03, home, \u00a32503, paid"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-7367, 2026-05-26, home, \u00a32438, paid"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-2558, 2026-08-14, motor, \u00a33343, paid"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-8278, 2026-08-19, motor, \u00a33408, paid"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "true"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "policy_status",
+      "value": "active (checked 2026-10-10)"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K064": {
+    "pile": "simple",
+    "reason": "A low-value windscreen claim with supporting photos and a repair estimate that matches the amount claimed. The policy has been in force since 2023 and was confirmed active on 2026-10-10, after the incident date. There are no previous or related claims. A police reference and engineer report are absent, but neither would normally be expected for a stone-chip windscreen claim. Nothing in the record points to a need for further checks.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "glass"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "129"
+     },
+     {
+      "field": "description",
+      "value": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3129."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K065": {
+    "pile": "simple",
+    "reason": "The policy is active and was checked on the day the claim arrived. It has run for about three years, so this is not a new policy. The claim was reported the day after the incident. The amount is modest and matches the repair estimate quoted in the description. Photos, a repair estimate and a police reference are all supplied, and no related claims are linked. The claimant made one previous motor claim three months earlier, which was paid. A single prior claim is not a warning sign on its own. No engineer report was provided, but the photos and estimate appear enough for a small rear-end repair. Nothing in the record calls for further checks.",
+    "cited_facts": [
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "1091"
+     },
+     {
+      "field": "description",
+      "value": "Rear-ended at traffic lights on Brook Way. Boot lid and bumper damaged. Estimate \u00a31091."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "true"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-6270, 2026-07-05, motor, \u00a32081, paid"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (none)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K066": {
+    "pile": "suspicious",
+    "reason": "The roofer's invoice is described as dated three weeks before the storm it is meant to repair, which suggests the damage may predate the incident. The dates also conflict: the description puts the storm on 'the night of the 14th', but the recorded incident date is 2 September. These are unexplained inconsistencies, not proof of wrongdoing. The policy is long-standing and active, the amount is modest and there is no prior claim history, but the invoice timing should be investigated before payment. The record does not include the invoice itself, its exact date, or a weather or storm confirmation for either date.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "Roofer's invoice is dated three weeks before the storm."
+     },
+     {
+      "field": "description",
+      "value": "Storm on the night of the 14th blew tiles off the roof and rain damaged the loft."
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-09-02"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "1506"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (no prior claims)"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K067": {
+    "pile": "simple",
+    "reason": "A low-value rear-end collision on a policy that has been active for about three years. Policy status was confirmed active the day after the incident. Photos, a repair estimate and a police reference are all supplied, and the claimed amount matches the estimate in the description. There is one earlier motor claim about six months before, which was paid. On its own that is not a warning sign, though the handler may want to confirm the damage is new and separate from that claim. No engineer report has been provided, but given the supporting documents and modest amount, that does not appear to block quick payment.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "motor"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "1244"
+     },
+     {
+      "field": "description",
+      "value": "Rear-ended at traffic lights on Chapel Lane. Boot lid and bumper damaged. Estimate \u00a31244."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "true"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-1733, 2026-04-19, motor, \u00a31094, paid"
+     },
+     {
+      "field": "related_claims",
+      "value": "none"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K068": {
+    "pile": "simple",
+    "reason": "This is a low-value glass claim on an active policy, with photos and a repair estimate supplied. The claimant has no previous claims and there are no related claims. The policy began about five weeks before the incident, and the claimant is unsure how the damage happened. Neither point is unusual for a glass claim of this size, so on their own they do not justify a closer look. A police reference is not needed for this kind of claim.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "glass"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "260"
+     },
+     {
+      "field": "policy_status",
+      "value": "active (checked 2026-10-10)"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (no previous claims)"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (none)"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2026-09-06"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "description",
+      "value": "Rear windscreen smashed. Not sure how it happened."
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K069": {
+    "pile": "simple",
+    "reason": "This is a straightforward rear-end collision claim with supporting evidence. The policy has been in force since 2023 and was confirmed active the day after the incident. Photos, a repair estimate and a police reference are all supplied, and the amount matches the estimate. There is one earlier motor claim, paid six months ago, which on its own is not a pattern of concern, and no related claims are linked. No engineer report is on file, but for a modest bumper and boot-lid repair with an estimate and photos, this does not appear necessary to decide the claim.",
+    "cited_facts": [
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-12"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "1670"
+     },
+     {
+      "field": "description",
+      "value": "Rear-ended at traffic lights on Victoria Avenue. Boot lid and bumper damaged. Estimate \u00a31670."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "true"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-2590, 2026-04-23, motor, \u00a31248, paid"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (none)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K070": {
+    "pile": "closer_look",
+    "reason": "A modest, well-documented claim on a long-standing active policy with no prior claims, so nothing here points to fraud. It still needs a check before payment. A second claim from another claimant relates to the same incident, and the description says both cars belong to the claimant's household and are insured with Keelwater. The handler should reconcile the two claims to confirm which policy covers which vehicle's damage and to avoid paying for the same repair twice. The record does not show whether the \u00a3950 estimate covers one car or both, or what claim K047 is for. A police reference is absent, which is not unusual for a minor driveway collision.",
+    "cited_facts": [
+     {
+      "field": "related_claims",
+      "value": "K047, relation: same incident, claimant_id: P0076"
+     },
+     {
+      "field": "description",
+      "value": "Two of our cars collided on the driveway. Both insured with Keelwater. Estimate \u00a3950."
+     },
+     {
+      "field": "amount_gbp",
+      "value": "950"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "null"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (no prior claims)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K071": {
+    "pile": "closer_look",
+    "reason": "Nothing in the record points to fraud. The policy is long-standing and active, and the claimant has no prior or related claims. But the claim includes a physiotherapy (injury) element, and the only evidence supplied is photos. The record also does not say whether LK70 YLP is the vehicle covered by this policy or how the passenger relates to the policyholder. It does not say whether the driver who hit the car from behind has been identified, which affects who should pay. There is no police reference, and no receipts or medical evidence are listed for the phone, laptop or physiotherapy. These details should be confirmed before payment.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "I was a passenger in LK70 YLP on Brook Way when it was hit from behind. Claiming for my damaged phone, laptop and physiotherapy."
+     },
+     {
+      "field": "amount_gbp",
+      "value": "2283"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "null"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K072": {
+    "pile": "simple",
+    "reason": "This is a low-value windscreen claim. The policy is active, having been checked the day before the claim arrived, and it started about three years before the incident. The claim was reported two days after the damage. Photos and a repair estimate are supplied, and the description matches the amount quoted. A police reference and an engineer report would not normally be expected for stone damage to glass. There is no previous claims history and there are no related claims, so nothing points to a need for further checks.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "glass"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "156"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-11"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "description",
+      "value": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3156."
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (none)"
+     },
+     {
+      "field": "related_claims",
+      "value": "[] (none)"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K073": {
+    "pile": "simple",
+    "reason": "A low-value, single-vehicle car park bump with nothing unusual about it. The policy has been running for about three years and was confirmed active the day after the incident. Photos and a garage estimate are supplied, and the estimate matches the amount claimed. There are no previous or related claims. No police reference or engineer report was provided, but neither would normally be expected for minor bumper damage with no other party involved.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "motor"
+     },
+     {
+      "field": "description",
+      "value": "Reversed into a bollard in a supermarket car park. Rear bumper dented, no other vehicle involved. Garage estimate \u00a31062."
+     },
+     {
+      "field": "amount_gbp",
+      "value": "1062"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K074": {
+    "pile": "simple",
+    "reason": "This is a straightforward rear-end collision claim for a modest amount. The policy is active and has been in force for about three years. The claim was reported two days after the incident. Photos, a repair estimate and a police reference are all provided, and the claimant has no previous claims. One other claim (K006, from P0046) is linked to the same incident. That is expected in a two-vehicle collision and is not a warning sign on its own, but the handler should confirm the two accounts are consistent. No engineer report is on file. For a bumper and tailgate repair of this size that does not seem necessary, though we have not confirmed whether it is required. The policy status was last checked on the incident date, so it should be reconfirmed at payment.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "motor"
+     },
+     {
+      "field": "description",
+      "value": "another car went into the back of me on Mill Road. Bumper and tailgate damaged."
+     },
+     {
+      "field": "amount_gbp",
+      "value": "1878"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-12"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "true"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (no prior claims)"
+     },
+     {
+      "field": "related_claims",
+      "value": "K006, same incident, claimant P0046"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K075": {
+    "pile": "simple",
+    "reason": "This is a low-value motor claim with a consistent account and supporting documents. The policy is active and was checked on the day the claim arrived. It began about three years before the incident. The claim was reported the day after the incident. Photos and a repair estimate are provided, and the estimate matches the amount claimed. There are no previous or related claims on record. No police reference or engineer report was supplied, but neither seems necessary for minor damage to a parked car's mirror at this value.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "600"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "description",
+      "value": "Clipped a parked car's mirror while passing. Left a note with my details. Estimate \u00a3600."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "null"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K076": {
+    "pile": "simple",
+    "reason": "This is a pothole damage claim reported the day after the incident on a long-standing active policy. It is supported by photos, a repair estimate and an engineer report. The claimant has no prior claims and there are no related claims. A police reference is absent, but one is not normally expected for pothole damage. The council's acknowledgement of the pothole is mentioned in the description but no document for it is on file. That does not block payment, but it could be requested to support recovery from the council.",
+    "cited_facts": [
+     {
+      "field": "line",
+      "value": "motor"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2020-10-13"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "4604"
+     },
+     {
+      "field": "description",
+      "value": "Hit a deep pothole on Station Street at night, damaging both nearside wheels and the suspension. Council has acknowledged the pothole. Estimate \u00a34604."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K077": {
+    "pile": "closer_look",
+    "reason": "No red flags: the policy began about three years before the incident, it was active when checked a day after it, and the claimant has no prior claims. A second claim on the same incident is expected for a rear-end collision with more than one occupant. The claim still needs checking before payment for three reasons. First, it includes physiotherapy, a personal injury element that needs medical evidence. Second, the phone and laptop values are not supported by receipts or valuations in the documents. Third, the record does not show whether this passenger is covered under policy KW-909831 or how it links to related claim K009. There is also no police reference.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "I was a passenger in BH63 RHY on Victoria Avenue when it was hit from behind. Claiming for my damaged phone, laptop and physiotherapy."
+     },
+     {
+      "field": "amount_gbp",
+      "value": "3653"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "null"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[] (no prior claims)"
+     },
+     {
+      "field": "related_claims",
+      "value": "K009, same incident, claimant P0047"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K078": {
+    "pile": "closer_look",
+    "reason": "No signs of fraud. The policy has been active since 2023, the claimant has no prior claims, and photos and a repair estimate support a modest \u00a3738 amount. However, the description says a third party was involved and their insurer has not yet confirmed liability. Fault affects how the claim is settled (for example, excess and recovery from the other insurer), so the handler should confirm the third-party details and liability position before paying. The engineer report field is blank, so we cannot tell whether one was expected. No police reference was provided, which is not unusual for a minor collision where details were exchanged.",
+    "cited_facts": [
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "738"
+     },
+     {
+      "field": "description",
+      "value": "Third party involved; liability not yet confirmed by their insurer."
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "documents.police_ref",
+      "value": "false"
+     },
+     {
+      "field": "documents.engineer_report",
+      "value": "null"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K079": {
+    "pile": "simple",
+    "reason": "The policy has been in force since 2020 and was confirmed active after the incident date. The claim was reported three days after the incident. The described pothole damage is supported by photos, a repair estimate and an engineer report. The claimant has no previous claims and there are no related claims. A police reference is not normally expected for pothole damage. The council's acknowledgement of the pothole may allow the insurer to recover costs from the council, but that does not delay payment.",
+    "cited_facts": [
+     {
+      "field": "policy_start_date",
+      "value": "2020-10-13"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "received_at",
+      "value": "2026-10-12"
+     },
+     {
+      "field": "amount_gbp",
+      "value": "6528"
+     },
+     {
+      "field": "documents",
+      "value": "photos: true, repair_estimate: true, engineer_report: true, police_ref: null"
+     },
+     {
+      "field": "description",
+      "value": "Council has acknowledged the pothole."
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   },
+   "K080": {
+    "pile": "simple",
+    "reason": "A modest, clearly described escape-of-water claim. The policy is long-standing and was confirmed active after the incident date. Photos and a repair estimate support the amount, and there is no prior claim history or related claims. Police and engineer reports are absent, but neither would normally be needed for a split washing machine hose.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "Washing machine hose split and leaked onto the kitchen floor. Vinyl flooring needs replacing, quoted at \u00a3720."
+     },
+     {
+      "field": "amount_gbp",
+      "value": "720"
+     },
+     {
+      "field": "policy_status",
+      "value": "active"
+     },
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-10-10"
+     },
+     {
+      "field": "incident_date",
+      "value": "2026-10-09"
+     },
+     {
+      "field": "policy_start_date",
+      "value": "2023-10-13"
+     },
+     {
+      "field": "documents.photos",
+      "value": "true"
+     },
+     {
+      "field": "documents.repair_estimate",
+      "value": "true"
+     },
+     {
+      "field": "claimant_history",
+      "value": "[]"
+     },
+     {
+      "field": "related_claims",
+      "value": "[]"
+     }
+    ],
+    "model": "claude-opus-5-5"
+   }
+  }
+ },
+ "data_flags": {
+  "K001": [
+   "duplicate"
+  ],
+  "K002": [],
+  "K003": [
+   "missing_documents"
+  ],
+  "K004": [
+   "missing_documents"
+  ],
+  "K005": [
+   "missing_documents"
+  ],
+  "K006": [
+   "missing_documents"
+  ],
+  "K007": [],
+  "K008": [
+   "stale_policy_status"
+  ],
+  "K009": [],
+  "K010": [],
+  "K011": [],
+  "K012": [],
+  "K013": [
+   "missing_documents"
+  ],
+  "K014": [
+   "missing_documents"
+  ],
+  "K015": [
+   "missing_documents"
+  ],
+  "K016": [
+   "stale_policy_status"
+  ],
+  "K017": [],
+  "K018": [],
+  "K019": [],
+  "K020": [
+   "missing_documents"
+  ],
+  "K021": [],
+  "K022": [
+   "missing_documents"
+  ],
+  "K023": [],
+  "K024": [],
+  "K025": [],
+  "K026": [
+   "missing_policy_number"
+  ],
+  "K027": [],
+  "K028": [],
+  "K029": [],
+  "K030": [
+   "duplicate"
+  ],
+  "K031": [
+   "missing_documents"
+  ],
+  "K032": [
+   "missing_documents"
+  ],
+  "K033": [],
+  "K034": [
+   "missing_documents"
+  ],
+  "K035": [],
+  "K036": [
+   "stale_policy_status"
+  ],
+  "K037": [],
+  "K038": [],
+  "K039": [],
+  "K040": [],
+  "K041": [],
+  "K042": [
+   "missing_documents"
+  ],
+  "K043": [
+   "missing_documents"
+  ],
+  "K044": [],
+  "K045": [],
+  "K046": [],
+  "K047": [],
+  "K048": [
+   "missing_documents"
+  ],
+  "K049": [
+   "missing_policy_number"
+  ],
+  "K050": [
+   "missing_documents"
+  ],
+  "K051": [],
+  "K052": [],
+  "K053": [],
+  "K054": [
+   "duplicate"
+  ],
+  "K055": [
+   "stale_policy_status"
+  ],
+  "K056": [
+   "missing_documents"
+  ],
+  "K057": [],
+  "K058": [],
+  "K059": [
+   "duplicate"
+  ],
+  "K060": [],
+  "K061": [
+   "missing_documents"
+  ],
+  "K062": [],
+  "K063": [
+   "missing_documents"
+  ],
+  "K064": [],
+  "K065": [],
+  "K066": [],
+  "K067": [],
+  "K068": [],
+  "K069": [],
+  "K070": [],
+  "K071": [
+   "missing_documents"
+  ],
+  "K072": [],
+  "K073": [],
+  "K074": [],
+  "K075": [],
+  "K076": [],
+  "K077": [
+   "missing_documents"
+  ],
+  "K078": [
+   "missing_documents"
+  ],
+  "K079": [],
+  "K080": []
+ }
+}
