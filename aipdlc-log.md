@@ -80,3 +80,8 @@
 **Proposed:** One-person pilot, 24 invented claims: 61 s with suggestion vs 36 s without; accuracy 58% vs 83%; 1 of 3 wrong suggestions accepted, 4 of 9 correct ones overridden. A3b fails on time.
 **Decision:** Approved
 **Notes:** Fail carried to Stage 5; suggested sorting stays in the comparison. Templated look-alike claims confound overrides and time. Visual design (AI-designed; SKILL.md changed to help communication with customers, Sales and CS) approved with changes: required reasons and a similar-claims check, carried to Stage 6.
+
+## 2026-10-28T20:08:00Z - Item: keelwater-sorting - Stage: Stage 5, Options
+**Proposed:** Four options on 80 invented claims: status quo 6 wrong-simple, 36 s; bulk 5.2–6.0, 26–37 s (pilot: 0 of 4 planted claims spotted, 6 of 9 simple pulled out); suggested 61 s, 1 of 12 (pilot); auto-clear 5–14, ruled out.
+**Decision:** Approved
+**Notes:** Bulk ships with fixes; A1 timeline study in parallel; suggestion discovery with Sales and design partners, no engineering time. Weights: 6 standard, 7 light, 8 formal. Reverse if A1 queue ≤15%: effort moves to information and approval flow.

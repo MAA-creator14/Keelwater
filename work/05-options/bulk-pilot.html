@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bulk Sorting Pilot</title>
+<style>
+
+:root {
+  --bg: #f5f6f8; --surface: #ffffff; --surface-2: #f0f2f5; --border: #dfe3e8;
+  --text: #1a1f29; --muted: #5d6675; --accent: #2457d6; --accent-ink: #ffffff;
+  --ai-bg: #f4f1fe; --ai-border: #8b74e8; --ai-ink: #4a33b8;
+  --simple-bg: #e8f1ff; --simple-ink: #1d4fb8;
+  --closer-bg: #fff3dc; --closer-ink: #8a5a00;
+  --susp-bg: #fde8e8; --susp-ink: #a51d1d;
+  --missing-bg: #fff3dc; --missing-ink: #8a5a00;
+  --present-ink: #1f7a4d;
+  --shadow: 0 1px 2px rgba(16,24,40,.06), 0 1px 3px rgba(16,24,40,.08);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11141a; --surface: #1a1e26; --surface-2: #222733; --border: #2e3442;
+    --text: #e8ebf1; --muted: #9aa3b2; --accent: #6b93ff; --accent-ink: #0b1020;
+    --ai-bg: #211c38; --ai-border: #8f7cf0; --ai-ink: #c4b8ff;
+    --simple-bg: #16264a; --simple-ink: #9dbbff;
+    --closer-bg: #3a2c10; --closer-ink: #f3c46b;
+    --susp-bg: #3e1717; --susp-ink: #ff9d9d;
+    --missing-bg: #3a2c10; --missing-ink: #f3c46b;
+    --present-ink: #6fd3a0;
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11141a; --surface: #1a1e26; --surface-2: #222733; --border: #2e3442;
+  --text: #e8ebf1; --muted: #9aa3b2; --accent: #6b93ff; --accent-ink: #0b1020;
+  --ai-bg: #211c38; --ai-border: #8f7cf0; --ai-ink: #c4b8ff;
+  --simple-bg: #16264a; --simple-ink: #9dbbff;
+  --closer-bg: #3a2c10; --closer-ink: #f3c46b;
+  --susp-bg: #3e1717; --susp-ink: #ff9d9d;
+  --missing-bg: #3a2c10; --missing-ink: #f3c46b;
+  --present-ink: #6fd3a0;
+  --shadow: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif; }
+header { position: sticky; top: 0; z-index: 2; background: var(--surface);
+  border-bottom: 1px solid var(--border); padding: 12px 24px;
+  display: flex; align-items: center; gap: 16px; }
+header .brand { font-weight: 650; letter-spacing: -.01em; }
+header .brand span { color: var(--muted); font-weight: 450; }
+.progress { margin-left: auto; display: flex; align-items: center; gap: 10px; color: var(--muted);
+  font-size: 13px; }
+.bar { width: 160px; height: 6px; background: var(--surface-2); border-radius: 99px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--accent); }
+main { max-width: 1240px; margin: 0 auto; padding: 24px; }
+.grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 20px;
+  align-items: start; }
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } main { padding: 16px; } }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  box-shadow: var(--shadow); padding: 16px 18px; margin-bottom: 14px; }
+.card h3 { margin: 0 0 10px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em;
+  color: var(--muted); display: flex; align-items: center; gap: 8px; }
+.tag { font-size: 10px; letter-spacing: .05em; padding: 2px 7px; border-radius: 99px;
+  border: 1px solid var(--border); color: var(--muted); text-transform: uppercase; }
+.title { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+.title h2 { margin: 0; font-size: 22px; letter-spacing: -.01em; }
+.title .amount { font-size: 22px; font-weight: 650; margin-left: auto; }
+.desc { font-size: 16px; margin: 8px 0 0; }
+dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; margin: 0; }
+dt { color: var(--muted); }
+dd { margin: 0; overflow-wrap: anywhere; }
+.hint { color: var(--muted); font-size: 13px; }
+.docs { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+.doc { border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 14px; }
+.doc b { display: block; font-weight: 550; }
+.doc.missing { background: var(--missing-bg); border-color: transparent; color: var(--missing-ink); }
+.doc.present { color: var(--present-ink); }
+.doc.na { color: var(--muted); }
+.missing-flag { display: inline-block; background: var(--missing-bg); color: var(--missing-ink);
+  padding: 1px 8px; border-radius: 99px; font-size: 13px; font-weight: 550; }
+.rel { border-top: 1px solid var(--border); padding-top: 10px; margin-top: 10px; }
+.rel:first-of-type { border-top: 0; margin-top: 0; padding-top: 0; }
+.ai { background: var(--ai-bg); border: 1.5px dashed var(--ai-border); }
+.ai h3 { color: var(--ai-ink); }
+.ai .tag { border-color: var(--ai-border); color: var(--ai-ink); }
+.status { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 10px;
+  font-weight: 650; font-size: 18px; margin-bottom: 12px; }
+.status small { display: block; font-weight: 450; font-size: 13px; }
+.s-simple { background: var(--simple-bg); color: var(--simple-ink); }
+.s-closer_look { background: var(--closer-bg); color: var(--closer-ink); }
+.s-suspicious { background: var(--susp-bg); color: var(--susp-ink); }
+.ai section { margin-top: 12px; }
+.ai section h4 { margin: 0 0 4px; font-size: 13px; color: var(--ai-ink); }
+.ai ul { margin: 0; padding-left: 18px; }
+.reminder { margin-top: 12px; font-size: 13px; padding: 8px 10px; border-radius: 8px;
+  background: var(--surface); border: 1px solid var(--border); }
+.meta { display: flex; justify-content: space-between; align-items: center; margin-top: 14px;
+  font-size: 12px; color: var(--muted); gap: 8px; flex-wrap: wrap; }
+button { font: inherit; border-radius: 8px; border: 1px solid var(--border); background: var(--surface);
+  color: var(--text); padding: 9px 14px; cursor: pointer; }
+button:hover { border-color: var(--accent); }
+button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent);
+  font-weight: 600; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+button.small { padding: 4px 10px; font-size: 12px; }
+.decide .row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.piles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 10px; }
+.piles label { border: 1px solid var(--border); border-radius: 8px; padding: 10px; cursor: pointer;
+  text-align: center; font-weight: 550; }
+.piles input { display: none; }
+.piles input:checked + span { color: var(--accent); }
+.piles label:has(input:checked) { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+input[type=text] { width: 100%; font: inherit; padding: 9px 10px; border-radius: 8px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text); }
+.checks { display: flex; flex-direction: column; gap: 6px; margin: 10px 0 14px; font-size: 14px; }
+.hidden { display: none; }
+.center { max-width: 640px; margin: 48px auto; }
+.center h1 { font-size: 26px; letter-spacing: -.01em; margin: 0 0 8px; }
+.center ol { padding-left: 20px; }
+.chip { display: inline-block; padding: 2px 9px; border-radius: 99px; font-size: 12px; font-weight: 600; }
+
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: .05em;
+  color: var(--muted); padding: 8px 10px; border-bottom: 1px solid var(--border); }
+td { padding: 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+tr.out td { background: var(--closer-bg); }
+td.num { white-space: nowrap; }
+.criteria { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.criteria span { font-size: 12px; padding: 2px 9px; border-radius: 99px; background: var(--surface-2); }
+.wrap { overflow-x: auto; }
+.reason { margin-top: 6px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">Keelwater <span>· Bulk sorting pilot · invented claims</span></div>
+</header>
+<main id="app"></main>
+<script>
+const ROWS = [{"id": "B01", "line": "motor", "amount": 910, "description": "My van LM19 KTR went into the back of a car at the traffic lights on Station Street. Front bumper and grille damaged. Estimate \u00a3910.", "incident": "2026-10-09", "received": "2026-10-11", "policy_years": 3.0}, {"id": "B02", "line": "glass", "amount": 129, "description": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3129.", "incident": "2026-10-09", "received": "2026-10-12", "policy_years": 3.0}, {"id": "B03", "line": "motor", "amount": 806, "description": "Reversed into a bollard in a supermarket car park. Rear bumper dented, no other vehicle involved. Garage estimate \u00a3806.", "incident": "2026-10-09", "received": "2026-10-11", "policy_years": 3.0}, {"id": "B04", "line": "glass", "amount": 240, "description": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3240. Sending this again as I haven't heard back.", "incident": "2026-10-09", "received": "2026-10-11", "policy_years": 3.0}, {"id": "B05", "line": "home", "amount": 633, "description": "Washing machine hose split and leaked onto the kitchen floor. Vinyl flooring needs replacing, quoted at \u00a3633.", "incident": "2026-10-09", "received": "2026-10-10", "policy_years": 3.0}, {"id": "B06", "line": "motor", "amount": 640, "description": "Reversed into a neighbour's garden wall and cracked two bricks. Left a note with my details. Builder's quote \u00a3640.", "incident": "2026-10-09", "received": "2026-10-11", "policy_years": 3.0}, {"id": "B07", "line": "motor", "amount": 870, "description": "Rear-ended at traffic lights on Station Street by a van, LM19 KTR. Boot lid and bumper damaged. Estimate \u00a3870.", "incident": "2026-10-09", "received": "2026-10-11", "policy_years": 3.0}, {"id": "B08", "line": "glass", "amount": 160, "description": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3160.", "incident": "2026-10-09", "received": "2026-10-12", "policy_years": 3.0}, {"id": "B09", "line": "glass", "amount": 274, "description": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3274.", "incident": "2026-10-09", "received": "2026-10-11", "policy_years": 3.0}, {"id": "B10", "line": "glass", "amount": 164, "description": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3164.", "incident": "2026-10-09", "received": "2026-10-12", "policy_years": 3.0}, {"id": "B11", "line": "home", "amount": 720, "description": "Washing machine hose split and leaked onto the kitchen floor. Vinyl flooring needs replacing, quoted at \u00a3720.", "incident": "2026-10-09", "received": "2026-10-12", "policy_years": 3.0}, {"id": "B12", "line": "glass", "amount": 117, "description": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3117.", "incident": "2026-10-09", "received": "2026-10-11", "policy_years": 3.0}, {"id": "B13", "line": "glass", "amount": 156, "description": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3156.", "incident": "2026-10-09", "received": "2026-10-11", "policy_years": 3.0}];
+const KEY = "keelwater-bulk-pilot";
+let state = (() => { try { return JSON.parse(localStorage.getItem(KEY)) || { stage: "start" }; } catch { return { stage: "start" }; } })();
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch {} };
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const gbp = n => "£" + Number(n).toLocaleString("en-GB");
+const fmt = d => new Date(d + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+let started = 0;
+
+function render() {
+  const app = document.getElementById("app");
+  if (state.stage === "start") {
+    app.innerHTML = `<div class="center card"><h1>Bulk sorting pilot</h1>
+      <p>You'll see one batch of ${ROWS.length} invented claims that a filter has proposed as simple.</p>
+      <ol><li>Scan the batch as you would at work.</li>
+      <li>Pull out any claim that shouldn't be sorted as simple, with a one-line reason.</li>
+      <li>Confirm the rest as simple.</li></ol>
+      <p class="hint">The timer runs from when the batch appears until you confirm. Work at your normal pace.</p>
+      <button class="primary" id="go">Show the batch</button></div>`;
+    document.getElementById("go").onclick = () => { state.stage = "batch"; save(); render(); };
+    return;
+  }
+  if (state.stage === "done") {
+    app.innerHTML = `<div class="center card"><h1>Batch sorted</h1>
+      <p>Download your result and save it as <code>bulk-pilot-results.csv</code> in <code>work/05-options/</code>.</p>
+      <button class="primary" id="dl">Download result (CSV)</button></div>`;
+    document.getElementById("dl").onclick = download;
+    return;
+  }
+  app.innerHTML = `<div class="card">
+    <h3>Proposed batch: simple <span class="tag">Filter</span></h3>
+    <div>Every claim below passed the batch filter:</div>
+    <div class="criteria"><span>Policy number present</span><span>All required documents received</span>
+      <span>No claims in the last 12 months</span><span>No related claims recorded</span>
+      <span>Policy over 60 days old</span><span>Under £1,000</span></div>
+    <div class="reminder">Sorting a claim as simple is not a payment authorisation.</div></div>
+  <div class="card wrap"><table>
+    <thead><tr><th>Pull out</th><th>Claim</th><th>Amount</th><th>Description</th><th>Dates</th><th>Policy</th></tr></thead>
+    <tbody>${ROWS.map(r => `<tr id="r-${r.id}">
+      <td><input type="checkbox" data-id="${r.id}"></td>
+      <td><b>${esc(r.id)}</b><div class="hint">${esc(r.line)}</div></td>
+      <td class="num">${gbp(r.amount)}</td>
+      <td>${esc(r.description)}<div class="reason hidden" id="w-${r.id}"><input type="text" data-reason="${r.id}" placeholder="One-line reason for pulling this out (required)"></div></td>
+      <td class="num">Incident ${fmt(r.incident)}<div class="hint">Received ${fmt(r.received)}</div></td>
+      <td class="num">${r.policy_years} years</td></tr>`).join("")}</tbody></table></div>
+  <div class="card"><button class="primary" id="confirm">Confirm: sort the rest as simple</button>
+    <span class="hint" id="msg" style="margin-left:10px"></span></div>`;
+  const boxes = [...document.querySelectorAll("input[type=checkbox][data-id]")];
+  boxes.forEach(b => b.onchange = () => {
+    document.getElementById("w-" + b.dataset.id).classList.toggle("hidden", !b.checked);
+    document.getElementById("r-" + b.dataset.id).classList.toggle("out", b.checked);
+  });
+  document.getElementById("confirm").onclick = () => {
+    const out = boxes.filter(b => b.checked).map(b => b.dataset.id);
+    const reasons = Object.fromEntries(out.map(id => [id, document.querySelector(`[data-reason="${id}"]`).value.trim()]));
+    if (out.some(id => !reasons[id])) { document.getElementById("msg").textContent = "Add a reason for each claim you pulled out."; return; }
+    state = { stage: "done", time_ms: Math.round(performance.now() - started), out, reasons, at: new Date().toISOString() };
+    save(); render();
+  };
+  started = performance.now();
+}
+
+function download() {
+  const q = v => `"${String(v).replace(/"/g, '""')}"`;
+  const lines = ["claim_id,pulled_out,reason,batch_time_ms,decided_at",
+    ...ROWS.map(r => [r.id, state.out.includes(r.id) ? 1 : 0, state.reasons[r.id] || "", state.time_ms, state.at].map(q).join(","))];
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([lines.join("\n")], { type: "text/csv" }));
+  a.download = "bulk-pilot-results.csv";
+  a.click();
+}
+render();
+</script>
+</body>
+</html>

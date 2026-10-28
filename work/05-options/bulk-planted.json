@@ -1,0 +1,23 @@
+{
+ "batch_ids": {
+  "N04": "B01",
+  "K064": "B02",
+  "K041": "B03",
+  "N01": "B04",
+  "K039": "B05",
+  "N02": "B06",
+  "N03": "B07",
+  "K053": "B08",
+  "K062": "B09",
+  "K046": "B10",
+  "K080": "B11",
+  "K045": "B12",
+  "K072": "B13"
+ },
+ "planted_answers": {
+  "B04": "N01: closer_look (P01: same claim submitted again)",
+  "B06": "N02: closer_look (P15: damage to a third party's property, no contact yet)",
+  "B07": "N03: closer_look (P08: linked to N04, same incident)",
+  "B01": "N04: closer_look (P08: linked to N03, same incident)"
+ }
+}

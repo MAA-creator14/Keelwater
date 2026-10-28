@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bulk Sorting Pilot</title>
+<style>
+/*__STYLE__*/
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: .05em;
+  color: var(--muted); padding: 8px 10px; border-bottom: 1px solid var(--border); }
+td { padding: 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+tr.out td { background: var(--closer-bg); }
+td.num { white-space: nowrap; }
+.criteria { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.criteria span { font-size: 12px; padding: 2px 9px; border-radius: 99px; background: var(--surface-2); }
+.wrap { overflow-x: auto; }
+.reason { margin-top: 6px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">Keelwater <span>· Bulk sorting pilot · invented claims</span></div>
+</header>
+<main id="app"></main>
+<script>
+const ROWS = /*__DATA__*/null;
+const KEY = "keelwater-bulk-pilot";
+let state = (() => { try { return JSON.parse(localStorage.getItem(KEY)) || { stage: "start" }; } catch { return { stage: "start" }; } })();
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch {} };
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const gbp = n => "£" + Number(n).toLocaleString("en-GB");
+const fmt = d => new Date(d + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+let started = 0;
+
+function render() {
+  const app = document.getElementById("app");
+  if (state.stage === "start") {
+    app.innerHTML = `<div class="center card"><h1>Bulk sorting pilot</h1>
+      <p>You'll see one batch of ${ROWS.length} invented claims that a filter has proposed as simple.</p>
+      <ol><li>Scan the batch as you would at work.</li>
+      <li>Pull out any claim that shouldn't be sorted as simple, with a one-line reason.</li>
+      <li>Confirm the rest as simple.</li></ol>
+      <p class="hint">The timer runs from when the batch appears until you confirm. Work at your normal pace.</p>
+      <button class="primary" id="go">Show the batch</button></div>`;
+    document.getElementById("go").onclick = () => { state.stage = "batch"; save(); render(); };
+    return;
+  }
+  if (state.stage === "done") {
+    app.innerHTML = `<div class="center card"><h1>Batch sorted</h1>
+      <p>Download your result and save it as <code>bulk-pilot-results.csv</code> in <code>work/05-options/</code>.</p>
+      <button class="primary" id="dl">Download result (CSV)</button></div>`;
+    document.getElementById("dl").onclick = download;
+    return;
+  }
+  app.innerHTML = `<div class="card">
+    <h3>Proposed batch: simple <span class="tag">Filter</span></h3>
+    <div>Every claim below passed the batch filter:</div>
+    <div class="criteria"><span>Policy number present</span><span>All required documents received</span>
+      <span>No claims in the last 12 months</span><span>No related claims recorded</span>
+      <span>Policy over 60 days old</span><span>Under £1,000</span></div>
+    <div class="reminder">Sorting a claim as simple is not a payment authorisation.</div></div>
+  <div class="card wrap"><table>
+    <thead><tr><th>Pull out</th><th>Claim</th><th>Amount</th><th>Description</th><th>Dates</th><th>Policy</th></tr></thead>
+    <tbody>${ROWS.map(r => `<tr id="r-${r.id}">
+      <td><input type="checkbox" data-id="${r.id}"></td>
+      <td><b>${esc(r.id)}</b><div class="hint">${esc(r.line)}</div></td>
+      <td class="num">${gbp(r.amount)}</td>
+      <td>${esc(r.description)}<div class="reason hidden" id="w-${r.id}"><input type="text" data-reason="${r.id}" placeholder="One-line reason for pulling this out (required)"></div></td>
+      <td class="num">Incident ${fmt(r.incident)}<div class="hint">Received ${fmt(r.received)}</div></td>
+      <td class="num">${r.policy_years} years</td></tr>`).join("")}</tbody></table></div>
+  <div class="card"><button class="primary" id="confirm">Confirm: sort the rest as simple</button>
+    <span class="hint" id="msg" style="margin-left:10px"></span></div>`;
+  const boxes = [...document.querySelectorAll("input[type=checkbox][data-id]")];
+  boxes.forEach(b => b.onchange = () => {
+    document.getElementById("w-" + b.dataset.id).classList.toggle("hidden", !b.checked);
+    document.getElementById("r-" + b.dataset.id).classList.toggle("out", b.checked);
+  });
+  document.getElementById("confirm").onclick = () => {
+    const out = boxes.filter(b => b.checked).map(b => b.dataset.id);
+    const reasons = Object.fromEntries(out.map(id => [id, document.querySelector(`[data-reason="${id}"]`).value.trim()]));
+    if (out.some(id => !reasons[id])) { document.getElementById("msg").textContent = "Add a reason for each claim you pulled out."; return; }
+    state = { stage: "done", time_ms: Math.round(performance.now() - started), out, reasons, at: new Date().toISOString() };
+    save(); render();
+  };
+  started = performance.now();
+}
+
+function download() {
+  const q = v => `"${String(v).replace(/"/g, '""')}"`;
+  const lines = ["claim_id,pulled_out,reason,batch_time_ms,decided_at",
+    ...ROWS.map(r => [r.id, state.out.includes(r.id) ? 1 : 0, state.reasons[r.id] || "", state.time_ms, state.at].map(q).join(","))];
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([lines.join("\n")], { type: "text/csv" }));
+  a.download = "bulk-pilot-results.csv";
+  a.click();
+}
+render();
+</script>
+</body>
+</html>
