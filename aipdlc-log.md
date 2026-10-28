@@ -64,3 +64,9 @@
 **Proposed:** Six failure modes, wrong-pay first: 3 human-drafted, plus missing context, stale or partial inputs and handler over-trust added at AI review.
 **Decision:** Approved
 **Notes:** Failure 2 narrowed to errors with no money out. Drift offered and not kept. Failure 1 terms and the noisy handler labels carried to Stage 3.
+
+
+## 2026-10-28T06:59:00Z - Item: keelwater-sorting - Stage: Stage 3, Evidence and assumptions
+**Proposed:** Register of 5 rows (A1 waits not queue, A2 overlooked information, A3a AI accuracy, A3b AI value, L1 label audit), ranked, with thresholds set before any test.
+**Decision:** Approved
+**Notes:** Thresholds locked. A1 keeps the Stage 0 queue-time 30%/15%, reversed so queue ≤15% passes. A3 split by AI; A2 and A3 redrafted by AI and edited by human. Label audit (L1) runs before A3a.
