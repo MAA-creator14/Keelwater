@@ -1,0 +1,2402 @@
+[
+{
+"line": "home",
+"amount_gbp": 706,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 1415,
+"docs_missing": true,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 4173,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 2338,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 94,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 379,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 324,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 256,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 6676,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 8418,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 7246,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 4601,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 5342,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 95,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 2249,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 397,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 3620,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 254,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 165,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 138,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 2550,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 525,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 3457,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 5456,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 167,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 109,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 8171,
+"docs_missing": true,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 8204,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 99,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 3983,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 5717,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 177,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 3563,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 5349,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 6516,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 5911,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 6935,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 120,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 1080,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 5530,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 379,
+"docs_missing": true,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 4758,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 2866,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 5730,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 2572,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 333,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 3292,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 2371,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 104,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 2963,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 3506,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 1103,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 817,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 1260,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 611,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 168,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 127,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 8561,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 2841,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 1093,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 133,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 5640,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 1233,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 7041,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 348,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 7492,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 504,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 213,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 7480,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 5258,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 6117,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 248,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 1650,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 172,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 3004,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 6526,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 4841,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 288,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 805,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 8409,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 273,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 7170,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 6430,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 144,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 6749,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 1766,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 8423,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 6110,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 4743,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 3980,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 345,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 8790,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 300,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 4675,
+"docs_missing": true,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 8013,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 7898,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 302,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 354,
+"docs_missing": true,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 5074,
+"docs_missing": true,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 2616,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 3857,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 305,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 195,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 2753,
+"docs_missing": true,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 3200,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 5798,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 2022,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 252,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 185,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 6088,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 155,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 7092,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 153,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 8709,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 4126,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 201,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 4771,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 3160,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 6476,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 367,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 236,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 1619,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 176,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 4501,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 2744,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 5709,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 4091,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 602,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 7701,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 8496,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 1359,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 2597,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 7266,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 7572,
+"docs_missing": true,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 5033,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 276,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 4049,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 7590,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "home",
+"amount_gbp": 676,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 3212,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 8162,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 144,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 6944,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 522,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 6748,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 8757,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 155,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 2587,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 715,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 3373,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 8261,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 149,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 7480,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 5401,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 2882,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 4271,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 2985,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 201,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 4616,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 7744,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 323,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 4642,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 8660,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "home",
+"amount_gbp": 8813,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 5561,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 5768,
+"docs_missing": true,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 212,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 4808,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 3715,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 2355,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 183,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 2669,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 156,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 2372,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 6149,
+"docs_missing": true,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 8409,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 8276,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 5307,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 4989,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 2805,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 3194,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 238,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 386,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 3805,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 1724,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 2864,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 3424,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 5232,
+"docs_missing": true,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 170,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 104,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 4557,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 5243,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 5149,
+"docs_missing": true,
+"pile": "suspicious"
+},
+{
+"line": "home",
+"amount_gbp": 4310,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 1166,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 355,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 1178,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 8113,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "home",
+"amount_gbp": 2819,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 5886,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 3622,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 189,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 376,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 139,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 1340,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 1705,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 2769,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 216,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 232,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 1496,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 8619,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 277,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 7990,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 219,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 3234,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 268,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 323,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 3972,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 5779,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 399,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 112,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 139,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 96,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 3512,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 4556,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 283,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 234,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 129,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 4541,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 8418,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 7534,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 4845,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 6609,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 500,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 8820,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 3680,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 198,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 364,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 217,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 132,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 1620,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 2204,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 146,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 7630,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 3685,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 6449,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 4524,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 108,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 3980,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 2698,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 2402,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 8760,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "home",
+"amount_gbp": 7375,
+"docs_missing": true,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 274,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 1710,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 123,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 8187,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 2851,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 258,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 4631,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 8147,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 6922,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 2632,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 6076,
+"docs_missing": true,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 8690,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 6287,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 277,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 380,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 1087,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 7201,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 92,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 3548,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 235,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 969,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 368,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 729,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 170,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 2756,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 329,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 333,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 202,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 1341,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 92,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "home",
+"amount_gbp": 2548,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 3061,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 330,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 245,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 144,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 1997,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 352,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 176,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 325,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 6688,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 8374,
+"docs_missing": true,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 273,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 7636,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 220,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 3128,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 131,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 8596,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 4402,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 414,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 3539,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 2420,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 295,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 382,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 1006,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 188,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 8761,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 157,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 368,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 8869,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 7043,
+"docs_missing": true,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 6362,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 6635,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 5733,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 325,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 118,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 337,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 2353,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 267,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 305,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 5415,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 2200,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 389,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 6090,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 267,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 5560,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 2677,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 5562,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 5907,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 149,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 390,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 93,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 3902,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 107,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 3558,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "home",
+"amount_gbp": 8942,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 1101,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 4939,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 3902,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 295,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 260,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 5635,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 273,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 231,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 7374,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 8104,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 906,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 8390,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 8666,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 224,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 117,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 8836,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 3678,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 236,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 832,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 269,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 1104,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 7304,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 307,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 1544,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 946,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 6879,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 7290,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "home",
+"amount_gbp": 2164,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 4425,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 87,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 5840,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 3006,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "home",
+"amount_gbp": 7072,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 7228,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "home",
+"amount_gbp": 1663,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 7482,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 330,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 135,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "home",
+"amount_gbp": 8493,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 4898,
+"docs_missing": true,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 238,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 519,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 191,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "glass",
+"amount_gbp": 84,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 2921,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 724,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 1374,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 385,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 5689,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "home",
+"amount_gbp": 1776,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 255,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "glass",
+"amount_gbp": 274,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "home",
+"amount_gbp": 6375,
+"docs_missing": false,
+"pile": "suspicious"
+},
+{
+"line": "motor",
+"amount_gbp": 1959,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 2072,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 6432,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 3902,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 150,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 751,
+"docs_missing": true,
+"pile": "closer_look"
+},
+{
+"line": "motor",
+"amount_gbp": 3433,
+"docs_missing": false,
+"pile": "closer_look"
+},
+{
+"line": "glass",
+"amount_gbp": 201,
+"docs_missing": false,
+"pile": "simple"
+},
+{
+"line": "motor",
+"amount_gbp": 7608,
+"docs_missing": false,
+"pile": "closer_look"
+}
+]

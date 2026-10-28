@@ -1,0 +1,1620 @@
+{
+ "results": [
+  {
+   "variant": "handler baseline (simulated)",
+   "n": 80,
+   "accuracy": 0.8875,
+   "wrong_simple_rate": 0.0625,
+   "wrong_simple_ids": [
+    "K008",
+    "K020",
+    "K044",
+    "K060",
+    "K071"
+   ],
+   "linked_n": 17,
+   "linked_wrong_simple": 4,
+   "linked_wrong_simple_ids": [
+    "K020",
+    "K044",
+    "K060",
+    "K071"
+   ],
+   "over_escalation_rate": 0.05,
+   "data_flagged_n": 32,
+   "data_flagged_sorted_simple": [
+    "K008",
+    "K020",
+    "K071"
+   ],
+   "cited_facts": 0,
+   "ungrounded_facts": 0,
+   "ungrounded_examples": [],
+   "with_reason": 0,
+   "latency_median_ms": null,
+   "latency_p90_ms": null,
+   "confusion": {
+    "simple": {
+     "simple": 29,
+     "closer_look": 4,
+     "suspicious": 0,
+     "refused": 0,
+     "no_answer": 0
+    },
+    "closer_look": {
+     "simple": 5,
+     "closer_look": 30,
+     "suspicious": 0,
+     "refused": 0,
+     "no_answer": 0
+    },
+    "suspicious": {
+     "simple": 0,
+     "closer_look": 0,
+     "suspicious": 12,
+     "refused": 0,
+     "no_answer": 0
+    }
+   }
+  },
+  {
+   "variant": "rules",
+   "n": 80,
+   "accuracy": 0.925,
+   "wrong_simple_rate": 0.05,
+   "wrong_simple_ids": [
+    "K038",
+    "K044",
+    "K060",
+    "K068"
+   ],
+   "linked_n": 17,
+   "linked_wrong_simple": 2,
+   "linked_wrong_simple_ids": [
+    "K044",
+    "K060"
+   ],
+   "over_escalation_rate": 0.025,
+   "data_flagged_n": 32,
+   "data_flagged_sorted_simple": [],
+   "cited_facts": 96,
+   "ungrounded_facts": 0,
+   "ungrounded_examples": [],
+   "with_reason": 80,
+   "latency_median_ms": 0.004640998668037355,
+   "latency_p90_ms": 0.0122929981444031,
+   "confusion": {
+    "simple": {
+     "simple": 31,
+     "closer_look": 2,
+     "suspicious": 0,
+     "refused": 0,
+     "no_answer": 0
+    },
+    "closer_look": {
+     "simple": 4,
+     "closer_look": 31,
+     "suspicious": 0,
+     "refused": 0,
+     "no_answer": 0
+    },
+    "suspicious": {
+     "simple": 0,
+     "closer_look": 0,
+     "suspicious": 12,
+     "refused": 0,
+     "no_answer": 0
+    }
+   },
+   "a3a": "fail"
+  },
+  {
+   "variant": "prototype stand-in",
+   "n": 80,
+   "accuracy": 0.5,
+   "wrong_simple_rate": 0.2875,
+   "wrong_simple_ids": [
+    "K001",
+    "K008",
+    "K009",
+    "K012",
+    "K016",
+    "K026",
+    "K030",
+    "K035",
+    "K036",
+    "K038",
+    "K040",
+    "K044",
+    "K049",
+    "K054",
+    "K055",
+    "K059",
+    "K060",
+    "K065",
+    "K066",
+    "K067",
+    "K068",
+    "K069",
+    "K074"
+   ],
+   "linked_n": 17,
+   "linked_wrong_simple": 8,
+   "linked_wrong_simple_ids": [
+    "K001",
+    "K009",
+    "K030",
+    "K044",
+    "K054",
+    "K059",
+    "K060",
+    "K074"
+   ],
+   "over_escalation_rate": 0.075,
+   "data_flagged_n": 32,
+   "data_flagged_sorted_simple": [
+    "K001",
+    "K008",
+    "K016",
+    "K026",
+    "K030",
+    "K036",
+    "K049",
+    "K054",
+    "K055",
+    "K059"
+   ],
+   "cited_facts": 0,
+   "ungrounded_facts": 0,
+   "ungrounded_examples": [],
+   "with_reason": 0,
+   "latency_median_ms": 0.0039059814298525453,
+   "latency_p90_ms": 0.006204508827067912,
+   "confusion": {
+    "simple": {
+     "simple": 27,
+     "closer_look": 6,
+     "suspicious": 0,
+     "refused": 0,
+     "no_answer": 0
+    },
+    "closer_look": {
+     "simple": 22,
+     "closer_look": 13,
+     "suspicious": 0,
+     "refused": 0,
+     "no_answer": 0
+    },
+    "suspicious": {
+     "simple": 1,
+     "closer_look": 11,
+     "suspicious": 0,
+     "refused": 0,
+     "no_answer": 0
+    }
+   },
+   "a3a": "fail"
+  }
+ ],
+ "l1": {
+  "status": "not complete",
+  "done": 0,
+  "of": 20
+ },
+ "predictions": {
+  "rules": {
+   "K001": {
+    "pile": "closer_look",
+    "reason": "Closer look: related to K030.",
+    "cited_facts": [
+     {
+      "field": "related_claims",
+      "value": "K030"
+     }
+    ]
+   },
+   "K002": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3438.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "438"
+     }
+    ]
+   },
+   "K003": {
+    "pile": "suspicious",
+    "reason": "Claimant has 4 claims in the last 12 months.",
+    "cited_facts": [
+     {
+      "field": "claimant_history",
+      "value": "H-9009"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-3273"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-9568"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-2224"
+     }
+    ]
+   },
+   "K004": {
+    "pile": "suspicious",
+    "reason": "Policy started 8 days before the incident.",
+    "cited_facts": [
+     {
+      "field": "policy_start_date",
+      "value": "2026-10-01"
+     }
+    ]
+   },
+   "K005": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing police_ref; third-party liability not confirmed.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "police_ref"
+     },
+     {
+      "field": "description",
+      "value": "liability not yet confirmed"
+     }
+    ]
+   },
+   "K006": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing repair_estimate; related to K074.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "repair_estimate"
+     },
+     {
+      "field": "related_claims",
+      "value": "K074"
+     }
+    ]
+   },
+   "K007": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a395.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "95"
+     }
+    ]
+   },
+   "K008": {
+    "pile": "closer_look",
+    "reason": "Closer look: policy status last checked 119 days ago.",
+    "cited_facts": [
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-06-14"
+     }
+    ]
+   },
+   "K009": {
+    "pile": "closer_look",
+    "reason": "Closer look: related to K077.",
+    "cited_facts": [
+     {
+      "field": "related_claims",
+      "value": "K077"
+     }
+    ]
+   },
+   "K010": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a35,791.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "5791"
+     }
+    ]
+   },
+   "K011": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3700.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "700"
+     }
+    ]
+   },
+   "K012": {
+    "pile": "closer_look",
+    "reason": "Closer look: claimant has claimed in the last 12 months.",
+    "cited_facts": [
+     {
+      "field": "claimant_history",
+      "value": "H-2019"
+     }
+    ]
+   },
+   "K013": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing engineer_report.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "engineer_report"
+     }
+    ]
+   },
+   "K014": {
+    "pile": "suspicious",
+    "reason": "Claimant asks for payment in cash.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "cash"
+     }
+    ]
+   },
+   "K015": {
+    "pile": "suspicious",
+    "reason": "Policy started 8 days before the incident.",
+    "cited_facts": [
+     {
+      "field": "policy_start_date",
+      "value": "2026-10-01"
+     }
+    ]
+   },
+   "K016": {
+    "pile": "closer_look",
+    "reason": "Closer look: policy status last checked 69 days ago.",
+    "cited_facts": [
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-08-02"
+     }
+    ]
+   },
+   "K017": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a396.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "96"
+     }
+    ]
+   },
+   "K018": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3150.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "150"
+     }
+    ]
+   },
+   "K019": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a31,336.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "1336"
+     }
+    ]
+   },
+   "K020": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing repair_estimate.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "repair_estimate"
+     }
+    ]
+   },
+   "K021": {
+    "pile": "suspicious",
+    "reason": "Supporting document is dated before the incident.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "dated"
+     }
+    ]
+   },
+   "K022": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing repair_estimate.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "repair_estimate"
+     }
+    ]
+   },
+   "K023": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a35,389.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "5389"
+     }
+    ]
+   },
+   "K024": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a33,472.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "3472"
+     }
+    ]
+   },
+   "K025": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3991.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "991"
+     }
+    ]
+   },
+   "K026": {
+    "pile": "closer_look",
+    "reason": "Closer look: no policy number.",
+    "cited_facts": [
+     {
+      "field": "policy_number",
+      "value": "None"
+     }
+    ]
+   },
+   "K027": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3914.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "914"
+     }
+    ]
+   },
+   "K028": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3641.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "641"
+     }
+    ]
+   },
+   "K029": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3786.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "786"
+     }
+    ]
+   },
+   "K030": {
+    "pile": "closer_look",
+    "reason": "Closer look: related to K001.",
+    "cited_facts": [
+     {
+      "field": "related_claims",
+      "value": "K001"
+     }
+    ]
+   },
+   "K031": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing police_ref; third-party liability not confirmed.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "police_ref"
+     },
+     {
+      "field": "description",
+      "value": "liability not yet confirmed"
+     }
+    ]
+   },
+   "K032": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing photos, repair_estimate.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "photos"
+     },
+     {
+      "field": "documents",
+      "value": "repair_estimate"
+     }
+    ]
+   },
+   "K033": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a35,095.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "5095"
+     }
+    ]
+   },
+   "K034": {
+    "pile": "suspicious",
+    "reason": "Policy started 8 days before the incident.",
+    "cited_facts": [
+     {
+      "field": "policy_start_date",
+      "value": "2026-10-01"
+     }
+    ]
+   },
+   "K035": {
+    "pile": "closer_look",
+    "reason": "Closer look: claimant has claimed in the last 12 months.",
+    "cited_facts": [
+     {
+      "field": "claimant_history",
+      "value": "H-7252"
+     }
+    ]
+   },
+   "K036": {
+    "pile": "closer_look",
+    "reason": "Closer look: policy status last checked 76 days ago.",
+    "cited_facts": [
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-07-28"
+     }
+    ]
+   },
+   "K037": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3482.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "482"
+     }
+    ]
+   },
+   "K038": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a31,800.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "1800"
+     }
+    ]
+   },
+   "K039": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3633.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "633"
+     }
+    ]
+   },
+   "K040": {
+    "pile": "closer_look",
+    "reason": "Closer look: claimant has claimed in the last 12 months.",
+    "cited_facts": [
+     {
+      "field": "claimant_history",
+      "value": "H-5807"
+     }
+    ]
+   },
+   "K041": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3806.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "806"
+     }
+    ]
+   },
+   "K042": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing photos, repair_estimate.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "photos"
+     },
+     {
+      "field": "documents",
+      "value": "repair_estimate"
+     }
+    ]
+   },
+   "K043": {
+    "pile": "suspicious",
+    "reason": "Claimant asks for payment in cash.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "cash"
+     }
+    ]
+   },
+   "K044": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a31,052.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "1052"
+     }
+    ]
+   },
+   "K045": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3117.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "117"
+     }
+    ]
+   },
+   "K046": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3164.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "164"
+     }
+    ]
+   },
+   "K047": {
+    "pile": "closer_look",
+    "reason": "Closer look: related to K070.",
+    "cited_facts": [
+     {
+      "field": "related_claims",
+      "value": "K070"
+     }
+    ]
+   },
+   "K048": {
+    "pile": "suspicious",
+    "reason": "Claimant asks for payment in cash.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "cash"
+     }
+    ]
+   },
+   "K049": {
+    "pile": "closer_look",
+    "reason": "Closer look: no policy number.",
+    "cited_facts": [
+     {
+      "field": "policy_number",
+      "value": "None"
+     }
+    ]
+   },
+   "K050": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing repair_estimate.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "repair_estimate"
+     }
+    ]
+   },
+   "K051": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3279.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "279"
+     }
+    ]
+   },
+   "K052": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3637.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "637"
+     }
+    ]
+   },
+   "K053": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3160.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "160"
+     }
+    ]
+   },
+   "K054": {
+    "pile": "closer_look",
+    "reason": "Closer look: related to K059.",
+    "cited_facts": [
+     {
+      "field": "related_claims",
+      "value": "K059"
+     }
+    ]
+   },
+   "K055": {
+    "pile": "closer_look",
+    "reason": "Closer look: policy status last checked 97 days ago.",
+    "cited_facts": [
+     {
+      "field": "policy_status_checked_at",
+      "value": "2026-07-07"
+     }
+    ]
+   },
+   "K056": {
+    "pile": "suspicious",
+    "reason": "Claimant has 4 claims in the last 12 months.",
+    "cited_facts": [
+     {
+      "field": "claimant_history",
+      "value": "H-7921"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-3667"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-9097"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-1079"
+     }
+    ]
+   },
+   "K057": {
+    "pile": "suspicious",
+    "reason": "Supporting document is dated before the incident.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "dated"
+     }
+    ]
+   },
+   "K058": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3223.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "223"
+     }
+    ]
+   },
+   "K059": {
+    "pile": "closer_look",
+    "reason": "Closer look: related to K054.",
+    "cited_facts": [
+     {
+      "field": "related_claims",
+      "value": "K054"
+     }
+    ]
+   },
+   "K060": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a31,693.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "1693"
+     }
+    ]
+   },
+   "K061": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing repair_estimate.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "repair_estimate"
+     }
+    ]
+   },
+   "K062": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3274.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "274"
+     }
+    ]
+   },
+   "K063": {
+    "pile": "suspicious",
+    "reason": "Claimant has 4 claims in the last 12 months.",
+    "cited_facts": [
+     {
+      "field": "claimant_history",
+      "value": "H-7367"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-2558"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-6994"
+     },
+     {
+      "field": "claimant_history",
+      "value": "H-8278"
+     }
+    ]
+   },
+   "K064": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3129.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "129"
+     }
+    ]
+   },
+   "K065": {
+    "pile": "closer_look",
+    "reason": "Closer look: claimant has claimed in the last 12 months.",
+    "cited_facts": [
+     {
+      "field": "claimant_history",
+      "value": "H-6270"
+     }
+    ]
+   },
+   "K066": {
+    "pile": "suspicious",
+    "reason": "Supporting document is dated before the incident.",
+    "cited_facts": [
+     {
+      "field": "description",
+      "value": "dated"
+     }
+    ]
+   },
+   "K067": {
+    "pile": "closer_look",
+    "reason": "Closer look: claimant has claimed in the last 12 months.",
+    "cited_facts": [
+     {
+      "field": "claimant_history",
+      "value": "H-1733"
+     }
+    ]
+   },
+   "K068": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3260.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "260"
+     }
+    ]
+   },
+   "K069": {
+    "pile": "closer_look",
+    "reason": "Closer look: claimant has claimed in the last 12 months.",
+    "cited_facts": [
+     {
+      "field": "claimant_history",
+      "value": "H-2590"
+     }
+    ]
+   },
+   "K070": {
+    "pile": "closer_look",
+    "reason": "Closer look: related to K047.",
+    "cited_facts": [
+     {
+      "field": "related_claims",
+      "value": "K047"
+     }
+    ]
+   },
+   "K071": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing repair_estimate.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "repair_estimate"
+     }
+    ]
+   },
+   "K072": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3156.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "156"
+     }
+    ]
+   },
+   "K073": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a31,062.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "1062"
+     }
+    ]
+   },
+   "K074": {
+    "pile": "closer_look",
+    "reason": "Closer look: related to K006.",
+    "cited_facts": [
+     {
+      "field": "related_claims",
+      "value": "K006"
+     }
+    ]
+   },
+   "K075": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3600.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "600"
+     }
+    ]
+   },
+   "K076": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a34,604.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "4604"
+     }
+    ]
+   },
+   "K077": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing repair_estimate; related to K009.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "repair_estimate"
+     },
+     {
+      "field": "related_claims",
+      "value": "K009"
+     }
+    ]
+   },
+   "K078": {
+    "pile": "closer_look",
+    "reason": "Closer look: missing police_ref; third-party liability not confirmed.",
+    "cited_facts": [
+     {
+      "field": "documents",
+      "value": "police_ref"
+     },
+     {
+      "field": "description",
+      "value": "liability not yet confirmed"
+     }
+    ]
+   },
+   "K079": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a36,528.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "6528"
+     }
+    ]
+   },
+   "K080": {
+    "pile": "simple",
+    "reason": "Complete claim, no history or links, \u00a3720.",
+    "cited_facts": [
+     {
+      "field": "amount_gbp",
+      "value": "720"
+     }
+    ]
+   }
+  },
+  "prototype stand-in": {
+   "K001": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K002": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K003": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K004": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K005": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K006": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K007": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K008": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K009": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K010": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K011": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K012": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K013": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K014": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K015": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K016": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K017": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K018": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K019": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K020": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K021": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K022": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K023": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K024": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K025": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K026": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K027": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K028": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K029": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K030": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K031": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K032": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K033": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K034": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K035": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K036": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K037": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K038": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K039": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K040": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K041": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K042": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K043": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K044": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K045": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K046": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K047": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K048": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K049": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K050": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K051": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K052": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K053": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K054": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K055": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K056": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K057": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K058": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K059": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K060": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K061": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K062": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K063": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K064": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K065": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K066": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K067": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K068": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K069": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K070": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K071": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K072": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K073": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K074": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K075": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K076": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K077": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K078": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K079": {
+    "pile": "closer_look",
+    "reason": "",
+    "cited_facts": []
+   },
+   "K080": {
+    "pile": "simple",
+    "reason": "",
+    "cited_facts": []
+   }
+  }
+ },
+ "data_flags": {
+  "K001": [
+   "duplicate"
+  ],
+  "K002": [],
+  "K003": [
+   "missing_documents"
+  ],
+  "K004": [
+   "missing_documents"
+  ],
+  "K005": [
+   "missing_documents"
+  ],
+  "K006": [
+   "missing_documents"
+  ],
+  "K007": [],
+  "K008": [
+   "stale_policy_status"
+  ],
+  "K009": [],
+  "K010": [],
+  "K011": [],
+  "K012": [],
+  "K013": [
+   "missing_documents"
+  ],
+  "K014": [
+   "missing_documents"
+  ],
+  "K015": [
+   "missing_documents"
+  ],
+  "K016": [
+   "stale_policy_status"
+  ],
+  "K017": [],
+  "K018": [],
+  "K019": [],
+  "K020": [
+   "missing_documents"
+  ],
+  "K021": [],
+  "K022": [
+   "missing_documents"
+  ],
+  "K023": [],
+  "K024": [],
+  "K025": [],
+  "K026": [
+   "missing_policy_number"
+  ],
+  "K027": [],
+  "K028": [],
+  "K029": [],
+  "K030": [
+   "duplicate"
+  ],
+  "K031": [
+   "missing_documents"
+  ],
+  "K032": [
+   "missing_documents"
+  ],
+  "K033": [],
+  "K034": [
+   "missing_documents"
+  ],
+  "K035": [],
+  "K036": [
+   "stale_policy_status"
+  ],
+  "K037": [],
+  "K038": [],
+  "K039": [],
+  "K040": [],
+  "K041": [],
+  "K042": [
+   "missing_documents"
+  ],
+  "K043": [
+   "missing_documents"
+  ],
+  "K044": [],
+  "K045": [],
+  "K046": [],
+  "K047": [],
+  "K048": [
+   "missing_documents"
+  ],
+  "K049": [
+   "missing_policy_number"
+  ],
+  "K050": [
+   "missing_documents"
+  ],
+  "K051": [],
+  "K052": [],
+  "K053": [],
+  "K054": [
+   "duplicate"
+  ],
+  "K055": [
+   "stale_policy_status"
+  ],
+  "K056": [
+   "missing_documents"
+  ],
+  "K057": [],
+  "K058": [],
+  "K059": [
+   "duplicate"
+  ],
+  "K060": [],
+  "K061": [
+   "missing_documents"
+  ],
+  "K062": [],
+  "K063": [
+   "missing_documents"
+  ],
+  "K064": [],
+  "K065": [],
+  "K066": [],
+  "K067": [],
+  "K068": [],
+  "K069": [],
+  "K070": [],
+  "K071": [
+   "missing_documents"
+  ],
+  "K072": [],
+  "K073": [],
+  "K074": [],
+  "K075": [],
+  "K076": [],
+  "K077": [
+   "missing_documents"
+  ],
+  "K078": [
+   "missing_documents"
+  ],
+  "K079": [],
+  "K080": []
+ }
+}

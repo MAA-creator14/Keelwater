@@ -1,0 +1,1998 @@
+[
+ {
+  "id": "K001",
+  "received_at": "2026-10-10",
+  "line": "motor",
+  "claimant_id": "P0054",
+  "incident_ref": "I0052",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-523337",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 900,
+  "description": "Side mirror knocked off by a passing van on Victoria Avenue. Replacement \u00a3900. Submitting again as I had no confirmation.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": [
+   {
+    "claim_id": "K030",
+    "relation": "same incident",
+    "claimant_id": "P0054"
+   }
+  ]
+ },
+ {
+  "id": "K002",
+  "received_at": "2026-10-11",
+  "line": "home",
+  "claimant_id": "P0022",
+  "incident_ref": "I0022",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-372268",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 438,
+  "description": "Washing machine hose split and leaked onto the kitchen floor. Vinyl flooring needs replacing, quoted at \u00a3438.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K003",
+  "received_at": "2026-10-12",
+  "line": "home",
+  "claimant_id": "P0062",
+  "incident_ref": "I0060",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-925635",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1662,
+  "description": "Laptop and camera stolen in a break-in. No sign of forced entry. Claiming \u00a31662.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": false,
+   "police_ref": true,
+   "engineer_report": null
+  },
+  "claimant_history": [
+   {
+    "claim_id": "H-9009",
+    "date": "2025-12-09",
+    "line": "home",
+    "amount_gbp": 3290,
+    "outcome": "paid"
+   },
+   {
+    "claim_id": "H-3273",
+    "date": "2026-09-01",
+    "line": "home",
+    "amount_gbp": 1126,
+    "outcome": "paid"
+   },
+   {
+    "claim_id": "H-9568",
+    "date": "2026-09-17",
+    "line": "home",
+    "amount_gbp": 2220,
+    "outcome": "paid"
+   },
+   {
+    "claim_id": "H-2224",
+    "date": "2026-08-10",
+    "line": "home",
+    "amount_gbp": 2361,
+    "outcome": "paid"
+   }
+  ],
+  "related_claims": []
+ },
+ {
+  "id": "K004",
+  "received_at": "2026-10-10",
+  "line": "motor",
+  "claimant_id": "P0060",
+  "incident_ref": "I0058",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-560998",
+  "policy_start_date": "2026-10-01",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 8362,
+  "description": "Car stolen from outside my house overnight and found burnt out two days later. Claiming the full value, \u00a38362.",
+  "documents": {
+   "photos": false,
+   "repair_estimate": false,
+   "police_ref": true,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K005",
+  "received_at": "2026-10-11",
+  "line": "motor",
+  "claimant_id": "P0029",
+  "incident_ref": "I0029",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-883226",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1857,
+  "description": "Another car pulled out of a side road and hit my front wing. The other driver gave their details. Estimate \u00a31857. Third party involved; liability not yet confirmed by their insurer.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": false,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K006",
+  "received_at": "2026-10-11",
+  "line": "motor",
+  "claimant_id": "P0046",
+  "incident_ref": "I0045",
+  "incident_date": "2026-10-10",
+  "policy_number": "KW-615835",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 3297,
+  "description": "I was a passenger in XB72 WHL on Mill Road when it was hit from behind. Claiming for my damaged phone, laptop and physiotherapy.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": false,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": [
+   {
+    "claim_id": "K074",
+    "relation": "same incident",
+    "claimant_id": "P0045"
+   }
+  ]
+ },
+ {
+  "id": "K007",
+  "received_at": "2026-10-11",
+  "line": "glass",
+  "claimant_id": "P0004",
+  "incident_ref": "I0004",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-676089",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 95,
+  "description": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a395.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K008",
+  "received_at": "2026-10-11",
+  "line": "motor",
+  "claimant_id": "P0057",
+  "incident_ref": "I0055",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-333135",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-06-14",
+  "amount_gbp": 418,
+  "description": "Kerbed the car while parking, front alloy cracked. Estimate \u00a3418.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K009",
+  "received_at": "2026-10-11",
+  "line": "motor",
+  "claimant_id": "P0047",
+  "incident_ref": "I0046",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-354163",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1420,
+  "description": "I was driving BH63 RHY when another car went into the back of me on Victoria Avenue. Bumper and tailgate damaged.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": true,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": [
+   {
+    "claim_id": "K077",
+    "relation": "same incident",
+    "claimant_id": "P0048"
+   }
+  ]
+ },
+ {
+  "id": "K010",
+  "received_at": "2026-10-11",
+  "line": "motor",
+  "claimant_id": "P0028",
+  "incident_ref": "I0028",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-292627",
+  "policy_start_date": "2020-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 5791,
+  "description": "Hit a deep pothole on Victoria Avenue at night, damaging both nearside wheels and the suspension. Council has acknowledged the pothole. Estimate \u00a35791.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": true
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K011",
+  "received_at": "2026-10-12",
+  "line": "home",
+  "claimant_id": "P0078",
+  "incident_ref": "I0073",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-735039",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-08-28",
+  "amount_gbp": 700,
+  "description": "Dog chewed through the sofa. Claiming accidental damage cover.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K012",
+  "received_at": "2026-10-10",
+  "line": "motor",
+  "claimant_id": "P0044",
+  "incident_ref": "I0044",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-256909",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 621,
+  "description": "Rear-ended at traffic lights on Brook Way. Boot lid and bumper damaged. Estimate \u00a3621.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": true,
+   "engineer_report": null
+  },
+  "claimant_history": [
+   {
+    "claim_id": "H-2019",
+    "date": "2026-07-30",
+    "line": "motor",
+    "amount_gbp": 1090,
+    "outcome": "paid"
+   }
+  ],
+  "related_claims": []
+ },
+ {
+  "id": "K013",
+  "received_at": "2026-10-11",
+  "line": "home",
+  "claimant_id": "P0073",
+  "incident_ref": "I0069",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-247500",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 4100,
+  "description": "Burst pipe in the loft during the cold snap flooded the upstairs bedroom. Plumber and builder quotes attached.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": false
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K014",
+  "received_at": "2026-10-11",
+  "line": "motor",
+  "claimant_id": "P0066",
+  "incident_ref": "I0063",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-474122",
+  "policy_start_date": "2026-07-31",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 4535,
+  "description": "Passenger in VD72 XST when it was hit on Mill Road. Whiplash and lost earnings. Prefer payment in cash.",
+  "documents": {
+   "photos": false,
+   "repair_estimate": false,
+   "police_ref": false,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": [
+   {
+    "claim_id": "K043",
+    "relation": "same incident",
+    "claimant_id": "P0065"
+   },
+   {
+    "claim_id": "K048",
+    "relation": "same incident",
+    "claimant_id": "P0067"
+   }
+  ]
+ },
+ {
+  "id": "K015",
+  "received_at": "2026-10-10",
+  "line": "motor",
+  "claimant_id": "P0059",
+  "incident_ref": "I0057",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-911150",
+  "policy_start_date": "2026-10-01",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 7208,
+  "description": "Car stolen from outside my house overnight and found burnt out two days later. Claiming the full value, \u00a37208.",
+  "documents": {
+   "photos": false,
+   "repair_estimate": false,
+   "police_ref": true,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K016",
+  "received_at": "2026-10-10",
+  "line": "motor",
+  "claimant_id": "P0056",
+  "incident_ref": "I0054",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-369839",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-08-02",
+  "amount_gbp": 460,
+  "description": "Kerbed the car while parking, front alloy cracked. Estimate \u00a3460.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K017",
+  "received_at": "2026-10-10",
+  "line": "glass",
+  "claimant_id": "P0009",
+  "incident_ref": "I0009",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-945836",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 96,
+  "description": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a396.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K018",
+  "received_at": "2026-10-11",
+  "line": "glass",
+  "claimant_id": "P0001",
+  "incident_ref": "I0001",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-208177",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 150,
+  "description": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3150.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K019",
+  "received_at": "2026-10-12",
+  "line": "motor",
+  "claimant_id": "P0014",
+  "incident_ref": "I0014",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-286426",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1336,
+  "description": "Reversed into a bollard in a supermarket car park. Rear bumper dented, no other vehicle involved. Garage estimate \u00a31336.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K020",
+  "received_at": "2026-10-10",
+  "line": "motor",
+  "claimant_id": "P0050",
+  "incident_ref": "I0048",
+  "incident_date": "2026-10-06",
+  "policy_number": "KW-273492",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 2363,
+  "description": "I was a passenger in HP43 ELB on Chapel Lane when it was hit from behind. Claiming for my damaged phone, laptop and physiotherapy.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": false,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K021",
+  "received_at": "2026-10-10",
+  "line": "home",
+  "claimant_id": "P0070",
+  "incident_ref": "I0066",
+  "incident_date": "2026-09-02",
+  "policy_number": "KW-420497",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 3412,
+  "description": "Storm on the night of the 14th blew tiles off the roof and rain damaged the loft. Claiming \u00a33412. Roofer's invoice is dated three weeks before the storm.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K022",
+  "received_at": "2026-10-10",
+  "line": "motor",
+  "claimant_id": "P0030",
+  "incident_ref": "I0030",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-685660",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1713,
+  "description": "Car scraped along a wall in a narrow lane. Estimate to follow.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": false,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K023",
+  "received_at": "2026-10-11",
+  "line": "motor",
+  "claimant_id": "P0025",
+  "incident_ref": "I0025",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-834924",
+  "policy_start_date": "2020-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 5389,
+  "description": "Hit a deep pothole on Kings Parade at night, damaging both nearside wheels and the suspension. Council has acknowledged the pothole. Estimate \u00a35389.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": true
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K024",
+  "received_at": "2026-10-12",
+  "line": "motor",
+  "claimant_id": "P0027",
+  "incident_ref": "I0027",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-765865",
+  "policy_start_date": "2020-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 3472,
+  "description": "Hit a deep pothole on Victoria Avenue at night, damaging both nearside wheels and the suspension. Council has acknowledged the pothole. Estimate \u00a33472.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": true
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K025",
+  "received_at": "2026-10-10",
+  "line": "motor",
+  "claimant_id": "P0013",
+  "incident_ref": "I0013",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-506776",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 991,
+  "description": "Reversed into a bollard in a supermarket car park. Rear bumper dented, no other vehicle involved. Garage estimate \u00a3991.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K026",
+  "received_at": "2026-10-11",
+  "line": "motor",
+  "claimant_id": "P0036",
+  "incident_ref": "I0036",
+  "incident_date": "2026-10-09",
+  "policy_number": null,
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 505,
+  "description": "Car damaged while parked overnight on Mill Road. Estimate \u00a3505.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K027",
+  "received_at": "2026-10-12",
+  "line": "motor",
+  "claimant_id": "P0017",
+  "incident_ref": "I0017",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-406123",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 914,
+  "description": "Reversed into a bollard in a supermarket car park. Rear bumper dented, no other vehicle involved. Garage estimate \u00a3914.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K028",
+  "received_at": "2026-10-11",
+  "line": "home",
+  "claimant_id": "P0021",
+  "incident_ref": "I0021",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-269156",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 641,
+  "description": "Washing machine hose split and leaked onto the kitchen floor. Vinyl flooring needs replacing, quoted at \u00a3641.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K029",
+  "received_at": "2026-10-10",
+  "line": "home",
+  "claimant_id": "P0018",
+  "incident_ref": "I0018",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-426906",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 786,
+  "description": "Washing machine hose split and leaked onto the kitchen floor. Vinyl flooring needs replacing, quoted at \u00a3786.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K030",
+  "received_at": "2026-10-10",
+  "line": "motor",
+  "claimant_id": "P0054",
+  "incident_ref": "I0052",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-595120",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 900,
+  "description": "Side mirror knocked off by a passing van on Victoria Avenue. Replacement \u00a3900.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": [
+   {
+    "claim_id": "K001",
+    "relation": "same incident",
+    "claimant_id": "P0054"
+   }
+  ]
+ },
+ {
+  "id": "K031",
+  "received_at": "2026-10-10",
+  "line": "motor",
+  "claimant_id": "P0033",
+  "incident_ref": "I0033",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-745327",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1536,
+  "description": "Another car pulled out of a side road and hit my front wing. The other driver gave their details. Estimate \u00a31536. Third party involved; liability not yet confirmed by their insurer.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": false,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K032",
+  "received_at": "2026-10-11",
+  "line": "home",
+  "claimant_id": "P0035",
+  "incident_ref": "I0035",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-581316",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1127,
+  "description": "Ceiling stain spreading from the bathroom above. Plumber found a leaking joint. Photos to follow.",
+  "documents": {
+   "photos": false,
+   "repair_estimate": false,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K033",
+  "received_at": "2026-10-11",
+  "line": "motor",
+  "claimant_id": "P0024",
+  "incident_ref": "I0024",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-644076",
+  "policy_start_date": "2020-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 5095,
+  "description": "Hit a deep pothole on Kings Parade at night, damaging both nearside wheels and the suspension. Council has acknowledged the pothole. Estimate \u00a35095.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": true
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K034",
+  "received_at": "2026-10-12",
+  "line": "motor",
+  "claimant_id": "P0061",
+  "incident_ref": "I0059",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-135843",
+  "policy_start_date": "2026-10-01",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 4716,
+  "description": "Car stolen from outside my house overnight and found burnt out two days later. Claiming the full value, \u00a34716.",
+  "documents": {
+   "photos": false,
+   "repair_estimate": false,
+   "police_ref": true,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K035",
+  "received_at": "2026-10-10",
+  "line": "motor",
+  "claimant_id": "P0041",
+  "incident_ref": "I0041",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-109852",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1012,
+  "description": "Rear-ended at traffic lights on Chapel Lane. Boot lid and bumper damaged. Estimate \u00a31012.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": true,
+   "engineer_report": null
+  },
+  "claimant_history": [
+   {
+    "claim_id": "H-7252",
+    "date": "2026-03-13",
+    "line": "motor",
+    "amount_gbp": 1050,
+    "outcome": "paid"
+   }
+  ],
+  "related_claims": []
+ },
+ {
+  "id": "K036",
+  "received_at": "2026-10-12",
+  "line": "motor",
+  "claimant_id": "P0058",
+  "incident_ref": "I0056",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-269766",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-07-28",
+  "amount_gbp": 863,
+  "description": "Kerbed the car while parking, front alloy cracked. Estimate \u00a3863.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K037",
+  "received_at": "2026-10-10",
+  "line": "motor",
+  "claimant_id": "P0016",
+  "incident_ref": "I0016",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-981288",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 482,
+  "description": "Reversed into a bollard in a supermarket car park. Rear bumper dented, no other vehicle involved. Garage estimate \u00a3482.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K038",
+  "received_at": "2026-10-11",
+  "line": "motor",
+  "claimant_id": "P0074",
+  "incident_ref": "I0070",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-908496",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1800,
+  "description": "Car damaged in a hit-and-run while parked. Reported to the police.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": true,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K039",
+  "received_at": "2026-10-10",
+  "line": "home",
+  "claimant_id": "P0020",
+  "incident_ref": "I0020",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-402203",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 633,
+  "description": "Washing machine hose split and leaked onto the kitchen floor. Vinyl flooring needs replacing, quoted at \u00a3633.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K040",
+  "received_at": "2026-10-11",
+  "line": "motor",
+  "claimant_id": "P0040",
+  "incident_ref": "I0040",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-243065",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 659,
+  "description": "Rear-ended at traffic lights on Victoria Avenue. Boot lid and bumper damaged. Estimate \u00a3659.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": true,
+   "engineer_report": null
+  },
+  "claimant_history": [
+   {
+    "claim_id": "H-5807",
+    "date": "2026-03-08",
+    "line": "motor",
+    "amount_gbp": 1184,
+    "outcome": "paid"
+   }
+  ],
+  "related_claims": []
+ },
+ {
+  "id": "K041",
+  "received_at": "2026-10-11",
+  "line": "motor",
+  "claimant_id": "P0015",
+  "incident_ref": "I0015",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-393598",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 806,
+  "description": "Reversed into a bollard in a supermarket car park. Rear bumper dented, no other vehicle involved. Garage estimate \u00a3806.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K042",
+  "received_at": "2026-10-11",
+  "line": "home",
+  "claimant_id": "P0031",
+  "incident_ref": "I0031",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-205884",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1213,
+  "description": "Ceiling stain spreading from the bathroom above. Plumber found a leaking joint. Photos to follow.",
+  "documents": {
+   "photos": false,
+   "repair_estimate": false,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K043",
+  "received_at": "2026-10-12",
+  "line": "motor",
+  "claimant_id": "P0065",
+  "incident_ref": "I0063",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-531150",
+  "policy_start_date": "2026-07-31",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 3866,
+  "description": "Passenger in VD72 XST when it was hit on Mill Road. Whiplash and lost earnings. Prefer payment in cash.",
+  "documents": {
+   "photos": false,
+   "repair_estimate": false,
+   "police_ref": false,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": [
+   {
+    "claim_id": "K014",
+    "relation": "same incident",
+    "claimant_id": "P0066"
+   },
+   {
+    "claim_id": "K048",
+    "relation": "same incident",
+    "claimant_id": "P0067"
+   }
+  ]
+ },
+ {
+  "id": "K044",
+  "received_at": "2026-10-11",
+  "line": "motor",
+  "claimant_id": "P0051",
+  "incident_ref": "I0049",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-758359",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1052,
+  "description": "I was driving LK70 YLP when another car went into the back of me on Brook Way. Bumper and tailgate damaged.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": true,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K045",
+  "received_at": "2026-10-11",
+  "line": "glass",
+  "claimant_id": "P0008",
+  "incident_ref": "I0008",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-324815",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 117,
+  "description": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3117.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K046",
+  "received_at": "2026-10-12",
+  "line": "glass",
+  "claimant_id": "P0005",
+  "incident_ref": "I0005",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-332708",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 164,
+  "description": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3164.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K047",
+  "received_at": "2026-10-10",
+  "line": "motor",
+  "claimant_id": "P0076",
+  "incident_ref": "I0072",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-456561",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1100,
+  "description": "Two of our cars collided on the driveway. Both insured with Keelwater. Estimate \u00a31,100.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": [
+   {
+    "claim_id": "K070",
+    "relation": "same incident",
+    "claimant_id": "P0077"
+   }
+  ]
+ },
+ {
+  "id": "K048",
+  "received_at": "2026-10-12",
+  "line": "motor",
+  "claimant_id": "P0067",
+  "incident_ref": "I0063",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-757143",
+  "policy_start_date": "2026-07-31",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 3269,
+  "description": "Passenger in VD72 XST when it was hit on Mill Road. Whiplash and lost earnings. Prefer payment in cash.",
+  "documents": {
+   "photos": false,
+   "repair_estimate": false,
+   "police_ref": false,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": [
+   {
+    "claim_id": "K014",
+    "relation": "same incident",
+    "claimant_id": "P0066"
+   },
+   {
+    "claim_id": "K043",
+    "relation": "same incident",
+    "claimant_id": "P0065"
+   }
+  ]
+ },
+ {
+  "id": "K049",
+  "received_at": "2026-10-12",
+  "line": "motor",
+  "claimant_id": "P0032",
+  "incident_ref": "I0032",
+  "incident_date": "2026-10-09",
+  "policy_number": null,
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 652,
+  "description": "Car damaged while parked overnight on Kings Parade. Estimate \u00a3652.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K050",
+  "received_at": "2026-10-12",
+  "line": "motor",
+  "claimant_id": "P0038",
+  "incident_ref": "I0038",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-438491",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1739,
+  "description": "Car scraped along a wall in a narrow lane. Estimate to follow.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": false,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K051",
+  "received_at": "2026-10-11",
+  "line": "glass",
+  "claimant_id": "P0071",
+  "incident_ref": "I0067",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-742776",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 279,
+  "description": "Windscreen cracked by a stone. Replacement \u00a3279.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [
+   {
+    "claim_id": "H-3101",
+    "date": "2024-04-25",
+    "line": "glass",
+    "amount_gbp": 210,
+    "outcome": "paid"
+   }
+  ],
+  "related_claims": []
+ },
+ {
+  "id": "K052",
+  "received_at": "2026-10-11",
+  "line": "motor",
+  "claimant_id": "P0011",
+  "incident_ref": "I0011",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-403710",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 637,
+  "description": "Reversed into a bollard in a supermarket car park. Rear bumper dented, no other vehicle involved. Garage estimate \u00a3637.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K053",
+  "received_at": "2026-10-12",
+  "line": "glass",
+  "claimant_id": "P0007",
+  "incident_ref": "I0007",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-967037",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 160,
+  "description": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3160.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K054",
+  "received_at": "2026-10-11",
+  "line": "motor",
+  "claimant_id": "P0053",
+  "incident_ref": "I0051",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-799599",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 884,
+  "description": "Side mirror knocked off by a passing van on Station Street. Replacement \u00a3884.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": [
+   {
+    "claim_id": "K059",
+    "relation": "same incident",
+    "claimant_id": "P0053"
+   }
+  ]
+ },
+ {
+  "id": "K055",
+  "received_at": "2026-10-12",
+  "line": "motor",
+  "claimant_id": "P0055",
+  "incident_ref": "I0053",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-321454",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-07-07",
+  "amount_gbp": 699,
+  "description": "Kerbed the car while parking, front alloy cracked. Estimate \u00a3699.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K056",
+  "received_at": "2026-10-11",
+  "line": "home",
+  "claimant_id": "P0064",
+  "incident_ref": "I0062",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-226828",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 3160,
+  "description": "Laptop and camera stolen in a break-in. No sign of forced entry. Claiming \u00a33160.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": false,
+   "police_ref": true,
+   "engineer_report": null
+  },
+  "claimant_history": [
+   {
+    "claim_id": "H-7921",
+    "date": "2026-07-24",
+    "line": "motor",
+    "amount_gbp": 2322,
+    "outcome": "paid"
+   },
+   {
+    "claim_id": "H-3667",
+    "date": "2026-06-24",
+    "line": "motor",
+    "amount_gbp": 2137,
+    "outcome": "paid"
+   },
+   {
+    "claim_id": "H-9097",
+    "date": "2026-04-02",
+    "line": "home",
+    "amount_gbp": 3019,
+    "outcome": "paid"
+   },
+   {
+    "claim_id": "H-1079",
+    "date": "2026-06-28",
+    "line": "motor",
+    "amount_gbp": 3454,
+    "outcome": "paid"
+   }
+  ],
+  "related_claims": []
+ },
+ {
+  "id": "K057",
+  "received_at": "2026-10-11",
+  "line": "home",
+  "claimant_id": "P0069",
+  "incident_ref": "I0065",
+  "incident_date": "2026-09-02",
+  "policy_number": "KW-670514",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 3996,
+  "description": "Storm on the night of the 14th blew tiles off the roof and rain damaged the loft. Claiming \u00a33996. Roofer's invoice is dated three weeks before the storm.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K058",
+  "received_at": "2026-10-10",
+  "line": "glass",
+  "claimant_id": "P0006",
+  "incident_ref": "I0006",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-477744",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 223,
+  "description": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3223.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K059",
+  "received_at": "2026-10-12",
+  "line": "motor",
+  "claimant_id": "P0053",
+  "incident_ref": "I0051",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-275390",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 884,
+  "description": "Side mirror knocked off by a passing van on Station Street. Replacement \u00a3884. Submitting again as I had no confirmation.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": [
+   {
+    "claim_id": "K054",
+    "relation": "same incident",
+    "claimant_id": "P0053"
+   }
+  ]
+ },
+ {
+  "id": "K060",
+  "received_at": "2026-10-12",
+  "line": "motor",
+  "claimant_id": "P0049",
+  "incident_ref": "I0047",
+  "incident_date": "2026-10-06",
+  "policy_number": "KW-551000",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1693,
+  "description": "I was driving HP43 ELB when another car went into the back of me on Chapel Lane. Bumper and tailgate damaged.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": true,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K061",
+  "received_at": "2026-10-12",
+  "line": "motor",
+  "claimant_id": "P0034",
+  "incident_ref": "I0034",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-447148",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1372,
+  "description": "Car scraped along a wall in a narrow lane. Estimate to follow.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": false,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K062",
+  "received_at": "2026-10-11",
+  "line": "glass",
+  "claimant_id": "P0002",
+  "incident_ref": "I0002",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-602140",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 274,
+  "description": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3274.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K063",
+  "received_at": "2026-10-11",
+  "line": "home",
+  "claimant_id": "P0063",
+  "incident_ref": "I0061",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-977072",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 2474,
+  "description": "Laptop and camera stolen in a break-in. No sign of forced entry. Claiming \u00a32474.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": false,
+   "police_ref": true,
+   "engineer_report": null
+  },
+  "claimant_history": [
+   {
+    "claim_id": "H-7367",
+    "date": "2026-05-26",
+    "line": "home",
+    "amount_gbp": 2438,
+    "outcome": "paid"
+   },
+   {
+    "claim_id": "H-2558",
+    "date": "2026-08-14",
+    "line": "motor",
+    "amount_gbp": 3343,
+    "outcome": "paid"
+   },
+   {
+    "claim_id": "H-6994",
+    "date": "2026-01-03",
+    "line": "home",
+    "amount_gbp": 2503,
+    "outcome": "paid"
+   },
+   {
+    "claim_id": "H-8278",
+    "date": "2026-08-19",
+    "line": "motor",
+    "amount_gbp": 3408,
+    "outcome": "paid"
+   }
+  ],
+  "related_claims": []
+ },
+ {
+  "id": "K064",
+  "received_at": "2026-10-12",
+  "line": "glass",
+  "claimant_id": "P0003",
+  "incident_ref": "I0003",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-169746",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 129,
+  "description": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3129.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K065",
+  "received_at": "2026-10-10",
+  "line": "motor",
+  "claimant_id": "P0039",
+  "incident_ref": "I0039",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-957659",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1091,
+  "description": "Rear-ended at traffic lights on Brook Way. Boot lid and bumper damaged. Estimate \u00a31091.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": true,
+   "engineer_report": null
+  },
+  "claimant_history": [
+   {
+    "claim_id": "H-6270",
+    "date": "2026-07-05",
+    "line": "motor",
+    "amount_gbp": 2081,
+    "outcome": "paid"
+   }
+  ],
+  "related_claims": []
+ },
+ {
+  "id": "K066",
+  "received_at": "2026-10-10",
+  "line": "home",
+  "claimant_id": "P0068",
+  "incident_ref": "I0064",
+  "incident_date": "2026-09-02",
+  "policy_number": "KW-155490",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1506,
+  "description": "Storm on the night of the 14th blew tiles off the roof and rain damaged the loft. Claiming \u00a31506. Roofer's invoice is dated three weeks before the storm.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K067",
+  "received_at": "2026-10-11",
+  "line": "motor",
+  "claimant_id": "P0042",
+  "incident_ref": "I0042",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-404437",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1244,
+  "description": "Rear-ended at traffic lights on Chapel Lane. Boot lid and bumper damaged. Estimate \u00a31244.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": true,
+   "engineer_report": null
+  },
+  "claimant_history": [
+   {
+    "claim_id": "H-1733",
+    "date": "2026-04-19",
+    "line": "motor",
+    "amount_gbp": 1094,
+    "outcome": "paid"
+   }
+  ],
+  "related_claims": []
+ },
+ {
+  "id": "K068",
+  "received_at": "2026-10-10",
+  "line": "glass",
+  "claimant_id": "P0075",
+  "incident_ref": "I0071",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-479772",
+  "policy_start_date": "2026-09-06",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 260,
+  "description": "Rear windscreen smashed. Not sure how it happened.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K069",
+  "received_at": "2026-10-12",
+  "line": "motor",
+  "claimant_id": "P0043",
+  "incident_ref": "I0043",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-219137",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1670,
+  "description": "Rear-ended at traffic lights on Victoria Avenue. Boot lid and bumper damaged. Estimate \u00a31670.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": true,
+   "engineer_report": null
+  },
+  "claimant_history": [
+   {
+    "claim_id": "H-2590",
+    "date": "2026-04-23",
+    "line": "motor",
+    "amount_gbp": 1248,
+    "outcome": "paid"
+   }
+  ],
+  "related_claims": []
+ },
+ {
+  "id": "K070",
+  "received_at": "2026-10-12",
+  "line": "motor",
+  "claimant_id": "P0077",
+  "incident_ref": "I0072",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-554452",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 950,
+  "description": "Two of our cars collided on the driveway. Both insured with Keelwater. Estimate \u00a3950.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": [
+   {
+    "claim_id": "K047",
+    "relation": "same incident",
+    "claimant_id": "P0076"
+   }
+  ]
+ },
+ {
+  "id": "K071",
+  "received_at": "2026-10-12",
+  "line": "motor",
+  "claimant_id": "P0052",
+  "incident_ref": "I0050",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-513977",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 2283,
+  "description": "I was a passenger in LK70 YLP on Brook Way when it was hit from behind. Claiming for my damaged phone, laptop and physiotherapy.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": false,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K072",
+  "received_at": "2026-10-11",
+  "line": "glass",
+  "claimant_id": "P0010",
+  "incident_ref": "I0010",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-302831",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 156,
+  "description": "Windscreen chipped by a stone on the motorway, now cracked across the driver's side. Replacement quoted at \u00a3156.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K073",
+  "received_at": "2026-10-12",
+  "line": "motor",
+  "claimant_id": "P0012",
+  "incident_ref": "I0012",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-985825",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1062,
+  "description": "Reversed into a bollard in a supermarket car park. Rear bumper dented, no other vehicle involved. Garage estimate \u00a31062.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K074",
+  "received_at": "2026-10-12",
+  "line": "motor",
+  "claimant_id": "P0045",
+  "incident_ref": "I0045",
+  "incident_date": "2026-10-10",
+  "policy_number": "KW-353610",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 1878,
+  "description": "I was driving XB72 WHL when another car went into the back of me on Mill Road. Bumper and tailgate damaged.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": true,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": [
+   {
+    "claim_id": "K006",
+    "relation": "same incident",
+    "claimant_id": "P0046"
+   }
+  ]
+ },
+ {
+  "id": "K075",
+  "received_at": "2026-10-10",
+  "line": "motor",
+  "claimant_id": "P0072",
+  "incident_ref": "I0068",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-563539",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 600,
+  "description": "Clipped a parked car's mirror while passing. Left a note with my details. Estimate \u00a3600.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K076",
+  "received_at": "2026-10-10",
+  "line": "motor",
+  "claimant_id": "P0026",
+  "incident_ref": "I0026",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-305073",
+  "policy_start_date": "2020-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 4604,
+  "description": "Hit a deep pothole on Station Street at night, damaging both nearside wheels and the suspension. Council has acknowledged the pothole. Estimate \u00a34604.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": true
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K077",
+  "received_at": "2026-10-12",
+  "line": "motor",
+  "claimant_id": "P0048",
+  "incident_ref": "I0046",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-909831",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 3653,
+  "description": "I was a passenger in BH63 RHY on Victoria Avenue when it was hit from behind. Claiming for my damaged phone, laptop and physiotherapy.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": false,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": [
+   {
+    "claim_id": "K009",
+    "relation": "same incident",
+    "claimant_id": "P0047"
+   }
+  ]
+ },
+ {
+  "id": "K078",
+  "received_at": "2026-10-11",
+  "line": "motor",
+  "claimant_id": "P0037",
+  "incident_ref": "I0037",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-870575",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 738,
+  "description": "Another car pulled out of a side road and hit my front wing. The other driver gave their details. Estimate \u00a3738. Third party involved; liability not yet confirmed by their insurer.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": false,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K079",
+  "received_at": "2026-10-12",
+  "line": "motor",
+  "claimant_id": "P0023",
+  "incident_ref": "I0023",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-148572",
+  "policy_start_date": "2020-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 6528,
+  "description": "Hit a deep pothole on Mill Road at night, damaging both nearside wheels and the suspension. Council has acknowledged the pothole. Estimate \u00a36528.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": true
+  },
+  "claimant_history": [],
+  "related_claims": []
+ },
+ {
+  "id": "K080",
+  "received_at": "2026-10-12",
+  "line": "home",
+  "claimant_id": "P0019",
+  "incident_ref": "I0019",
+  "incident_date": "2026-10-09",
+  "policy_number": "KW-534053",
+  "policy_start_date": "2023-10-13",
+  "policy_status": "active",
+  "policy_status_checked_at": "2026-10-10",
+  "amount_gbp": 720,
+  "description": "Washing machine hose split and leaked onto the kitchen floor. Vinyl flooring needs replacing, quoted at \u00a3720.",
+  "documents": {
+   "photos": true,
+   "repair_estimate": true,
+   "police_ref": null,
+   "engineer_report": null
+  },
+  "claimant_history": [],
+  "related_claims": []
+ }
+]
