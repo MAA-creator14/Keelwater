@@ -45,3 +45,12 @@ Append-only. One entry per AI session that affects the Keelwater work. Keep the 
 - Changed: Open coded the tickets myself.
 - Rejected: Confidence level per ticket. Having reviewed the tickets, I felt that adding confidence levels would not add much weight in this instance.
 **Evidence:** Chat, 27 Oct; aipdlc-log.md, Stage 1 entry.
+
+## 2026-10-27T12:01:01Z - Item: keelwater-sorting - Stage 2: AI use
+**Asked:** Critically review three proposed failure modes.
+**Got:** A review of my 3 proposed failure modes, plus 4 missing modes suggested by the AI.
+**Kept / changed / rejected:**
+- Kept: missing context, stale or partial inputs and handler over-trust failure modes.
+- Changed: narrowed Failure 2 to errors with no money moved.
+- Rejected: drift failure mode because I don't believe the claim mix to be a real factor.
+**Evidence:** Chat, 27 Oct; aipdlc-log.md, Stage 2 entry.
