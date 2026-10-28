@@ -62,3 +62,28 @@ Append-only. One entry per AI session that affects the Keelwater work. Keep the 
 - Kept A1 assumption.
 - Changed: treshold conditons for A1 and A3
 **Evidence:** Chat, 28 Oct; aipdlc-log.md, Stage 3 entry.
+
+## 2026-10-28T18:42:01Z - Item: keelwater-sorting - Stage 4a: AI use
+**Asked:** Review my draft system test and proposed planted faults
+**Got:** Invented a handler baseline and invented 80 claims
+**Kept / changed / rejected:**
+- Kept invented claims
+- Changed the sorting policy
+- Rejected the reason quality rubric suggestion, logged as not done to focus on sorting accuracy instead
+**Evidence:** Chat, 28 Oct; aipdlc-log.md, Stage 4a entry.
+
+## 2026-10-28T18:42:01Z - Item: keelwater-sorting - Stage 4b: AI use
+**Asked:** Review my draft for a UI for handlers to review AI generated suggestions
+**Got:** A simple handler UI for coding a mix of claims
+**Kept / changed / rejected:**
+- Kept the suggestion to test as a single handler (instead of 5-10)
+**Evidence:** Chat, 28 Oct; aipdlc-log.md, Stage 4b entry.
+
+## 2026-10-28T20:11:01Z - Item: keelwater-sorting - Stage 5: AI use
+**Asked:** Review my proposed approach to testing bulk sorting
+**Got:** Suggestions on how to sharpen the test
+**Kept / changed / rejected:**
+- Kept: proposed assumptions with ranges labelled invented assumptions (time per batch, error rate under pace, etc.)
+- Changed the filter (any type under £1,000)
+- Rejected recommended suggestion to finish building bulk sorting and running A1 study, opting for an approach that enables me to do further discover and codesign AI suggestions iterations
+**Evidence:** Chat, 28 Oct; aipdlc-log.md, Stage 5 entry.
