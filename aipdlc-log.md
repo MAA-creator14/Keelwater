@@ -90,3 +90,18 @@
 **Proposed:** Spec for bulk sorting with three fixes: critical list (8 conditions), linked rules 1–3 (flag exactly the 17 linked of 80 invented claims), per-claim payment hold and reversal any time before payment; invented thresholds (3 of 4 planted spotted, ≤10% simple over-pulled, ≥30% time saved, two-level pause); non-goals auto-clear, AI suggestions, automatic fraud decisions.
 **Decision:** Approved
 **Notes:** Human drafted; definitions, human-control items and thresholds AI-proposed at review and accepted. Critical item 8 untestable until intake captures third party, payment method and document dates. Time to payment tracked with no target until A1 reports.
+
+## 2026-10-29T18:49:00Z - Item: keelwater-sorting - Stage: Process change
+**Proposed:** From Stage 7, AI drafts first because of time; the human makes the named judgment calls (rollback owner, rollout and shadow period, go/no-go owner, Sales and CS timing and limits, design-partner access) and decides each gate.
+**Decision:** Approved
+**Notes:** Departs from the 26 Oct commitment to draft each stage before AI review. Stages 1 to 6 were human-drafted.
+
+## 2026-10-29T19:53:00Z - Item: keelwater-sorting - Stage: Stage 7, Build and verify (described)
+**Proposed:** AI-drafted build description: seven controls with owners, append-only trace format, switch-off by a named on-call owner (under 5 minutes, invented, drilled in staging), verification table mapped to the Stage 6 criteria, designer and engineer challenge points.
+**Decision:** Approved
+**Notes:** Date versus scope left open: the human decides after the tech lead's estimate. Carried to Stage 8: critical item 8 not covered, 30% time saving and Failure 6 unproven, linked-check speed at large-customer volume.
+
+## 2026-10-29T20:00:00Z - Item: keelwater-sorting - Stage: Stage 8, Release and measure (described)
+**Proposed:** AI-drafted release plan on the human's calls: real baselines; drill, 2-week shadow, one C-008 team for 2 weeks, then waves; PM and claims owner sign each go/no-go; two-level kill criteria; Sales and CS told now, no promise of automatic sorting or faster payment. SKILL.md auto-payment gates recorded as not applying.
+**Decision:** Approved
+**Notes:** Shadow start set after the tech lead's estimate (Christmas a known risk). Review sample size agreed with the claims owner before shadow. D1's RFP asks for AI-assisted triage; bulk sorting meets only the reason-record half.
