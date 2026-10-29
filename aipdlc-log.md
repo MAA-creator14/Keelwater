@@ -85,3 +85,8 @@
 **Proposed:** Four options on 80 invented claims: status quo 6 wrong-simple, 36 s; bulk 5.2–6.0, 26–37 s (pilot: 0 of 4 planted claims spotted, 6 of 9 simple pulled out); suggested 61 s, 1 of 12 (pilot); auto-clear 5–14, ruled out.
 **Decision:** Approved
 **Notes:** Bulk ships with fixes; A1 timeline study in parallel; suggestion discovery with Sales and design partners, no engineering time. Weights: 6 standard, 7 light, 8 formal. Reverse if A1 queue ≤15%: effort moves to information and approval flow.
+
+## 2026-10-29T18:36:00Z - Item: keelwater-sorting - Stage: Stage 6, Spec
+**Proposed:** Spec for bulk sorting with three fixes: critical list (8 conditions), linked rules 1–3 (flag exactly the 17 linked of 80 invented claims), per-claim payment hold and reversal any time before payment; invented thresholds (3 of 4 planted spotted, ≤10% simple over-pulled, ≥30% time saved, two-level pause); non-goals auto-clear, AI suggestions, automatic fraud decisions.
+**Decision:** Approved
+**Notes:** Human drafted; definitions, human-control items and thresholds AI-proposed at review and accepted. Critical item 8 untestable until intake captures third party, payment method and document dates. Time to payment tracked with no target until A1 reports.
